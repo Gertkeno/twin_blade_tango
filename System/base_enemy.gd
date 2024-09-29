@@ -31,7 +31,7 @@ func _physics_process(delta: float) -> void:
 	if attack_recovery.is_stopped():
 		var diff := target.global_position - self.global_position
 		var distance := diff.length()
-		if distance < 1.8:
+		if distance < 1.2:
 			# TODO: do attack
 			attack()
 		else:

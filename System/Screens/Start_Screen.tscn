@@ -129,12 +129,12 @@ offset_bottom = 84.0
 grow_horizontal = 2
 grow_vertical = 2
 focus_neighbor_top = NodePath("../Exit")
-focus_neighbor_bottom = NodePath("../Options")
+focus_neighbor_bottom = NodePath("../Credits")
 theme_override_font_sizes/font_size = 32
 text = "Start"
 flat = true
 
-[node name="Options" type="Button" parent="."]
+[node name="Credits" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -166,7 +166,7 @@ offset_right = 34.0
 offset_bottom = 196.0
 grow_horizontal = 2
 grow_vertical = 2
-focus_neighbor_top = NodePath("../Options")
+focus_neighbor_top = NodePath("../Credits")
 focus_neighbor_bottom = NodePath("../Start")
 theme_override_font_sizes/font_size = 32
 text = "Exit"
@@ -202,4 +202,5 @@ libraries = {
 }
 
 [connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Credits" to="." method="_on_credits_pressed"]
 [connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]
