@@ -1,0 +1,76 @@
+[gd_scene load_steps=4 format=3 uid="uid://b1gy03ltrhj3y"]
+
+[ext_resource type="Texture2D" uid="uid://dpuhi2i5m3a0f" path="res://Assets/Splashes/TUTORIAL_bg.png" id="1_yg82a"]
+[ext_resource type="Script" path="res://System/Screens/action_to_next_screen.gd" id="2_38bl1"]
+[ext_resource type="Theme" uid="uid://jnrndgwutnjh" path="res://Assets/Interface/font_theme.tres" id="3_5trou"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_5trou")
+script = ExtResource("2_38bl1")
+next_scene = "res://System/Screens/controller_selection.tscn"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.105882, 0.0823529, 0.109804, 1)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -576.0
+offset_top = -96.0
+offset_right = 614.0
+offset_bottom = -96.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_yg82a")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="Tutorial" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -211.0
+offset_right = 211.0
+offset_bottom = 151.0
+grow_horizontal = 2
+theme_type_variation = &"HeaderLarge"
+text = "Tutorial"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -324.5
+offset_top = -158.0
+offset_right = 324.5
+offset_bottom = 223.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Left stick to move
+Right stick to aim
+
+Left trigger to throw the sword
+Right trigger to attack!
+
+Now, select your character
+by pressing a controller or keyboard button"
+horizontal_alignment = 1

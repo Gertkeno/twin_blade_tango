@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://1aiprwr3lk22"]
+
+[node name="CSGCombiner3D" type="CSGCombiner3D"]
+transform = Transform3D(-1.78197e-08, 0, -0.407667, 0, 0.407667, 0, 0.407667, 0, -1.78197e-08, 0, 0, 0)
+
+[node name="blade" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.83299, 0)
+size = Vector3(0.10376, 3.7959, 1)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="blade"]
+transform = Transform3D(1, 0, 0, 0, 0.801139, 0.598478, 0, -0.598478, 0.801139, 0, 1.68647, -0.232593)
+operation = 2
+size = Vector3(0.768555, 0.659912, 1.89648)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.905583, 0)
+size = Vector3(0.476562, 0.274414, 1.58203)
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0496533, 0)
+radius = 0.247653
+height = 1.70966

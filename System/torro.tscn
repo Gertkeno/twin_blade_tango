@@ -1,0 +1,171 @@
+[gd_scene load_steps=24 format=3 uid="uid://cm7cstaadjio5"]
+
+[ext_resource type="PackedScene" uid="uid://dk7f2bg8agvlh" path="res://System/base_player.tscn" id="1_mq01p"]
+[ext_resource type="PackedScene" uid="uid://djx50pj07yprd" path="res://Assets/Models/Characters/Torro/SK_Torro.fbx" id="2_s0t5n"]
+[ext_resource type="AnimationLibrary" uid="uid://dj7c451nnwucx" path="res://Assets/Models/Characters/Torro/Animations/A_Male_Attack.fbx" id="3_3a54i"]
+[ext_resource type="Texture2D" uid="uid://dgwqphd3006df" path="res://Assets/Materials/T_Torro.png" id="3_eq8e7"]
+[ext_resource type="AnimationLibrary" uid="uid://bg36bu5a6mbqp" path="res://Assets/Models/Characters/Torro/Animations/A_Male_Death.fbx" id="4_e4a0g"]
+[ext_resource type="AnimationLibrary" uid="uid://bt33pyssfghk5" path="res://Assets/Models/Characters/Torro/Animations/A_Male_StrafeLeft.fbx" id="5_8tmnt"]
+[ext_resource type="AnimationLibrary" uid="uid://50igijtk0xlr" path="res://Assets/Models/Characters/Torro/Animations/A_Male_Idle.fbx" id="6_0hu0n"]
+[ext_resource type="AnimationLibrary" uid="uid://cs0gnoix4rt5b" path="res://Assets/Models/Characters/Torro/Animations/A_Male_StrafeRight.fbx" id="6_pksqj"]
+[ext_resource type="AnimationLibrary" uid="uid://bi8nwcte5v6wd" path="res://Assets/Models/Characters/Torro/Animations/A_Male_WalkBackwards.fbx" id="7_rdetl"]
+[ext_resource type="AnimationLibrary" uid="uid://bsqnq1b7pq0mp" path="res://Assets/Models/Characters/Torro/Animations/A_Male_WalkForwards.fbx" id="8_2nq62"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_euwci"]
+albedo_texture = ExtResource("3_eq8e7")
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_8a1of"]
+animation = &"A_Male_Death/A_Male_Death"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_5m1l0"]
+animation = &"A_Male_WalkForwards/A_Male_WalkForwards"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_yyptk"]
+animation = &"A_Male_WalkBackwards/A_Male_WalkBackwards"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_o4vqe"]
+animation = &"A_Male_StrafeLeft/A_Male_StrafeLeft"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_k54ly"]
+animation = &"A_Male_StrafeRight/A_Male_StrafeRight"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_oemdw"]
+animation = &"A_Male_Idle/A_Male_Idle"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_3g6sh"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_5m1l0")
+blend_point_0/pos = Vector2(0, 1)
+blend_point_1/node = SubResource("AnimationNodeAnimation_yyptk")
+blend_point_1/pos = Vector2(0, -1)
+blend_point_2/node = SubResource("AnimationNodeAnimation_o4vqe")
+blend_point_2/pos = Vector2(-1, 0)
+blend_point_3/node = SubResource("AnimationNodeAnimation_k54ly")
+blend_point_3/pos = Vector2(1, 0)
+blend_point_4/node = SubResource("AnimationNodeAnimation_oemdw")
+blend_point_4/pos = Vector2(0, 0)
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_yuwx1"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_yr5s0"]
+advance_mode = 2
+advance_condition = &"died"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_faknt"]
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_7mqn4"]
+states/A_Male_Death_A_Male_Death/node = SubResource("AnimationNodeAnimation_8a1of")
+states/A_Male_Death_A_Male_Death/position = Vector2(567, 13)
+states/Walk/node = SubResource("AnimationNodeBlendSpace2D_3g6sh")
+states/Walk/position = Vector2(427, 100)
+transitions = ["Start", "Walk", SubResource("AnimationNodeStateMachineTransition_yuwx1"), "Walk", "A_Male_Death_A_Male_Death", SubResource("AnimationNodeStateMachineTransition_yr5s0"), "A_Male_Death_A_Male_Death", "End", SubResource("AnimationNodeStateMachineTransition_faknt")]
+graph_offset = Vector2(82, -74)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_mbje7"]
+viewport_path = NodePath("Sprite3D/Healthbar2D")
+
+[node name="LeadTorro" node_paths=PackedStringArray("animator_tree") instance=ExtResource("1_mq01p")]
+animator_tree = NodePath("Model/AnimationTree")
+
+[node name="HandTemp" parent="." index="1"]
+transform = Transform3D(0.0863742, 0.174879, 0.401526, -0.437751, 0.0469976, 0.0736978, -0.0134019, -0.408013, 0.180587, 0.528316, 0.964642, -0.02764)
+bone_name = "Cup_R"
+bone_idx = 39
+use_external_skeleton = true
+external_skeleton = NodePath("../Model/Group/DeformationSystem/Skeleton3D")
+
+[node name="Model" type="Node3D" parent="." index="4"]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 0, 0)
+
+[node name="Group" type="Node3D" parent="Model" index="0"]
+transform = Transform3D(0.446, 0, 0, 0, 0.446, 0, 0, 0, 0.446, 0, 0, 0)
+
+[node name="DeformationSystem" parent="Model/Group" index="0" instance=ExtResource("2_s0t5n")]
+
+[node name="Skeleton3D" parent="Model/Group/DeformationSystem" index="0"]
+bones/1/position = Vector3(-0.0223688, 2.3716, -0.192265)
+bones/1/rotation = Quaternion(0.541388, 0.52254, 0.445328, 0.485317)
+bones/2/position = Vector3(0.265654, -0.0325143, 0.00635526)
+bones/2/rotation = Quaternion(-0.00324924, -0.0112376, -0.0581947, 0.998237)
+bones/2/scale = Vector3(0.996858, 0.996858, 0.996858)
+bones/3/position = Vector3(0.269969, 3.54881e-07, -3.53897e-08)
+bones/3/rotation = Quaternion(-0.000459322, 0.0144057, 0.0769751, 0.996929)
+bones/3/scale = Vector3(0.999423, 0.999423, 0.999423)
+bones/4/position = Vector3(0.262583, -2.2278e-05, -0.000229131)
+bones/4/rotation = Quaternion(-0.00135747, 0.0134941, 0.0425901, 0.999001)
+bones/4/scale = Vector3(0.999745, 0.999745, 0.999745)
+bones/5/position = Vector3(0.125987, 6.76094e-05, 0.000257681)
+bones/5/rotation = Quaternion(-0.0014559, 0.0083378, 0.0442956, 0.998983)
+bones/5/scale = Vector3(1.00284, 1.00284, 1.00284)
+bones/6/position = Vector3(0.125492, 3.37537e-08, 1.06716e-07)
+bones/6/rotation = Quaternion(-0.000939201, 0.00517659, 0.0286208, 0.999577)
+bones/6/scale = Vector3(1.00202, 1.00202, 1.00202)
+bones/7/position = Vector3(0.126607, -3.90075e-05, 2.22016e-06)
+bones/7/rotation = Quaternion(0.000228914, 0.00144388, 0.120573, 0.992703)
+bones/8/position = Vector3(0.313521, 8.88178e-16, 1.20856e-15)
+bones/8/rotation = Quaternion(-0.00147603, 0.00252622, 0.00845574, 0.99996)
+bones/9/rotation = Quaternion(-0.0143459, 0.00280098, -0.0123166, 0.999817)
+bones/10/rotation = Quaternion(-0.0143459, 0.00311932, -0.0122398, 0.999817)
+bones/11/position = Vector3(0.134619, -0.0711557, -0.0186652)
+bones/11/rotation = Quaternion(-0.00423942, 0.0746244, -0.123673, 0.989504)
+bones/19/rotation = Quaternion(0.0196371, 0.832127, -0.0100717, 0.554146)
+bones/20/rotation = Quaternion(0.281312, 0.361217, -0.0274988, 0.888611)
+bones/21/position = Vector3(0.249841, 4.70747e-06, -9.32117e-07)
+bones/21/rotation = Quaternion(-0.0432233, 8.84479e-36, 0, 0.999065)
+bones/22/position = Vector3(0.249841, 4.77963e-06, -4.292e-07)
+bones/22/rotation = Quaternion(-0.0432233, 8.84479e-36, 0, 0.999065)
+bones/23/position = Vector3(0.249841, 4.79822e-06, 7.85285e-08)
+bones/23/rotation = Quaternion(-0.0456307, 0.0935239, 0.227662, 0.968164)
+bones/24/rotation = Quaternion(0.160421, -1.7379e-35, 0, 0.987049)
+bones/25/rotation = Quaternion(0.160421, -1.7379e-35, 0, 0.987049)
+bones/26/rotation = Quaternion(-0.12847, -0.0129689, -0.106192, 0.985926)
+bones/48/rotation = Quaternion(0.782341, -0.0889391, -0.61283, 0.0668766)
+bones/49/rotation = Quaternion(0.265421, 0.406015, -0.0611501, 0.872333)
+bones/50/position = Vector3(-0.249841, 2.22045e-16, -6.66134e-16)
+bones/50/rotation = Quaternion(-0.0534767, 1.03398e-25, 3.61892e-25, 0.998569)
+bones/51/position = Vector3(-0.249841, 1.11022e-16, -2.22045e-16)
+bones/51/rotation = Quaternion(-0.0534767, 1.03398e-25, 3.61892e-25, 0.998569)
+bones/52/position = Vector3(-0.249841, 3.33067e-16, -2.22045e-16)
+bones/52/rotation = Quaternion(-0.0555204, 0.0813898, 0.197134, 0.975413)
+bones/53/rotation = Quaternion(0.163643, 1.55096e-25, 2.06795e-25, 0.98652)
+bones/54/rotation = Quaternion(0.163643, 1.55096e-25, 2.06795e-25, 0.98652)
+bones/55/rotation = Quaternion(-0.154622, -0.110708, -0.114442, 0.975058)
+bones/77/rotation = Quaternion(0.215825, 0.976076, -0.0102891, -0.0242685)
+bones/78/rotation = Quaternion(0.0367263, 3.87741e-26, -1.42172e-25, 0.999325)
+bones/79/rotation = Quaternion(0.0367263, 3.87741e-26, -1.42172e-25, 0.999325)
+bones/80/rotation = Quaternion(0.0335562, 0.0147315, -0.401698, 0.915039)
+bones/81/rotation = Quaternion(0.236742, 0.00246773, 0.194743, 0.951852)
+bones/84/rotation = Quaternion(0.953647, -0.220899, -0.203699, -0.0163749)
+bones/85/rotation = Quaternion(0.0126242, -6.46235e-27, 5.37183e-26, 0.99992)
+bones/86/rotation = Quaternion(0.0126242, -6.46235e-27, 5.37183e-26, 0.99992)
+bones/87/rotation = Quaternion(0.0119687, 0.0041119, -0.324898, 0.945664)
+bones/88/rotation = Quaternion(0.244041, 0.165898, 0.0532519, 0.953984)
+
+[node name="Male_Geometry" parent="Model/Group/DeformationSystem/Skeleton3D" index="0"]
+material_override = SubResource("StandardMaterial3D_euwci")
+lod_bias = 4.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Model" index="1"]
+libraries = {
+"A_Male_Attack": ExtResource("3_3a54i"),
+"A_Male_Death": ExtResource("4_e4a0g"),
+"A_Male_Idle": ExtResource("6_0hu0n"),
+"A_Male_StrafeLeft": ExtResource("5_8tmnt"),
+"A_Male_StrafeRight": ExtResource("6_pksqj"),
+"A_Male_WalkBackwards": ExtResource("7_rdetl"),
+"A_Male_WalkForwards": ExtResource("8_2nq62")
+}
+
+[node name="AnimationTree" type="AnimationTree" parent="Model" index="2"]
+tree_root = SubResource("AnimationNodeStateMachine_7mqn4")
+anim_player = NodePath("../AnimationPlayer")
+parameters/conditions/died = false
+parameters/Walk/blend_position = Vector2(0, 0)
+
+[node name="Sprite3D" parent="." index="6"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 2.25623, 0)
+texture = SubResource("ViewportTexture_mbje7")
+
+[editable path="Model/Group/DeformationSystem"]

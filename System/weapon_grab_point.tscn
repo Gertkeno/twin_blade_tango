@@ -1,0 +1,98 @@
+[gd_scene load_steps=14 format=3 uid="uid://b88ujsclmi6i0"]
+
+[ext_resource type="Script" path="res://System/weapon_grab_point.gd" id="1_bs5q7"]
+[ext_resource type="Gradient" uid="uid://ij8dwmvkxp80" path="res://Assets/Materials/fade_out.tres" id="1_d2lik"]
+[ext_resource type="Material" uid="uid://bl2cpnu05unk5" path="res://Assets/Materials/grab_point_bonus_particle.tres" id="3_8b2xl"]
+[ext_resource type="Material" uid="uid://brwq60m1endlr" path="res://Assets/Materials/grab_point_highlight.tres" id="3_gir3j"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_mfsmk"]
+radius = 1.0
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_suiit"]
+gradient = ExtResource("1_d2lik")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_ygj7i"]
+particle_flag_rotate_y = true
+emission_shape = 1
+emission_sphere_radius = 0.2
+angle_min = -437.1
+angle_max = 480.0
+angular_velocity_min = -1.60933e-05
+angular_velocity_max = 60.0
+gravity = Vector3(0, 0.6, 0)
+attractor_interaction_enabled = false
+color_ramp = SubResource("GradientTexture1D_suiit")
+
+[sub_resource type="QuadMesh" id="QuadMesh_ea5ui"]
+material = ExtResource("3_gir3j")
+size = Vector2(2.5, 2.5)
+orientation = 1
+
+[sub_resource type="Gradient" id="Gradient_afqe5"]
+offsets = PackedFloat32Array(0, 0.311828, 1)
+colors = PackedColorArray(0.505344, 0.505344, 0.505344, 1, 1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_371pb"]
+gradient = SubResource("Gradient_afqe5")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_rme2f"]
+emission_shape_offset = Vector3(0, 0.535, 0)
+emission_shape = 6
+emission_ring_axis = Vector3(0, 1, 0)
+emission_ring_height = 1.0
+emission_ring_radius = 1.0
+emission_ring_inner_radius = 1.0
+angle_min = -15.0
+angle_max = 15.0
+direction = Vector3(0, 1, 0)
+spread = 5.0
+initial_velocity_min = 1.0
+initial_velocity_max = 1.5
+gravity = Vector3(0, 0, 0)
+damping_min = 0.6
+damping_max = 1.0
+color_ramp = SubResource("GradientTexture1D_371pb")
+hue_variation_min = -0.04
+hue_variation_max = -2.23517e-08
+anim_offset_max = 0.7563
+
+[sub_resource type="QuadMesh" id="QuadMesh_cfii1"]
+material = ExtResource("3_8b2xl")
+size = Vector2(0.7, 0.7)
+
+[sub_resource type="Curve3D" id="Curve3D_v80gi"]
+resource_local_to_scene = true
+
+[node name="WeaponGrabPoint" type="Area3D"]
+collision_layer = 8
+collision_mask = 2
+monitoring = false
+monitorable = false
+script = ExtResource("1_bs5q7")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CylinderShape3D_mfsmk")
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.433686, 0)
+amount = 5
+visibility_aabb = AABB(-2.66473, -2.64164, -2.69494, 5.15631, 5.72066, 5.24061)
+process_material = SubResource("ParticleProcessMaterial_ygj7i")
+draw_pass_1 = SubResource("QuadMesh_ea5ui")
+
+[node name="Bonus" type="GPUParticles3D" parent="."]
+emitting = false
+amount = 10
+process_material = SubResource("ParticleProcessMaterial_rme2f")
+draw_pass_1 = SubResource("QuadMesh_cfii1")
+
+[node name="Path3D" type="Path3D" parent="."]
+top_level = true
+curve = SubResource("Curve3D_v80gi")
+
+[node name="PathFollow3D" type="PathFollow3D" parent="Path3D"]
+rotation_mode = 0
+loop = false
+tilt_enabled = false
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

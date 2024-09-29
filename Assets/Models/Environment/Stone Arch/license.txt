@@ -1,0 +1,11 @@
+Model Information:
+* title:	Damaged Stone Arch
+* source:	https://sketchfab.com/3d-models/damaged-stone-arch-89209a3a28014ec98a5e9cdfd6c7a845
+* author:	Presiyan.Velev (https://sketchfab.com/Presiyan.Velev)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Damaged Stone Arch" (https://sketchfab.com/3d-models/damaged-stone-arch-89209a3a28014ec98a5e9cdfd6c7a845) by Presiyan.Velev (https://sketchfab.com/Presiyan.Velev) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

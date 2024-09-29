@@ -1,0 +1,11 @@
+Model Information:
+* title:	Stone Arch
+* source:	https://sketchfab.com/3d-models/stone-arch-aefd167806504fb3aa1ec34288d73575
+* author:	DudleyLong (https://sketchfab.com/DudleyLong)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Stone Arch" (https://sketchfab.com/3d-models/stone-arch-aefd167806504fb3aa1ec34288d73575) by DudleyLong (https://sketchfab.com/DudleyLong) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

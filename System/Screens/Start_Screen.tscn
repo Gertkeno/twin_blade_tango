@@ -1,0 +1,205 @@
+[gd_scene load_steps=9 format=3 uid="uid://bprp7r8nefc81"]
+
+[ext_resource type="Script" path="res://System/Screens/start_screen.gd" id="1_3nylk"]
+[ext_resource type="Theme" uid="uid://jnrndgwutnjh" path="res://Assets/Interface/font_theme.tres" id="1_fjtqw"]
+[ext_resource type="Texture2D" uid="uid://dg44g4pqiq05g" path="res://Assets/Splashes/Start_bg.png" id="1_xx4tj"]
+[ext_resource type="AudioStream" uid="uid://i3bvt55fprsy" path="res://Assets/Audio/sword_draw_select.ogg" id="4_50hix"]
+[ext_resource type="AudioStream" uid="uid://0ytnvncph1sh" path="res://Assets/Audio/Ángel Villoldo - Argentinian Tango.mp3" id="4_adyhb"]
+
+[sub_resource type="Animation" id="Animation_6ueox"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Music:volume_db")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-15.847]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 0,
+"values": []
+}
+
+[sub_resource type="Animation" id="Animation_lfoen"]
+resource_name = "start_select"
+length = 1.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.133333, 0.3, 0.633333, 1.16667),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1.2, 1.2, 1.2, 1), Color(1, 1, 1, 1), Color(0.105882, 0.0823529, 0.109804, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Music:volume_db")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.1, 0.933333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-15.847, -63.631]
+}
+tracks/2/type = "audio"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SelectSound")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("4_50hix")
+}],
+"times": PackedFloat32Array(0.133333)
+}
+tracks/2/use_blend = true
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wx74r"]
+_data = {
+"RESET": SubResource("Animation_6ueox"),
+"start_select": SubResource("Animation_lfoen")
+}
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_fjtqw")
+script = ExtResource("1_3nylk")
+next_screen = "res://System/Screens/Story_Screen.tscn"
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_xx4tj")
+expand_mode = 1
+
+[node name="Start" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -68.0
+offset_top = 31.0
+offset_right = 68.0
+offset_bottom = 84.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_neighbor_top = NodePath("../Exit")
+focus_neighbor_bottom = NodePath("../Options")
+theme_override_font_sizes/font_size = 32
+text = "Start"
+flat = true
+
+[node name="Options" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -63.0
+offset_top = 83.0
+offset_right = 63.0
+offset_bottom = 136.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_neighbor_top = NodePath("../Start")
+focus_neighbor_bottom = NodePath("../Exit")
+theme_override_font_sizes/font_size = 32
+text = "Credits"
+flat = true
+
+[node name="Exit" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -35.0
+offset_top = 143.0
+offset_right = 34.0
+offset_bottom = 196.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_neighbor_top = NodePath("../Options")
+focus_neighbor_bottom = NodePath("../Start")
+theme_override_font_sizes/font_size = 32
+text = "Exit"
+flat = true
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -306.0
+offset_top = -72.0
+offset_right = 279.0
+offset_bottom = 23.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_type_variation = &"HeaderLarge"
+text = "Twin Blade Tango"
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_adyhb")
+volume_db = -15.847
+autoplay = true
+bus = &"Music"
+
+[node name="SelectSound" type="AudioStreamPlayer" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_wx74r")
+}
+
+[connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]

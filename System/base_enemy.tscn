@@ -1,0 +1,116 @@
+[gd_scene load_steps=15 format=3 uid="uid://bm5tlldc2q8le"]
+
+[ext_resource type="Script" path="res://System/base_enemy.gd" id="1_d08y8"]
+[ext_resource type="PackedScene" uid="uid://be3e1b71cykap" path="res://Assets/Models/Characters/RoseEnemy/rose_enemy_all.glb" id="2_nhc4x"]
+[ext_resource type="Texture2D" uid="uid://1dcrrntks114" path="res://Assets/Models/Characters/RoseEnemy/enemy_idle_regular_rose eye texture.jpg" id="3_hm7p5"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_623hv"]
+height = 1.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g4bpg"]
+albedo_texture = ExtResource("3_hm7p5")
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_df8gp"]
+height = 4.0
+radius = 1.0
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_gd5ab"]
+animation = &"idle_regular"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_cd8m4"]
+animation = &"lunge_attack"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ca0it"]
+animation = &"walk"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_wgwy3"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_qw7up"]
+advance_mode = 2
+advance_condition = &"attacking"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_x6yci"]
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_eibgd"]
+advance_mode = 2
+advance_condition = &"walking"
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_2bp5q"]
+states/Start/position = Vector2(196, 54)
+states/idle_regular/node = SubResource("AnimationNodeAnimation_gd5ab")
+states/idle_regular/position = Vector2(456, 167)
+states/lunge_attack/node = SubResource("AnimationNodeAnimation_cd8m4")
+states/lunge_attack/position = Vector2(584, 54)
+states/walk/node = SubResource("AnimationNodeAnimation_ca0it")
+states/walk/position = Vector2(378, 54)
+transitions = ["Start", "walk", SubResource("AnimationNodeStateMachineTransition_wgwy3"), "walk", "lunge_attack", SubResource("AnimationNodeStateMachineTransition_qw7up"), "lunge_attack", "idle_regular", SubResource("AnimationNodeStateMachineTransition_x6yci"), "idle_regular", "walk", SubResource("AnimationNodeStateMachineTransition_eibgd")]
+graph_offset = Vector2(75, 22)
+
+[node name="BaseEnemy" type="CharacterBody3D" node_paths=PackedStringArray("animator_tree")]
+collision_layer = 4
+collision_mask = 7
+script = ExtResource("1_d08y8")
+animator_tree = NodePath("AnimationTree")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+shape = SubResource("CylinderShape3D_623hv")
+
+[node name="rose_enemy_all" parent="." instance=ExtResource("2_nhc4x")]
+transform = Transform3D(-0.432792, 0, 3.78359e-08, 0, 0.432792, 0, -3.78359e-08, 0, -0.432792, 0, 0, 0.2)
+
+[node name="Skeleton3D" parent="rose_enemy_all/Armature" index="0"]
+bones/0/rotation = Quaternion(0.00460111, -0.0209093, -0.0220165, 0.999528)
+bones/1/rotation = Quaternion(-0.00927182, 0.0208063, 0.022114, 0.999496)
+bones/1/scale = Vector3(1, 1, 1)
+bones/2/position = Vector3(5.10815e-08, -0.195543, -0.239441)
+bones/2/rotation = Quaternion(0.0617018, -1.17211e-07, 5.81713e-09, 0.998095)
+bones/2/scale = Vector3(1, 1, 1)
+bones/3/rotation = Quaternion(-0.242603, 1.39044e-14, 2.51717e-15, 0.970126)
+bones/4/rotation = Quaternion(-0.104268, -7.26481e-17, 1.37173e-16, 0.994549)
+bones/4/scale = Vector3(1, 1, 1)
+bones/5/position = Vector3(-0.189784, 1.65761, -0.399157)
+bones/5/rotation = Quaternion(-0.493551, 9.83809e-17, 4.43502e-18, 0.869717)
+bones/6/position = Vector3(4.98889e-09, -1.3271, 1.05967)
+bones/6/rotation = Quaternion(0.755976, 7.80343e-08, 9.01193e-08, 0.654599)
+bones/7/rotation = Quaternion(0.712044, 2.03401e-10, 1.69564e-07, 0.702134)
+bones/8/rotation = Quaternion(0.817812, 0.152259, 0.320439, -0.453122)
+bones/9/rotation = Quaternion(0.0989286, -0.00647326, 0.0614612, 0.993174)
+bones/10/rotation = Quaternion(0.126868, -0.0135419, 0.0983643, 0.986937)
+bones/11/rotation = Quaternion(-0.00947371, -0.00204689, 0.209506, 0.977759)
+bones/12/rotation = Quaternion(-0.0242894, -1.56545e-10, 7.4617e-10, 0.999705)
+bones/13/rotation = Quaternion(-0.0142727, -0.000804136, 0.223726, 0.974547)
+bones/13/scale = Vector3(1, 1, 1)
+bones/14/rotation = Quaternion(-0.0102109, 0.000593344, 0.0947468, 0.995449)
+bones/14/scale = Vector3(1, 1, 1)
+bones/15/rotation = Quaternion(0.0333471, -5.57451e-19, -1.09874e-18, 0.999444)
+
+[node name="mesh" parent="rose_enemy_all/Armature/Skeleton3D" index="0"]
+surface_material_override/2 = SubResource("StandardMaterial3D_g4bpg")
+
+[node name="Hitbox" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -0.5)
+collision_layer = 0
+collision_mask = 2
+monitorable = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Hitbox"]
+shape = SubResource("CylinderShape3D_df8gp")
+
+[node name="AttackRecovery" type="Timer" parent="."]
+wait_time = 2.5
+one_shot = true
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+root_node = NodePath("../rose_enemy_all")
+tree_root = SubResource("AnimationNodeStateMachine_2bp5q")
+anim_player = NodePath("../rose_enemy_all/AnimationPlayer")
+parameters/conditions/attacking = false
+parameters/conditions/walking = true
+
+[connection signal="timeout" from="AttackRecovery" to="." method="_on_attack_recovery_timeout"]
+
+[editable path="rose_enemy_all"]

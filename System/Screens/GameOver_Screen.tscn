@@ -1,0 +1,99 @@
+[gd_scene load_steps=4 format=3 uid="uid://cpxrq2lnvglmy"]
+
+[ext_resource type="Texture2D" uid="uid://bdlgherkwcim8" path="res://Assets/Splashes/GAME OVER_bg.png" id="1_63dth"]
+[ext_resource type="Script" path="res://System/Screens/game_over_screen.gd" id="1_ed5et"]
+[ext_resource type="Theme" uid="uid://jnrndgwutnjh" path="res://Assets/Interface/font_theme.tres" id="1_vkosv"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_vkosv")
+script = ExtResource("1_ed5et")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_63dth")
+expand_mode = 1
+
+[node name="Game Over" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -288.0
+offset_top = -94.0
+offset_right = 278.0
+offset_bottom = 51.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_type_variation = &"HeaderLarge"
+text = "It was a good dance"
+
+[node name="Exit" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 119.0
+offset_top = 120.0
+offset_right = 222.0
+offset_bottom = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_neighbor_left = NodePath("../Menu")
+focus_neighbor_right = NodePath("../Restart")
+text = "Exit"
+flat = true
+
+[node name="Restart" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -328.0
+offset_top = 106.0
+offset_right = -99.0
+offset_bottom = 206.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_neighbor_left = NodePath("../Exit")
+focus_neighbor_right = NodePath("../Menu")
+text = "Restart"
+flat = true
+
+[node name="Menu" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -68.0
+offset_top = 118.0
+offset_right = 65.0
+offset_bottom = 196.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_neighbor_left = NodePath("../Restart")
+focus_neighbor_right = NodePath("../Exit")
+text = "Menu"
+flat = true
+
+[connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="Restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="Menu" to="." method="_on_menu_pressed"]

@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://bh6mgbhvvlcx4"]
+
+[ext_resource type="PackedScene" uid="uid://dpnj6mmr0arta" path="res://Assets/Models/Environment/Grass an Shit/brussels.fbx" id="1_3vcxp"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kwm6o"]
+albedo_color = Color(0, 0.347262, 0.143873, 1)
+
+[node name="brussels" instance=ExtResource("1_3vcxp")]
+
+[node name="4" parent="." index="0"]
+material_override = SubResource("StandardMaterial3D_kwm6o")

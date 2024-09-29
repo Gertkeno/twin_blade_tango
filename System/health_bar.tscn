@@ -1,0 +1,41 @@
+[gd_scene load_steps=3 format=3 uid="uid://cfg8w6tdq1653"]
+
+[ext_resource type="Script" path="res://System/health_bar.gd" id="1_6b1is"]
+[ext_resource type="Texture2D" uid="uid://wqeeyw5nsxc3" path="res://Assets/Interface/heart_full_16x16.png" id="1_mdjkg"]
+
+[node name="HealthBar" type="HBoxContainer"]
+offset_right = 101.0
+offset_bottom = 16.0
+theme_override_constants/separation = 1
+script = ExtResource("1_6b1is")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+texture = ExtResource("1_mdjkg")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+layout_mode = 2
+size_flags_vertical = 0
+texture = ExtResource("1_mdjkg")
+
+[node name="TextureRect3" type="TextureRect" parent="."]
+layout_mode = 2
+size_flags_vertical = 0
+texture = ExtResource("1_mdjkg")
+
+[node name="TextureRect4" type="TextureRect" parent="."]
+layout_mode = 2
+size_flags_vertical = 0
+texture = ExtResource("1_mdjkg")
+
+[node name="TextureRect5" type="TextureRect" parent="."]
+layout_mode = 2
+size_flags_vertical = 0
+texture = ExtResource("1_mdjkg")
+
+[node name="TextureRect6" type="TextureRect" parent="."]
+layout_mode = 2
+size_flags_vertical = 0
+texture = ExtResource("1_mdjkg")

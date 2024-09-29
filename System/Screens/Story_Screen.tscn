@@ -1,0 +1,74 @@
+[gd_scene load_steps=5 format=3 uid="uid://bofov1kcmt77p"]
+
+[ext_resource type="Theme" uid="uid://jnrndgwutnjh" path="res://Assets/Interface/font_theme.tres" id="1_g5h8g"]
+[ext_resource type="Texture2D" uid="uid://c58utlj52tt6p" path="res://Assets/Splashes/sTORY_bg.png" id="1_icotp"]
+[ext_resource type="FontFile" uid="uid://dlqkuwvltom6s" path="res://Assets/Ink-Free-Font/Inkfree.ttf" id="2_chhiu"]
+[ext_resource type="Script" path="res://System/Screens/action_to_next_screen.gd" id="2_eyls6"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_g5h8g")
+script = ExtResource("2_eyls6")
+next_scene = "res://System/Screens/Tutorials_Screen.tscn"
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_icotp")
+expand_mode = 1
+
+[node name="Story" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -167.5
+offset_right = 167.5
+offset_bottom = 180.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 0.843137, 0.654902, 1)
+theme_override_fonts/font = ExtResource("2_chhiu")
+theme_override_font_sizes/font_size = 145
+text = "Story"
+
+[node name="Story 2" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 0.00170867
+text = "A god sends a young couple to another realm 
+to test their love. Could this lovely pair be able
+ to walts their way out to proof their undying 
+love by solving puzzles and fighting along 
+side each other? "
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Continue" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -420.0
+offset_top = -162.0
+offset_right = 11.0
+offset_bottom = -43.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "Continue..."
+flat = true

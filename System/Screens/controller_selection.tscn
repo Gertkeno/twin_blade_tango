@@ -1,0 +1,305 @@
+[gd_scene load_steps=18 format=3 uid="uid://k2km5cqcs06o"]
+
+[ext_resource type="Theme" uid="uid://jnrndgwutnjh" path="res://Assets/Interface/font_theme.tres" id="1_0uy7a"]
+[ext_resource type="Script" path="res://System/Screens/controller_selection.gd" id="1_p31u7"]
+[ext_resource type="Texture2D" uid="uid://bxhoiix5g8rm4" path="res://Assets/Materials/circle_fade_gradient_texture_2d.tres" id="2_28xei"]
+[ext_resource type="Texture2D" uid="uid://b7knrqx380ssg" path="res://Assets/Interface/character_left.png" id="2_axnes"]
+[ext_resource type="Texture2D" uid="uid://c6l67bj70by3j" path="res://Assets/Interface/character_right.png" id="3_32eal"]
+[ext_resource type="Texture2D" uid="uid://beignypy565w0" path="res://Assets/Interface/character_left_mask.png" id="3_q4yxf"]
+[ext_resource type="Texture2D" uid="uid://dybu46gcjjjnb" path="res://Assets/Interface/character_right_mask.png" id="5_rp6jx"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_6o7ca"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_b0uxk"]
+sky_material = SubResource("ProceduralSkyMaterial_6o7ca")
+
+[sub_resource type="Environment" id="Environment_5grhe"]
+background_mode = 2
+sky = SubResource("Sky_b0uxk")
+tonemap_mode = 2
+
+[sub_resource type="Animation" id="Animation_7vrx6"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Fadeout:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Fadeout/TextureRect:texture:gradient:offsets")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [PackedFloat32Array(0.95, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_sewua"]
+resource_name = "transition"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Fadeout:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.233333),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Fadeout/TextureRect:texture:gradient:offsets")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.233, 0.966667, 1.4935),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [PackedFloat32Array(0.95, 1), PackedFloat32Array(0, 1), PackedFloat32Array(0, 0.03)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0u8dr"]
+_data = {
+"RESET": SubResource("Animation_7vrx6"),
+"transition": SubResource("Animation_sewua")
+}
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_r4ke7"]
+
+[sub_resource type="PrismMesh" id="PrismMesh_jm2yf"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_wwm67"]
+font_size = 33
+font_color = Color(0.945784, 0.94496, 0.919429, 1)
+outline_size = 11
+outline_color = Color(0.0605303, 0.0605303, 0.0605303, 1)
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_hdpsm"]
+blend_mode = 2
+
+[node name="Controller Selection" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_0uy7a")
+script = ExtResource("1_p31u7")
+
+[node name="TextureRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.105882, 0.0823529, 0.109804, 1)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_5grhe")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
+shadow_enabled = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_0u8dr")
+}
+
+[node name="Lead" type="VBoxContainer" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.5
+anchor_bottom = 1.0
+grow_vertical = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+
+[node name="Label" type="Label" parent="Lead"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Press a Controller Button"
+
+[node name="Follow" type="VBoxContainer" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 0
+grow_vertical = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+
+[node name="Label" type="Label" parent="Follow"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Waiting..."
+
+[node name="Version2" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="LeadPortrait" type="TextureRect" parent="Version2"]
+unique_name_in_owner = true
+self_modulate = Color(0.24342, 0.210277, 0.169005, 1)
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("2_axnes")
+expand_mode = 1
+
+[node name="MaskRect" type="TextureRect" parent="Version2/LeadPortrait"]
+clip_children = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_q4yxf")
+expand_mode = 1
+
+[node name="SubViewportContainer2" type="SubViewportContainer" parent="Version2/LeadPortrait/MaskRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -288.0
+offset_top = -256.0
+offset_right = 288.0
+offset_bottom = 256.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SubViewport" type="SubViewport" parent="Version2/LeadPortrait/MaskRect/SubViewportContainer2"]
+transparent_bg = true
+handle_input_locally = false
+render_target_update_mode = 4
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Version2/LeadPortrait/MaskRect/SubViewportContainer2/SubViewport"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+mesh = SubResource("CylinderMesh_r4ke7")
+
+[node name="Camera3D2" type="Camera3D" parent="Version2/LeadPortrait/MaskRect/SubViewportContainer2/SubViewport"]
+transform = Transform3D(1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, 1.19209e-07, 1.25007, 2.59657)
+cull_mask = 1048573
+
+[node name="FollowPortrait" type="TextureRect" parent="Version2"]
+unique_name_in_owner = true
+self_modulate = Color(0.24342, 0.210277, 0.169005, 1)
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("3_32eal")
+expand_mode = 1
+
+[node name="MaskRect" type="TextureRect" parent="Version2/FollowPortrait"]
+clip_children = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_rp6jx")
+expand_mode = 1
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Version2/FollowPortrait/MaskRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -256.0
+offset_top = -256.0
+offset_right = 256.0
+offset_bottom = 256.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SubViewport" type="SubViewport" parent="Version2/FollowPortrait/MaskRect/SubViewportContainer"]
+transparent_bg = true
+handle_input_locally = false
+render_target_update_mode = 4
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Version2/FollowPortrait/MaskRect/SubViewportContainer/SubViewport"]
+layers = 2
+mesh = SubResource("PrismMesh_jm2yf")
+
+[node name="Camera3D" type="Camera3D" parent="Version2/FollowPortrait/MaskRect/SubViewportContainer/SubViewport"]
+transform = Transform3D(1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, 1.19209e-07, 1.25007, 2.59657)
+cull_mask = 1048574
+
+[node name="TextureRect" type="TextureRect" parent="Version2/FollowPortrait/MaskRect/SubViewportContainer"]
+layout_mode = 2
+
+[node name="RichTextLabel" type="Label" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -159.5
+offset_top = -46.0
+offset_right = 159.5
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 4
+text = "Who you wanna be?"
+label_settings = SubResource("LabelSettings_wwm67")
+
+[node name="Fadeout" type="HBoxContainer" parent="."]
+visible = false
+material = SubResource("CanvasItemMaterial_hdpsm")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 0
+
+[node name="TextureRect" type="TextureRect" parent="Fadeout"]
+use_parent_material = true
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("2_28xei")
+expand_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="Fadeout"]
+use_parent_material = true
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("2_28xei")
+expand_mode = 1
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_finished"]

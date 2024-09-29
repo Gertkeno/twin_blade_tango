@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://bw4h45h35232u"]
+
+[ext_resource type="PackedScene" uid="uid://bjt1spmw334tt" path="res://Assets/Models/Environment/Grass an Shit/Leaf Thing.fbx" id="1_rrs78"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7k2d8"]
+albedo_color = Color(1.74474e-07, 0.240725, 0.0790728, 1)
+
+[node name="Leaf Thing" instance=ExtResource("1_rrs78")]
+
+[node name="2A" parent="." index="0"]
+material_override = SubResource("StandardMaterial3D_7k2d8")

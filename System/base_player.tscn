@@ -1,0 +1,102 @@
+[gd_scene load_steps=15 format=3 uid="uid://dk7f2bg8agvlh"]
+
+[ext_resource type="Script" path="res://System/base_player.gd" id="1_1psw8"]
+[ext_resource type="AudioStream" uid="uid://cvpqg4duqwgld" path="res://Assets/Audio/Swing1.ogg" id="2_0ksdv"]
+[ext_resource type="PackedScene" uid="uid://cfg8w6tdq1653" path="res://System/health_bar.tscn" id="2_s6o1r"]
+[ext_resource type="Gradient" uid="uid://ij8dwmvkxp80" path="res://Assets/Materials/fade_out.tres" id="3_e8kws"]
+[ext_resource type="AudioStream" uid="uid://ca8sy6k7sfuic" path="res://Assets/Audio/Swing2.ogg" id="3_kmtxa"]
+[ext_resource type="Texture2D" uid="uid://cbgpkefy3gihl" path="res://Assets/Particles/slash2.png" id="3_yrwjb"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_pci14"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_ijyjn"]
+height = 4.0
+radius = 1.8
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_yml04"]
+playback_mode = 1
+random_pitch = 1.1
+streams_count = 2
+stream_0/stream = ExtResource("2_0ksdv")
+stream_1/stream = ExtResource("3_kmtxa")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_lhxbi"]
+viewport_path = NodePath("Sprite3D/Healthbar2D")
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_j4vyb"]
+gradient = ExtResource("3_e8kws")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_37ep5"]
+emission_shape = 1
+emission_sphere_radius = 0.2
+gravity = Vector3(0, 0, 0)
+color_ramp = SubResource("GradientTexture1D_j4vyb")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8fi1x"]
+blend_mode = 1
+shading_mode = 0
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("3_yrwjb")
+
+[sub_resource type="QuadMesh" id="QuadMesh_rjryp"]
+material = SubResource("StandardMaterial3D_8fi1x")
+size = Vector2(5, 5)
+orientation = 1
+
+[node name="BasePlayer" type="CharacterBody3D" groups=["Player"]]
+collision_layer = 2
+collision_mask = 15
+script = ExtResource("1_1psw8")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_pci14")
+
+[node name="HandTemp" type="BoneAttachment3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.434701, 1.13184, -0.567674)
+
+[node name="Hitbox" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -1.5)
+collision_layer = 0
+collision_mask = 4
+monitorable = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Hitbox"]
+shape = SubResource("CylinderShape3D_ijyjn")
+
+[node name="AttackRecovery" type="Timer" parent="."]
+one_shot = true
+
+[node name="SwingSFX" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamRandomizer_yml04")
+bus = &"Sounds"
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 2.1, 0)
+billboard = 1
+double_sided = false
+alpha_cut = 1
+texture = SubResource("ViewportTexture_lhxbi")
+
+[node name="Healthbar2D" type="SubViewport" parent="Sprite3D"]
+disable_3d = true
+transparent_bg = true
+handle_input_locally = false
+gui_disable_input = true
+size = Vector2i(102, 16)
+render_target_update_mode = 4
+
+[node name="HealthBar" parent="Sprite3D/Healthbar2D" instance=ExtResource("2_s6o1r")]
+unique_name_in_owner = true
+
+[node name="SlashParticle" type="GPUParticles3D" parent="."]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 1, -1)
+emitting = false
+amount = 1
+lifetime = 0.3
+one_shot = true
+explosiveness = 1.0
+visibility_aabb = AABB(-5, -5.0551, -5.07109, 10.0103, 10.0551, 10.0711)
+local_coords = true
+process_material = SubResource("ParticleProcessMaterial_37ep5")
+draw_pass_1 = SubResource("QuadMesh_rjryp")

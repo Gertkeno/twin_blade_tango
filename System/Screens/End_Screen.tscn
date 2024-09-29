@@ -1,0 +1,114 @@
+[gd_scene load_steps=5 format=3 uid="uid://b5hg2el3mwl5"]
+
+[ext_resource type="Texture2D" uid="uid://blvqpojencquc" path="res://Assets/Splashes/END_bg.png" id="1_06kst"]
+[ext_resource type="Script" path="res://System/Screens/end_screen.gd" id="1_uejpo"]
+[ext_resource type="FontFile" uid="uid://dlqkuwvltom6s" path="res://Assets/Ink-Free-Font/Inkfree.ttf" id="2_v4wv0"]
+[ext_resource type="AudioStream" uid="uid://dcgyaqgntp55u" path="res://Assets/Audio/Win Theme.mp3" id="4_5gac4"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_uejpo")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_06kst")
+expand_mode = 1
+
+[node name="The End" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -162.0
+offset_top = -73.0
+offset_right = 143.0
+offset_bottom = 35.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 0.882353, 0.647059, 1)
+theme_override_fonts/font = ExtResource("2_v4wv0")
+theme_override_font_sizes/font_size = 86
+text = "The End"
+
+[node name="Exit" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -55.0
+offset_top = 209.0
+offset_right = 48.0
+offset_bottom = 287.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_neighbor_top = NodePath("../Restart")
+focus_neighbor_bottom = NodePath("../Menu")
+theme_override_colors/font_color = Color(1, 0.882353, 0.654902, 1)
+theme_override_fonts/font = ExtResource("2_v4wv0")
+theme_override_font_sizes/font_size = 56
+text = "Exit"
+flat = true
+
+[node name="Restart" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -109.0
+offset_top = 114.0
+offset_right = 108.0
+offset_bottom = 192.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_neighbor_bottom = NodePath("../Exit")
+theme_override_colors/font_color = Color(1, 0.882353, 0.654902, 1)
+theme_override_fonts/font = ExtResource("2_v4wv0")
+theme_override_font_sizes/font_size = 56
+text = "Restart"
+flat = true
+
+[node name="Menu" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -101.0
+offset_top = 26.0
+offset_right = 101.0
+offset_bottom = 104.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_neighbor_top = NodePath("../Exit")
+focus_neighbor_bottom = NodePath("../Restart")
+theme_override_colors/font_color = Color(1, 0.882353, 0.654902, 1)
+theme_override_fonts/font = ExtResource("2_v4wv0")
+theme_override_font_sizes/font_size = 56
+text = "Menu"
+flat = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_5gac4")
+volume_db = -27.171
+autoplay = true
+
+[connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="Restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="Menu" to="." method="_on_menu_pressed"]

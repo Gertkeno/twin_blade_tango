@@ -1,0 +1,16 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://bl2cpnu05unk5"]
+
+[ext_resource type="Texture2D" uid="uid://bvv05jwyvcmb2" path="res://Assets/Particles/stars.png" id="1_q57bs"]
+
+[resource]
+blend_mode = 1
+shading_mode = 0
+disable_ambient_light = true
+disable_fog = true
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.560955, 0.560955, 0.560955, 1)
+albedo_texture = ExtResource("1_q57bs")
+billboard_mode = 3
+particles_anim_h_frames = 3
+particles_anim_v_frames = 3
+particles_anim_loop = true

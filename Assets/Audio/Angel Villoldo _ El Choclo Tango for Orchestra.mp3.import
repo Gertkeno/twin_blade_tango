@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bsqw3wuc3adei"
+path="res://.godot/imported/Angel Villoldo _ El Choclo Tango for Orchestra.mp3-b89b31c7f9673722f1d994b5a445805e.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/Angel Villoldo _ El Choclo Tango for Orchestra.mp3"
+dest_files=["res://.godot/imported/Angel Villoldo _ El Choclo Tango for Orchestra.mp3-b89b31c7f9673722f1d994b5a445805e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

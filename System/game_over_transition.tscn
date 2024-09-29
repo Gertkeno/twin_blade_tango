@@ -1,0 +1,165 @@
+[gd_scene load_steps=12 format=3 uid="uid://baxpiy8ofcj0j"]
+
+[ext_resource type="Texture2D" uid="uid://6wd2m5brf7po" path="res://Assets/Particles/circles.png" id="1_6afvq"]
+[ext_resource type="Script" path="res://System/game_over_transition.gd" id="1_edxag"]
+[ext_resource type="PackedScene" uid="uid://bmd1xiraqjitq" path="res://Assets/Models/Props/Heart/breaking_heart.glb" id="2_afw2c"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_kfwgb"]
+blend_mode = 1
+particles_animation = true
+particles_anim_h_frames = 5
+particles_anim_v_frames = 1
+particles_anim_loop = true
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_acbvj"]
+particle_flag_disable_z = true
+direction = Vector3(0, -1, 0)
+spread = 60.0
+initial_velocity_min = 145.35
+initial_velocity_max = 296.51
+gravity = Vector3(0, 98, 0)
+scale_min = 0.1
+scale_max = 0.3
+hue_variation_min = 0.06
+hue_variation_max = 0.1
+anim_offset_max = 0.8
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_ue5yi"]
+blend_mode = 2
+
+[sub_resource type="Gradient" id="Gradient_06lwn"]
+colors = PackedColorArray(0.589096, 0.589096, 0.589096, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_sqypp"]
+gradient = SubResource("Gradient_06lwn")
+
+[sub_resource type="Animation" id="Animation_e48p5"]
+resource_name = "fadeout"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect2:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.433333, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0.172833, 0.172833, 0.172833, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_pyvrr"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect2:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_yej5v"]
+_data = {
+"RESET": SubResource("Animation_pyvrr"),
+"fadeout": SubResource("Animation_e48p5")
+}
+
+[node name="game_over_transition" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_edxag")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="Control"]
+material = SubResource("CanvasItemMaterial_kfwgb")
+emitting = false
+amount = 22
+process_material = SubResource("ParticleProcessMaterial_acbvj")
+texture = ExtResource("1_6afvq")
+lifetime = 3.0
+one_shot = true
+explosiveness = 0.91
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 556.0
+offset_top = 304.0
+offset_right = 596.0
+offset_bottom = 344.0
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
+own_world_3d = true
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(1152, 648)
+render_target_update_mode = 4
+
+[node name="Node3D" type="Node3D" parent="SubViewportContainer/SubViewport"]
+
+[node name="breaking_heart" parent="SubViewportContainer/SubViewport/Node3D" instance=ExtResource("2_afw2c")]
+
+[node name="Skeleton3D" parent="SubViewportContainer/SubViewport/Node3D/breaking_heart/Armature" index="0"]
+bones/1/rotation = Quaternion(-1.47776e-08, 2.55779e-08, 0.500259, 0.865876)
+bones/2/rotation = Quaternion(5.65982e-08, 1.05448e-07, -0.472925, 0.881102)
+
+[node name="AnimationPlayer" parent="SubViewportContainer/SubViewport/Node3D/breaking_heart" index="1"]
+autoplay = "Break"
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="SubViewportContainer/SubViewport/Node3D"]
+transform = Transform3D(-0.866023, -0.433016, 0.250001, 0.490948, -0.641689, 0.589241, -0.0947282, 0.633034, 0.768306, 0, 0, 0)
+shadow_enabled = true
+
+[node name="Camera3D" type="Camera3D" parent="SubViewportContainer/SubViewport"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.13917, 3.72817)
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+modulate = Color(0, 0, 0, 1)
+material = SubResource("CanvasItemMaterial_ue5yi")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture1D_sqypp")
+
+[node name="FadeoutPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_yej5v")
+}
+
+[connection signal="finished" from="Control/GPUParticles2D" to="." method="_on_gpu_particles_2d_finished"]
+
+[editable path="SubViewportContainer/SubViewport/Node3D/breaking_heart"]

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dcgyaqgntp55u"
+path="res://.godot/imported/Win Theme.mp3-08a68f15b5b04121d5c124f4f507ae51.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/Win Theme.mp3"
+dest_files=["res://.godot/imported/Win Theme.mp3-08a68f15b5b04121d5c124f4f507ae51.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

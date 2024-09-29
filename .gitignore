@@ -1,0 +1,9 @@
+# Godot 4+ specific ignores
+.godot/
+/android/
+Build/
+AssetSource/
+
+.ark/
+.ark_ignore
+.ark_locks

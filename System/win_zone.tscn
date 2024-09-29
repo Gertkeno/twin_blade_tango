@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://kjbalt7vk2rx"]
+
+[ext_resource type="Script" path="res://System/win_zone.gd" id="1_t52ax"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_elv4f"]
+height = 5.5
+radius = 2.0
+
+[node name="WinZone" type="Area3D"]
+script = ExtResource("1_t52ax")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CylinderShape3D_elv4f")

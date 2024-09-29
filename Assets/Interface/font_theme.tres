@@ -1,0 +1,14 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://jnrndgwutnjh"]
+
+[ext_resource type="FontFile" uid="uid://dlqkuwvltom6s" path="res://Assets/Ink-Free-Font/Inkfree.ttf" id="1_gngnk"]
+
+[resource]
+default_font = ExtResource("1_gngnk")
+Button/colors/font_color = Color(1, 0.843137, 0.654902, 1)
+Button/colors/font_focus_color = Color(0.95, 0.95, 0.95, 1)
+Button/colors/font_hover_color = Color(0.95, 0.95, 0.95, 1)
+Button/font_sizes/font_size = 50
+HeaderLarge/colors/font_color = Color(1, 0.843137, 0.654902, 1)
+HeaderLarge/font_sizes/font_size = 105
+Label/colors/font_color = Color(1, 0.639216, 0.486275, 1)
+Label/font_sizes/font_size = 36
