@@ -234,7 +234,7 @@ transform = Transform3D(1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, 
 cull_mask = 1048573
 
 [node name="Pluma" type="Node3D" parent="Version2/LeadPortrait/MaskRect/SubViewportContainer2/SubViewport"]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.533808, -1.0236, 0)
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, -0.332351, -2.53062, 0)
 
 [node name="rig" type="Node3D" parent="Version2/LeadPortrait/MaskRect/SubViewportContainer2/SubViewport/Pluma"]
 
@@ -342,7 +342,7 @@ transform = Transform3D(1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, 
 cull_mask = 1048574
 
 [node name="Torro" type="Node3D" parent="Version2/FollowPortrait/MaskRect/SubViewportContainer/SubViewport"]
-transform = Transform3D(0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, 0.586201, -1.04233, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.068171, -2.95984, 0)
 
 [node name="Group" type="Node3D" parent="Version2/FollowPortrait/MaskRect/SubViewportContainer/SubViewport/Torro"]
 
