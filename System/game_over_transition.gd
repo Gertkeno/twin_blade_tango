@@ -10,4 +10,5 @@ func _ready() -> void:
 	await particles.finished
 	$FadeoutPlayer.play("fadeout")
 	await $FadeoutPlayer.animation_finished
+	self.queue_free()
 	get_tree().change_scene_to_file(game_over_screen)

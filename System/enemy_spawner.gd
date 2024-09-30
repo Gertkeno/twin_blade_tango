@@ -1,7 +1,7 @@
 extends Node3D
 
 @export var enemy: PackedScene
-@export var max_count: int = 6
+@export var max_count: int = 3
 @export var radius: float = 1
 
 var count: int = 0
