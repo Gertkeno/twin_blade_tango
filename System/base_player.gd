@@ -25,6 +25,7 @@ var swings: int = 0
 
 
 func _ready() -> void:
+	die_debounce = false
 	for e in InputMap.action_get_events("P%dLeft" % controller_id):
 		if e is InputEventKey:
 			is_kbm = true
@@ -33,6 +34,9 @@ func _ready() -> void:
 	if is_kbm:
 		viewport = get_viewport()
 		camera = viewport.get_camera_3d()
+	
+	await get_tree().process_frame
+	$Sprite3D.texture.viewport_path = $Sprite3D/Healthbar2D.get_path()
 
 
 func _physics_process(delta: float) -> void:
@@ -88,6 +92,10 @@ func _physics_process(delta: float) -> void:
 
 @onready var swing_sfx: AudioStreamPlayer = $SwingSFX
 func sword_attack() -> void:
+	var playback: AnimationNodeStateMachinePlayback = animator_tree.get("parameters/playback")
+	playback.travel("Attack")
+	await get_tree().create_timer(0.1).timeout
+
 	swing_sfx.play()
 	$SlashParticle.restart()
 
@@ -161,14 +169,17 @@ func grab_weapon(weapon: Node3D, distance_bonus: bool, refresh_swings: bool) -> 
 
 const game_over_transition = preload("res://System/game_over_transition.tscn")
 @onready var health_bar: Control = %HealthBar
+static var die_debounce: bool = false
 func take_damage(amount: int) -> void:
 	health -= amount
 	health_bar.update_value(health)
-	if health <= 0:
+	if health <= 0 and !die_debounce:
 		# Game over!
+		die_debounce = true
+		animator_tree.set("parameters/conditions/died", true)
 		var clone: Control = game_over_transition.instantiate()
 		get_tree().root.add_child(clone)
-		get_tree().paused = true
+		#get_tree().paused = true
 
 
 const pause_screen = preload("res://System/Screens/pause_menu.tscn")
