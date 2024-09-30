@@ -10,7 +10,7 @@ func _on_body_entered(body: Node3D) -> void:
 		print(pcount)
 		if pcount >= 2:
 			print("WIN")
-			get_tree().change_scene_to_file(next_scene)
+			get_tree().change_scene_to_file.call_deferred(next_scene)
 
 
 func _on_body_exited(body: Node3D) -> void:
