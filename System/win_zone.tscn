@@ -11,6 +11,7 @@ collision_layer = 0
 collision_mask = 2
 monitorable = false
 script = ExtResource("1_t52ax")
+next_scene = "res://System/Screens/FinalCutscene.tscn"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("CylinderShape3D_elv4f")

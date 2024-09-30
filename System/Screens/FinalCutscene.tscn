@@ -1,5 +1,6 @@
-[gd_scene load_steps=11 format=3 uid="uid://534i1o72wt04"]
+[gd_scene load_steps=16 format=3 uid="uid://534i1o72wt04"]
 
+[ext_resource type="Script" path="res://System/Screens/final_cutscene.gd" id="1_2le0v"]
 [ext_resource type="PackedScene" uid="uid://dudn4ykjy3wju" path="res://Assets/Models/Environment/Stone Arch/scene.gltf" id="1_htwbj"]
 [ext_resource type="PackedScene" uid="uid://dmkdi3tju53pv" path="res://Assets/Models/Environment/Dungeon floor and assets/FloorMarble.fbx" id="2_qaiwt"]
 [ext_resource type="PackedScene" uid="uid://djx50pj07yprd" path="res://Assets/Models/Characters/Torro/SK_Torro.fbx" id="3_peldu"]
@@ -11,7 +12,48 @@
 [ext_resource type="PackedScene" uid="uid://btc3u7kfa1fxy" path="res://Assets/Models/Environment/mountain/simple-mountain.fbx" id="9_g5ghk"]
 [ext_resource type="PackedScene" uid="uid://bmd1xiraqjitq" path="res://Assets/Models/Props/Heart/breaking_heart.glb" id="10_x2mmu"]
 
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_cij0j"]
+blend_mode = 2
+
+[sub_resource type="Animation" id="Animation_rtka4"]
+resource_name = "fadeout"
+length = 6.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(4.9, 6.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_70jxq"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3ly6n"]
+_data = {
+"RESET": SubResource("Animation_70jxq"),
+"fadeout": SubResource("Animation_rtka4")
+}
+
 [node name="Node3D" type="Node3D"]
+script = ExtResource("1_2le0v")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0149002, 5.42384, 4.7081)
@@ -182,8 +224,8 @@ bones/80/rotation = Quaternion(0.00131313, 1.54068e-09, -1.17254e-06, 0.999999)
 bones/81/rotation = Quaternion(-0.0553648, -0.0284252, 0.0451659, 0.997039)
 bones/82/rotation = Quaternion(-0.00962324, 0.00548293, 0.626178, 0.779601)
 bones/84/rotation = Quaternion(0.966456, -0.247676, 0.0532971, -0.0421805)
-bones/85/rotation = Quaternion(-0.00209909, -1.18438e-39, 0, 0.999998)
-bones/86/rotation = Quaternion(-0.00209909, -1.18438e-39, 0, 0.999998)
+bones/85/rotation = Quaternion(-0.00209909, 0, 0, 0.999998)
+bones/86/rotation = Quaternion(-0.00209909, 0, 0, 0.999998)
 bones/87/rotation = Quaternion(-0.00209909, -2.65209e-09, -1.26194e-06, 0.999998)
 bones/88/rotation = Quaternion(-0.0491502, -0.0366003, -0.118882, 0.991016)
 bones/89/rotation = Quaternion(-0.0122478, 3.7999e-05, 0.56345, 0.826059)
@@ -222,6 +264,23 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -0.631805, 1.71096, -5.8764)
 
 [node name="Sketchfab_Scene4" parent="." instance=ExtResource("1_htwbj")]
 transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, -9.06175, -8.4209, -3.53145)
+
+[node name="ColorRect" type="ColorRect" parent="."]
+material = SubResource("CanvasItemMaterial_cij0j")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_3ly6n")
+}
+autoplay = "fadeout"
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
 
 [editable path="Torro/Group/DeformationSystem"]
 [editable path="Pluma/rig/DeformationSystem"]
