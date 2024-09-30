@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://dk7f2bg8agvlh" path="res://System/base_player.tscn" id="1_3r3e0"]
 [ext_resource type="PackedScene" uid="uid://1vlktamrmvom" path="res://Assets/Models/Characters/Pluma/SK_Pluma.fbx" id="2_ieaax"]
-[ext_resource type="Material" uid="uid://dvmmb80dfc6u1" path="res://Assets/Models/Characters/Pluma/M_Pluma.tres" id="3_swkfi"]
+[ext_resource type="Material" uid="uid://w7c2p1jq0i1t" path="res://Assets/Models/Characters/Pluma/M_Pluma.tres" id="3_swkfi"]
 [ext_resource type="AnimationLibrary" uid="uid://ce7afc5ik4bfl" path="res://Assets/Models/Characters/Pluma/Animations/A_Female_Attack.fbx" id="4_4kcj8"]
 [ext_resource type="AnimationLibrary" uid="uid://bfoe51dwcaoel" path="res://Assets/Models/Characters/Pluma/Animations/A_Female_Death.fbx" id="5_77ary"]
 [ext_resource type="AnimationLibrary" uid="uid://bnw7h6c7vgbrw" path="res://Assets/Models/Characters/Pluma/Animations/A_Female_Idle.fbx" id="5_rsa0i"]
