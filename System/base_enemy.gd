@@ -48,7 +48,7 @@ func _physics_process(delta: float) -> void:
 
 func take_damage(amount: int) -> void:
 	health -= amount
-	# TODO: HIT EFFECT ANIMATION?!
+	$HitFlash.play("hitflash")
 
 	if health <= 0:
 		self.queue_free()
