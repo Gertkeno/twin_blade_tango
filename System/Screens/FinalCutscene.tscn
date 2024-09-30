@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://534i1o72wt04"]
+[gd_scene load_steps=19 format=3 uid="uid://534i1o72wt04"]
 
 [ext_resource type="Script" path="res://System/Screens/final_cutscene.gd" id="1_2le0v"]
 [ext_resource type="PackedScene" uid="uid://dudn4ykjy3wju" path="res://Assets/Models/Environment/Stone Arch/scene.gltf" id="1_htwbj"]
@@ -11,6 +11,19 @@
 [ext_resource type="AnimationLibrary" uid="uid://cr06dywfgce2x" path="res://Assets/Models/Characters/Pluma/Animations/A_Female_EndScene.fbx" id="8_ogb50"]
 [ext_resource type="PackedScene" uid="uid://btc3u7kfa1fxy" path="res://Assets/Models/Environment/mountain/simple-mountain.fbx" id="9_g5ghk"]
 [ext_resource type="PackedScene" uid="uid://bmd1xiraqjitq" path="res://Assets/Models/Props/Heart/breaking_heart.glb" id="10_x2mmu"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_hrnxv"]
+sky_top_color = Color(0.112562, 0.142863, 0.185002, 1)
+sky_horizon_color = Color(0.263945, 0.270919, 0.281929, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_13fx4"]
+sky_material = SubResource("ProceduralSkyMaterial_hrnxv")
+
+[sub_resource type="Environment" id="Environment_31kmv"]
+background_mode = 2
+sky = SubResource("Sky_13fx4")
+tonemap_mode = 2
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_cij0j"]
 blend_mode = 2
@@ -54,6 +67,9 @@ _data = {
 
 [node name="Node3D" type="Node3D"]
 script = ExtResource("1_2le0v")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_31kmv")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0149002, 5.42384, 4.7081)

@@ -156,15 +156,9 @@ func grab_weapon(weapon: Node3D, distance_bonus: bool, refresh_swings: bool) -> 
 		weapon.position = Vector3.ZERO
 		weapon.quaternion = Quaternion.IDENTITY
 
-		if refresh_swings:
-			playback.travel("Flourish")
-
 		damage = 2 if distance_bonus else 1
 		if distance_bonus:
-			print("Nice catch!")
-			pass
-		else:
-			pass
+			playback.travel("Flourish")
 
 
 const game_over_transition = preload("res://System/game_over_transition.tscn")

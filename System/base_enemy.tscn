@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bm5tlldc2q8le"]
+[gd_scene load_steps=16 format=3 uid="uid://bm5tlldc2q8le"]
 
 [ext_resource type="Script" path="res://System/base_enemy.gd" id="1_d08y8"]
 [ext_resource type="PackedScene" uid="uid://be3e1b71cykap" path="res://Assets/Models/Characters/RoseEnemy/rose_enemy_all.glb" id="2_nhc4x"]
@@ -36,7 +36,12 @@ advance_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_eibgd"]
 advance_mode = 2
-advance_condition = &"walking"
+advance_expression = "velocity
+"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_3s8y1"]
+advance_mode = 2
+advance_expression = "velocity.length_squared() <= 1"
 
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_2bp5q"]
 states/Start/position = Vector2(196, 54)
@@ -46,7 +51,7 @@ states/lunge_attack/node = SubResource("AnimationNodeAnimation_cd8m4")
 states/lunge_attack/position = Vector2(584, 54)
 states/walk/node = SubResource("AnimationNodeAnimation_ca0it")
 states/walk/position = Vector2(378, 54)
-transitions = ["Start", "walk", SubResource("AnimationNodeStateMachineTransition_wgwy3"), "walk", "lunge_attack", SubResource("AnimationNodeStateMachineTransition_qw7up"), "lunge_attack", "idle_regular", SubResource("AnimationNodeStateMachineTransition_x6yci"), "idle_regular", "walk", SubResource("AnimationNodeStateMachineTransition_eibgd")]
+transitions = ["Start", "walk", SubResource("AnimationNodeStateMachineTransition_wgwy3"), "walk", "lunge_attack", SubResource("AnimationNodeStateMachineTransition_qw7up"), "lunge_attack", "idle_regular", SubResource("AnimationNodeStateMachineTransition_x6yci"), "idle_regular", "walk", SubResource("AnimationNodeStateMachineTransition_eibgd"), "walk", "idle_regular", SubResource("AnimationNodeStateMachineTransition_3s8y1")]
 graph_offset = Vector2(75, 22)
 
 [node name="BaseEnemy" type="CharacterBody3D" node_paths=PackedStringArray("animator_tree")]
@@ -66,30 +71,33 @@ transform = Transform3D(-0.432792, 0, 3.78359e-08, 0, 0.432792, 0, -3.78359e-08,
 bones/0/rotation = Quaternion(0.00460111, -0.0209093, -0.0220165, 0.999528)
 bones/1/rotation = Quaternion(-0.00927182, 0.0208063, 0.022114, 0.999496)
 bones/1/scale = Vector3(1, 1, 1)
-bones/2/position = Vector3(2.22409e-08, -0.209011, -0.116719)
+bones/2/position = Vector3(5.78432e-08, -0.1018, -0.267113)
 bones/2/rotation = Quaternion(0.0617018, -1.17211e-07, 5.81713e-09, 0.998095)
 bones/2/scale = Vector3(1, 1, 1)
 bones/3/rotation = Quaternion(-0.242603, 1.39044e-14, 2.51717e-15, 0.970126)
 bones/4/rotation = Quaternion(-0.104268, -7.26481e-17, 1.37173e-16, 0.994549)
 bones/4/scale = Vector3(1, 1, 1)
-bones/5/position = Vector3(-0.134455, 1.57659, -0.223863)
-bones/5/rotation = Quaternion(-0.492304, 9.85578e-17, 4.44632e-18, 0.870423)
-bones/6/position = Vector3(2.74089e-09, -1.32676, 1.05726)
+bones/5/position = Vector3(-5.22508e-16, 1.80913, -0.676186)
+bones/5/rotation = Quaternion(-0.532294, 9.28943e-17, 3.82219e-18, 0.84656)
+bones/6/position = Vector3(-3.01885e-14, -1.33838, 1.13773)
 bones/6/rotation = Quaternion(0.755976, 7.80343e-08, 9.01193e-08, 0.654599)
 bones/7/rotation = Quaternion(0.712044, 2.03401e-10, 1.69564e-07, 0.702134)
-bones/8/rotation = Quaternion(0.800527, 0.183507, 0.359118, -0.443301)
-bones/9/rotation = Quaternion(0.101251, -0.00497343, 0.047221, 0.993727)
-bones/10/rotation = Quaternion(0.128828, -0.0123407, 0.089639, 0.98753)
-bones/11/rotation = Quaternion(-0.0118406, -0.00234809, 0.240332, 0.970616)
-bones/12/rotation = Quaternion(-0.0242894, -1.56545e-10, 7.4617e-10, 0.999705)
-bones/13/rotation = Quaternion(-0.0301346, -0.00123011, 0.342224, 0.939134)
+bones/8/rotation = Quaternion(0.873574, 0.0377303, 0.0702327, -0.480116)
+bones/9/rotation = Quaternion(0.104741, 2.98676e-05, -0.000283559, 0.9945)
+bones/10/rotation = Quaternion(0.136321, 0.00367792, -0.0267378, 0.990297)
+bones/11/rotation = Quaternion(0.00975664, -1.75794e-09, 2.08151e-07, 0.999952)
+bones/12/rotation = Quaternion(0.0406627, 0.00614472, -0.0561326, 0.997576)
+bones/13/rotation = Quaternion(0.0981171, -0.000194541, 0.0541322, 0.993702)
 bones/13/scale = Vector3(1, 1, 1)
-bones/14/rotation = Quaternion(-0.0363994, 0.00186642, 0.298055, 0.953853)
+bones/14/rotation = Quaternion(0.0474773, 0.000197679, 0.0315623, 0.998374)
 bones/14/scale = Vector3(1, 1, 1)
 bones/15/rotation = Quaternion(0.0333471, -5.57451e-19, -1.09874e-18, 0.999444)
 
 [node name="mesh" parent="rose_enemy_all/Armature/Skeleton3D" index="0"]
 surface_material_override/2 = SubResource("StandardMaterial3D_g4bpg")
+
+[node name="AnimationPlayer" parent="rose_enemy_all" index="3"]
+speed_scale = 1.5
 
 [node name="Hitbox" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -0.5)
@@ -104,13 +112,22 @@ shape = SubResource("CylinderShape3D_df8gp")
 wait_time = 2.5
 one_shot = true
 
+[node name="Chillout" type="Timer" parent="."]
+one_shot = true
+autostart = true
+
+[node name="Walkstop" type="Timer" parent="."]
+one_shot = true
+
 [node name="AnimationTree" type="AnimationTree" parent="."]
 root_node = NodePath("../rose_enemy_all")
 tree_root = SubResource("AnimationNodeStateMachine_2bp5q")
+advance_expression_base_node = NodePath("..")
 anim_player = NodePath("../rose_enemy_all/AnimationPlayer")
 parameters/conditions/attacking = false
-parameters/conditions/walking = true
 
 [connection signal="timeout" from="AttackRecovery" to="." method="_on_attack_recovery_timeout"]
+[connection signal="timeout" from="Chillout" to="." method="_on_chillout_timeout"]
+[connection signal="timeout" from="Walkstop" to="." method="_on_walkstop_timeout"]
 
 [editable path="rose_enemy_all"]

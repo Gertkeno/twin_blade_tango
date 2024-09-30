@@ -13,6 +13,7 @@ func _ready() -> void:
 	target = players.pick_random()
 
 
+@onready var chillout: Timer = $Chillout
 @onready var attack_recovery: Timer = $AttackRecovery
 func attack() -> void:
 	for body: Player in $Hitbox.get_overlapping_bodies():
@@ -28,7 +29,7 @@ func attack() -> void:
 
 
 func _physics_process(delta: float) -> void:
-	if attack_recovery.is_stopped():
+	if attack_recovery.is_stopped() and chillout.is_stopped():
 		var diff := target.global_position - self.global_position
 		var distance := diff.length()
 		if distance < 1.2:
@@ -55,3 +56,11 @@ func take_damage(amount: int) -> void:
 
 func _on_attack_recovery_timeout() -> void:
 	animator_tree.set("parameters/conditions/walking", true)
+
+
+func _on_chillout_timeout() -> void:
+	$Walkstop.start(randf_range(3, 8))
+
+
+func _on_walkstop_timeout() -> void:
+	chillout.start(randf_range(4, 11))
