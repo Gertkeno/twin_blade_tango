@@ -34,7 +34,6 @@ func _physics_process(delta: float) -> void:
 		var diff := target.global_position - self.global_position
 		var distance := diff.length()
 		if distance < 1.2:
-			# TODO: do attack
 			attack()
 		elif distance > 30:
 			chillout.start()

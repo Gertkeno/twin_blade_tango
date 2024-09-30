@@ -20,9 +20,7 @@ var playback: AnimationNodeStateMachinePlayback
 var nav_map: RID
 
 var current_speed: float = SPEED
-# TODO: reduce bonus damage
 var damage: int = 1
-# TODO: reduce sword until thrown
 var swings: int = 0
 
 
