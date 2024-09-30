@@ -156,12 +156,6 @@ grow_vertical = 2
 size_flags_horizontal = 6
 size_flags_vertical = 4
 
-[node name="_Torro_" type="Label" parent="CharacterLabel1"]
-layout_mode = 2
-size_flags_horizontal = 4
-text = "\"Torro\"
-"
-
 [node name="CharacterLabel2" type="VBoxContainer" parent="."]
 unique_name_in_owner = true
 layout_mode = 1
@@ -175,12 +169,6 @@ offset_bottom = -21.0
 grow_vertical = 2
 size_flags_horizontal = 6
 size_flags_vertical = 4
-
-[node name="_Pluma_" type="Label" parent="CharacterLabel2"]
-layout_mode = 2
-size_flags_horizontal = 4
-text = "\"Pluma\"
-"
 
 [node name="Follow" type="VBoxContainer" parent="."]
 unique_name_in_owner = true
@@ -228,21 +216,17 @@ expand_mode = 1
 
 [node name="SubViewportContainer2" type="SubViewportContainer" parent="Version2/LeadPortrait/MaskRect"]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -288.0
-offset_top = -256.0
-offset_right = 288.0
-offset_bottom = 256.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+stretch = true
 
 [node name="SubViewport" type="SubViewport" parent="Version2/LeadPortrait/MaskRect/SubViewportContainer2"]
 transparent_bg = true
 handle_input_locally = false
+size = Vector2i(574, 648)
 render_target_update_mode = 4
 
 [node name="Camera3D2" type="Camera3D" parent="Version2/LeadPortrait/MaskRect/SubViewportContainer2/SubViewport"]
@@ -340,21 +324,17 @@ expand_mode = 1
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="Version2/FollowPortrait/MaskRect"]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -256.0
-offset_top = -256.0
-offset_right = 256.0
-offset_bottom = 256.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+stretch = true
 
 [node name="SubViewport" type="SubViewport" parent="Version2/FollowPortrait/MaskRect/SubViewportContainer"]
 transparent_bg = true
 handle_input_locally = false
+size = Vector2i(574, 648)
 render_target_update_mode = 4
 
 [node name="Camera3D" type="Camera3D" parent="Version2/FollowPortrait/MaskRect/SubViewportContainer/SubViewport"]
@@ -444,6 +424,39 @@ layout_mode = 2
 size_flags_horizontal = 3
 texture = ExtResource("2_28xei")
 expand_mode = 1
+
+[node name="_Torro_" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.307292
+anchor_top = 1.00154
+anchor_right = 0.307292
+anchor_bottom = 1.00154
+offset_left = -55.0
+offset_top = -45.0
+offset_right = 55.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 4
+text = "\"Torro\"
+"
+
+[node name="_Torro_2" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.698785
+anchor_top = 1.00154
+anchor_right = 0.698785
+anchor_bottom = 1.00154
+offset_left = -58.0
+offset_top = -45.0
+offset_right = 58.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 4
+text = "\"Pluma\"
+"
+metadata/_edit_use_anchors_ = true
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_finished"]
 

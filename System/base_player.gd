@@ -16,6 +16,7 @@ var last_direction: Vector2 = Vector2.UP
 var is_kbm: bool = false
 var viewport: Viewport
 var camera: Camera3D
+var playback: AnimationNodeStateMachinePlayback
 
 var current_speed: float = SPEED
 # TODO: reduce bonus damage
@@ -35,6 +36,7 @@ func _ready() -> void:
 		viewport = get_viewport()
 		camera = viewport.get_camera_3d()
 	
+	playback = animator_tree.get("parameters/playback")
 	await get_tree().process_frame
 	$Sprite3D.texture.viewport_path = $Sprite3D/Healthbar2D.get_path()
 
@@ -92,7 +94,6 @@ func _physics_process(delta: float) -> void:
 
 @onready var swing_sfx: AudioStreamPlayer = $SwingSFX
 func sword_attack() -> void:
-	var playback: AnimationNodeStateMachinePlayback = animator_tree.get("parameters/playback")
 	playback.travel("Attack")
 	await get_tree().create_timer(0.1).timeout
 
@@ -129,7 +130,6 @@ func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("P%dAttack" % controller_id):
 		if attack_recovery.is_stopped():
 			if held_weapon:
-				# TODO: Play animation, method track calls attack()
 				sword_attack()
 			else:
 				pass # shove attack
@@ -152,12 +152,12 @@ func grab_weapon(weapon: Node3D, distance_bonus: bool, refresh_swings: bool) -> 
 		if refresh_swings:
 			swings = 0
 
-		weapon.reparent($HandTemp, false) # TODO: reparent to bone attachment
+		weapon.reparent($HandTemp, false)
 		weapon.position = Vector3.ZERO
 		weapon.quaternion = Quaternion.IDENTITY
 
 		if refresh_swings:
-			pass # TODO: strike a pose!
+			playback.travel("Flourish")
 
 		damage = 2 if distance_bonus else 1
 		if distance_bonus:

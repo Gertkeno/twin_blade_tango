@@ -65,6 +65,7 @@ monitorable = false
 shape = SubResource("CylinderShape3D_ijyjn")
 
 [node name="AttackRecovery" type="Timer" parent="."]
+wait_time = 0.6
 one_shot = true
 
 [node name="SwingSFX" type="AudioStreamPlayer" parent="."]
