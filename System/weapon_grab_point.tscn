@@ -74,7 +74,7 @@ script = ExtResource("1_bs5q7")
 shape = SubResource("CylinderShape3D_mfsmk")
 
 [node name="GPUParticles3D" type="GPUParticles3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.433686, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.238415, 0)
 amount = 5
 visibility_aabb = AABB(-2.66473, -2.64164, -2.69494, 5.15631, 5.72066, 5.24061)
 process_material = SubResource("ParticleProcessMaterial_ygj7i")

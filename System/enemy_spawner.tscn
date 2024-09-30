@@ -2,11 +2,13 @@
 
 [ext_resource type="Script" path="res://System/enemy_spawner.gd" id="1_oyy0i"]
 
-[node name="EnemySpawner" type="Node3D"]
+[node name="EnemySpawner" type="Marker3D"]
+gizmo_extents = 2.0
 script = ExtResource("1_oyy0i")
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 9.0
+one_shot = true
 autostart = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

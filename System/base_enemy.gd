@@ -9,8 +9,9 @@ const SPEED = 4.0
 
 var target: Player
 func _ready() -> void:
-	var players := get_tree().get_nodes_in_group("Player")
-	target = players.pick_random()
+	if target == null:
+		var players := get_tree().get_nodes_in_group("Player")
+		target = players.pick_random()
 
 
 @onready var chillout: Timer = $Chillout
@@ -35,9 +36,11 @@ func _physics_process(delta: float) -> void:
 		if distance < 1.2:
 			# TODO: do attack
 			attack()
+		elif distance > 30:
+			chillout.start()
 		else:
 			var direction := diff / distance
-			direction.y = 0
+			direction.y = -2.0
 			look_at(target.global_position)
 			velocity = direction * SPEED
 	else:
