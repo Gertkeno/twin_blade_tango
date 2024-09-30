@@ -54,33 +54,6 @@ states/walk/position = Vector2(378, 54)
 transitions = ["Start", "walk", SubResource("AnimationNodeStateMachineTransition_wgwy3"), "walk", "lunge_attack", SubResource("AnimationNodeStateMachineTransition_qw7up"), "lunge_attack", "idle_regular", SubResource("AnimationNodeStateMachineTransition_x6yci"), "idle_regular", "walk", SubResource("AnimationNodeStateMachineTransition_eibgd"), "walk", "idle_regular", SubResource("AnimationNodeStateMachineTransition_3s8y1")]
 graph_offset = Vector2(23, -18)
 
-[sub_resource type="Animation" id="Animation_xtw1u"]
-resource_name = "hitflash"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("rose_enemy_all/Armature/Skeleton3D/mesh:visible")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.433333, 0.666667, 0.9),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"update": 1,
-"values": [true, false, true, false, true]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("rose_enemy_all:scale")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.233333, 0.5, 0.933333),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [Vector3(0.553, 0.553, 0.553), Vector3(0.432792, 0.432792, 0.432792), Vector3(0.553, 0.553, 0.553), Vector3(0.432792, 0.432792, 0.432792)]
-}
-
 [sub_resource type="Animation" id="Animation_4hbvm"]
 length = 0.001
 tracks/0/type = "value"
@@ -108,6 +81,33 @@ tracks/1/keys = {
 "values": [Vector3(0.432792, 0.432792, 0.432792)]
 }
 
+[sub_resource type="Animation" id="Animation_xtw1u"]
+resource_name = "hitflash"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("rose_enemy_all/Armature/Skeleton3D/mesh:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.433333, 0.666667, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [true, false, true, false, true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("rose_enemy_all:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.233333, 0.5, 0.933333),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0.553, 0.553, 0.553), Vector3(0.432792, 0.432792, 0.432792), Vector3(0.553, 0.553, 0.553), Vector3(0.432792, 0.432792, 0.432792)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_cp4pd"]
 _data = {
 "RESET": SubResource("Animation_4hbvm"),
@@ -117,6 +117,7 @@ _data = {
 [node name="BaseEnemy" type="CharacterBody3D" node_paths=PackedStringArray("animator_tree")]
 collision_layer = 4
 collision_mask = 7
+platform_floor_layers = 4294967233
 script = ExtResource("1_d08y8")
 animator_tree = NodePath("AnimationTree")
 
@@ -131,25 +132,25 @@ transform = Transform3D(-0.432792, 0, 6.53498e-08, 0, 0.432792, 0, -6.53498e-08,
 bones/0/rotation = Quaternion(0.00460111, -0.0209093, -0.0220165, 0.999528)
 bones/1/rotation = Quaternion(-0.00927182, 0.0208063, 0.022114, 0.999496)
 bones/1/scale = Vector3(1, 1, 1)
-bones/2/position = Vector3(5.90341e-08, -0.147122, -0.272738)
+bones/2/position = Vector3(5.73746e-08, -0.0839677, -0.264899)
 bones/2/rotation = Quaternion(0.0617018, -1.17211e-07, 5.81713e-09, 0.998095)
 bones/2/scale = Vector3(1, 1, 1)
 bones/3/rotation = Quaternion(-0.242603, 1.39044e-14, 2.51717e-15, 0.970126)
 bones/4/rotation = Quaternion(-0.104268, -7.26481e-17, 1.37173e-16, 0.994549)
 bones/4/scale = Vector3(1, 1, 1)
-bones/5/position = Vector3(-4.76822e-16, 1.66002, -0.497071)
-bones/5/rotation = Quaternion(-0.563298, 8.85288e-17, 2.92565e-18, 0.826254)
+bones/5/position = Vector3(-4.59297e-16, 1.59231, -0.443189)
+bones/5/rotation = Quaternion(-0.556193, 8.95272e-17, 3.1651e-18, 0.831053)
 bones/6/position = Vector3(-3.01885e-14, -1.33838, 1.13773)
 bones/6/rotation = Quaternion(0.755976, 7.80343e-08, 9.01193e-08, 0.654599)
 bones/7/rotation = Quaternion(0.712044, 2.03401e-10, 1.69564e-07, 0.702134)
-bones/8/rotation = Quaternion(0.873573, 0.037746, 0.0702413, -0.480115)
-bones/9/rotation = Quaternion(0.104742, 6.12423e-05, -0.000581516, 0.994499)
-bones/10/rotation = Quaternion(0.136318, 0.00371457, -0.0270035, 0.99029)
-bones/11/rotation = Quaternion(0.00975052, 1.58354e-06, -0.000161966, 0.999952)
-bones/12/rotation = Quaternion(-0.0241836, 0.00896808, -0.0928075, 0.99535)
-bones/13/rotation = Quaternion(0.00480528, -2.48958e-06, 0.000695035, 0.999988)
+bones/8/rotation = Quaternion(0.864854, -0.0761549, -0.142302, -0.475372)
+bones/9/rotation = Quaternion(0.104742, 1.12954e-05, -0.000106713, 0.994499)
+bones/10/rotation = Quaternion(0.136332, 0.00372902, -0.027111, 0.990285)
+bones/11/rotation = Quaternion(0.00977958, -1.01512e-07, 8.44344e-06, 0.999952)
+bones/12/rotation = Quaternion(-0.0242885, 0.00199913, 0.00826624, 0.999669)
+bones/13/rotation = Quaternion(0.00342976, 0.000209008, -0.0581497, 0.998302)
 bones/13/scale = Vector3(1, 1, 1)
-bones/14/rotation = Quaternion(0.032511, 0.000138909, 0.0221823, 0.999225)
+bones/14/rotation = Quaternion(-0.00718043, -0.000913897, -0.145942, 0.989267)
 bones/14/scale = Vector3(1, 1, 1)
 bones/15/rotation = Quaternion(0.0333471, -5.57451e-19, -1.09874e-18, 0.999444)
 

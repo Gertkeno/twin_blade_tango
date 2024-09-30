@@ -46,6 +46,8 @@ orientation = 1
 [node name="BasePlayer" type="CharacterBody3D" groups=["Player"]]
 collision_layer = 2
 collision_mask = 15
+collision_priority = 10.0
+platform_floor_layers = 4294967233
 script = ExtResource("1_1psw8")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]

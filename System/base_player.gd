@@ -17,6 +17,7 @@ var is_kbm: bool = false
 var viewport: Viewport
 var camera: Camera3D
 var playback: AnimationNodeStateMachinePlayback
+var nav_map: RID
 
 var current_speed: float = SPEED
 # TODO: reduce bonus damage
@@ -35,9 +36,10 @@ func _ready() -> void:
 	if is_kbm:
 		viewport = get_viewport()
 		camera = viewport.get_camera_3d()
-	
+
 	playback = animator_tree.get("parameters/playback")
-	await get_tree().process_frame
+	nav_map = NavigationServer3D.get_maps()[0]
+	#await get_tree().process_frame
 	$Sprite3D.texture.viewport_path = $Sprite3D/Healthbar2D.get_path()
 
 
@@ -94,15 +96,15 @@ func _physics_process(delta: float) -> void:
 
 @onready var swing_sfx: AudioStreamPlayer = $SwingSFX
 func sword_attack() -> void:
+	swings += 1
+	attack_recovery.start(0.125 + swings / 12.0)
+
 	playback.travel("Attack")
-	await get_tree().create_timer(0.1).timeout
+	await get_tree().create_timer(0.125).timeout
 
 	swing_sfx.play()
 	$SlashParticle.restart()
 
-	swings += 1
-	# TODO: slower recovery with more swings?
-	attack_recovery.start()
 	for body: Node3D in $Hitbox.get_overlapping_bodies():
 		if body is Enemy:
 			body.take_damage(damage)
@@ -115,9 +117,11 @@ func throw_weapon() -> void:
 	var rand_angle := randf_range(-PI/2, PI/2)
 	var throw_pos := partner.global_position - transform.basis.z.rotated(Vector3.UP, rand_angle) * rand_offset
 
+	var throw_pos_nudged := NavigationServer3D.map_get_closest_point(nav_map, throw_pos)
+
 	current_speed = UNARMED_SPEED
 	var grab_zone: Area3D = WEAPON_GRAB_POINT.instantiate()
-	grab_zone.position = throw_pos
+	grab_zone.position = throw_pos_nudged
 	grab_zone.model = held_weapon
 	grab_zone.from_player = controller_id
 	held_weapon = null
