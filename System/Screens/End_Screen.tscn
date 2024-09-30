@@ -106,7 +106,7 @@ flat = true
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_5gac4")
-volume_db = -27.171
+volume_db = -17.49
 autoplay = true
 
 [connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]
