@@ -48,7 +48,7 @@ func _physics_process(delta: float) -> void:
 		"P%dRight" % controller_id,
 		"P%dForward" % controller_id,
 		"P%dBackward" % controller_id).rotated(-PI/4)
-	var direction := Vector3(input_dir.x, 0, input_dir.y).normalized()
+	var direction := Vector3(input_dir.x, 0, input_dir.y)
 	if direction:
 		velocity.x = move_toward(velocity.x, direction.x * current_speed, ACCELERATION * delta)
 		velocity.z = move_toward(velocity.z, direction.z * current_speed, ACCELERATION * delta)
