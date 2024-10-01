@@ -5,6 +5,7 @@ const SPEED = 4.0
 
 @export var health: int = 2
 @export var animator_tree: AnimationTree
+var playback: AnimationNodeStateMachinePlayback
 
 
 var target: Player
@@ -13,20 +14,18 @@ func _ready() -> void:
 		var players := get_tree().get_nodes_in_group("Player")
 		target = players.pick_random()
 
+	playback = animator_tree.get("parameters/playback")
+
 
 @onready var chillout: Timer = $Chillout
 @onready var attack_recovery: Timer = $AttackRecovery
 func attack() -> void:
 	for body: Player in $Hitbox.get_overlapping_bodies():
-		body.take_damage(1)
-		break
+		if body == target:
+			body.take_damage(1)
 
-	animator_tree.set("parameters/conditions/walking", false)
-	animator_tree.set("parameters/conditions/attacking", true)
+	playback.travel("Attack")
 	attack_recovery.start()
-
-	await get_tree().create_timer(0.2).timeout
-	animator_tree.set("parameters/conditions/attacking", false)
 
 
 func _physics_process(delta: float) -> void:
@@ -57,7 +56,7 @@ func take_damage(amount: int) -> void:
 
 
 func _on_attack_recovery_timeout() -> void:
-	animator_tree.set("parameters/conditions/walking", true)
+	pass
 
 
 func _on_chillout_timeout() -> void:
