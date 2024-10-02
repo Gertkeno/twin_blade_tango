@@ -15,7 +15,7 @@ config/description="With one blade between them a couple fight for their love"
 config/version="0.1"
 run/main_scene="res://System/Screens/Start_Screen.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
-config/icon="res://icon.svg"
+config/icon="res://icon.png"
 
 [autoload]
 
