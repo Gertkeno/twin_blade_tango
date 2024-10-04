@@ -10,6 +10,7 @@ extends Control
 @onready var active_label: Label = lead_label
 @onready var active_portrait: TextureRect = lead_portrait
 var for_player: int = 1
+var prompt_tween: Tween
 
 const main_map = "res://System/white_box.tscn"
 
@@ -29,9 +30,13 @@ const input_strings: PackedStringArray = [
 var used_keyboard: bool = false
 var used_controller_id: int = -1
 
+const PULSE_TIME: float = 1.0
 
 func _ready() -> void:
 	InputMap.load_from_project_settings()
+	prompt_tween = create_tween().set_loops().set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_IN)
+	prompt_tween.tween_property(active_label, "self_modulate", Color.TRANSPARENT, PULSE_TIME).from(Color.WHITE)
+	prompt_tween.tween_property(active_label, "self_modulate", Color.WHITE, PULSE_TIME).from(Color.TRANSPARENT)
 
 
 func _input(event: InputEvent) -> void:
@@ -66,12 +71,13 @@ func _input(event: InputEvent) -> void:
 	else:
 		return
 
+	prompt_tween.stop()
 	active_portrait.self_modulate = Color.WHITE
 	for_player += 1
 
+	active_label.self_modulate = Color.WHITE
 	active_label = follow_label
 	active_portrait = follow_portrait
-
 	
 	if for_player > 2:
 		set_process_input(false)
@@ -79,6 +85,10 @@ func _input(event: InputEvent) -> void:
 		ResourceLoader.load_threaded_request(main_map, "PackedScene")
 	else:
 		active_label.text = "Press a Controller Button"
+
+		prompt_tween = create_tween().set_loops().set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_IN)
+		prompt_tween.tween_property(active_label, "self_modulate", Color.TRANSPARENT, PULSE_TIME).from(Color.WHITE)
+		prompt_tween.tween_property(active_label, "self_modulate", Color.WHITE, PULSE_TIME).from(Color.TRANSPARENT)
 
 
 func _on_animation_finished(_anim_name: String) -> void:
