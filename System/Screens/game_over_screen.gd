@@ -3,6 +3,7 @@ extends Control
 func _ready() -> void:
 	get_tree().paused = false
 	$Menu.grab_focus()
+	$Exit.disabled = OS.get_name() == "Web"
 
 func _on_exit_pressed() -> void:
 	get_tree().quit()

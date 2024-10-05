@@ -115,63 +115,6 @@ grow_vertical = 2
 texture = ExtResource("1_xx4tj")
 expand_mode = 1
 
-[node name="Start" type="Button" parent="."]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -68.0
-offset_top = 31.0
-offset_right = 68.0
-offset_bottom = 84.0
-grow_horizontal = 2
-grow_vertical = 2
-focus_neighbor_top = NodePath("../Exit")
-focus_neighbor_bottom = NodePath("../Credits")
-theme_override_font_sizes/font_size = 32
-text = "Start"
-flat = true
-
-[node name="Credits" type="Button" parent="."]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -63.0
-offset_top = 83.0
-offset_right = 63.0
-offset_bottom = 136.0
-grow_horizontal = 2
-grow_vertical = 2
-focus_neighbor_top = NodePath("../Start")
-focus_neighbor_bottom = NodePath("../Exit")
-theme_override_font_sizes/font_size = 32
-text = "Credits"
-flat = true
-
-[node name="Exit" type="Button" parent="."]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -35.0
-offset_top = 143.0
-offset_right = 34.0
-offset_bottom = 196.0
-grow_horizontal = 2
-grow_vertical = 2
-focus_neighbor_top = NodePath("../Credits")
-focus_neighbor_bottom = NodePath("../Start")
-theme_override_font_sizes/font_size = 32
-text = "Exit"
-flat = true
-
 [node name="Title" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = 8
@@ -188,6 +131,58 @@ grow_vertical = 2
 theme_type_variation = &"HeaderLarge"
 text = "Twin Blade Tango"
 
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -132.0
+offset_top = 17.0
+offset_right = 134.0
+offset_bottom = 225.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Start" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+focus_neighbor_top = NodePath("../Exit")
+focus_neighbor_bottom = NodePath("../Credits")
+theme_override_font_sizes/font_size = 32
+text = "Start Co-op"
+flat = true
+
+[node name="SinglePlayer" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+tooltip_text = "Coming Soon!"
+focus_neighbor_top = NodePath("../Exit")
+focus_neighbor_bottom = NodePath("../Credits")
+theme_override_font_sizes/font_size = 32
+disabled = true
+text = "Start Single Player"
+flat = true
+
+[node name="Credits" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+focus_neighbor_top = NodePath("../Start")
+focus_neighbor_bottom = NodePath("../Exit")
+theme_override_font_sizes/font_size = 32
+text = "Credits"
+flat = true
+
+[node name="Exit" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+focus_neighbor_top = NodePath("../Credits")
+focus_neighbor_bottom = NodePath("../Start")
+theme_override_font_sizes/font_size = 32
+text = "Exit"
+flat = true
+
 [node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_adyhb")
 volume_db = -15.847
@@ -201,6 +196,6 @@ libraries = {
 "": SubResource("AnimationLibrary_wx74r")
 }
 
-[connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
-[connection signal="pressed" from="Credits" to="." method="_on_credits_pressed"]
-[connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/Credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="VBoxContainer/Exit" to="." method="_on_exit_pressed"]

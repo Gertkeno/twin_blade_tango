@@ -1,9 +1,8 @@
 extends Control
 
 func _ready() -> void:
-	$Start.grab_focus()
-	if OS.get_name() == "Web":
-		$Exit.hide()
+	$VBoxContainer/Start.grab_focus()
+	$VBoxContainer/Exit.disabled = OS.get_name() == "Web"
 
 
 @export_file("*.tscn") var next_screen: String

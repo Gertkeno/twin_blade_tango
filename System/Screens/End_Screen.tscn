@@ -42,25 +42,25 @@ theme_override_fonts/font = ExtResource("2_v4wv0")
 theme_override_font_sizes/font_size = 86
 text = "The End"
 
-[node name="Exit" type="Button" parent="."]
+[node name="Menu" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -55.0
-offset_top = 209.0
-offset_right = 48.0
-offset_bottom = 287.0
+offset_left = -101.0
+offset_top = 26.0
+offset_right = 101.0
+offset_bottom = 104.0
 grow_horizontal = 2
 grow_vertical = 2
-focus_neighbor_top = NodePath("../Restart")
-focus_neighbor_bottom = NodePath("../Menu")
+focus_neighbor_top = NodePath("../Exit")
+focus_neighbor_bottom = NodePath("../Restart")
 theme_override_colors/font_color = Color(1, 0.882353, 0.654902, 1)
 theme_override_fonts/font = ExtResource("2_v4wv0")
 theme_override_font_sizes/font_size = 56
-text = "Exit"
+text = "Menu"
 flat = true
 
 [node name="Restart" type="Button" parent="."]
@@ -83,25 +83,25 @@ theme_override_font_sizes/font_size = 56
 text = "Restart"
 flat = true
 
-[node name="Menu" type="Button" parent="."]
+[node name="Exit" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -101.0
-offset_top = 26.0
-offset_right = 101.0
-offset_bottom = 104.0
+offset_left = -55.0
+offset_top = 209.0
+offset_right = 48.0
+offset_bottom = 287.0
 grow_horizontal = 2
 grow_vertical = 2
-focus_neighbor_top = NodePath("../Exit")
-focus_neighbor_bottom = NodePath("../Restart")
+focus_neighbor_top = NodePath("../Restart")
+focus_neighbor_bottom = NodePath("../Menu")
 theme_override_colors/font_color = Color(1, 0.882353, 0.654902, 1)
 theme_override_fonts/font = ExtResource("2_v4wv0")
 theme_override_font_sizes/font_size = 56
-text = "Menu"
+text = "Exit"
 flat = true
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
@@ -109,6 +109,6 @@ stream = ExtResource("4_5gac4")
 volume_db = -17.49
 autoplay = true
 
-[connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]
-[connection signal="pressed" from="Restart" to="." method="_on_restart_pressed"]
 [connection signal="pressed" from="Menu" to="." method="_on_menu_pressed"]
+[connection signal="pressed" from="Restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]
