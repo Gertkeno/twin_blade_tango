@@ -34,7 +34,7 @@ import_script/path=""
 _subresources={
 "materials": {
 "lambert4": {
-"use_external/enabled": true,
+"use_external/enabled": false,
 "use_external/path": "res://Assets/Materials/mat_PictureFrame.tres"
 }
 }

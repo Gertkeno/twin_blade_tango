@@ -1,8 +1,7 @@
-[gd_resource type="StandardMaterial3D" load_steps=4 format=3 uid="uid://csfrkhsnwcx55"]
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://csfrkhsnwcx55"]
 
 [ext_resource type="Texture2D" uid="uid://bxcwafoyevmxm" path="res://Assets/Models/Props/Rapier/textures/T_Rapier_Gold_C.png" id="1_tu6hs"]
-[ext_resource type="Texture2D" uid="uid://c4rffrac0nrcu" path="res://Assets/Materials/stone_wall_04_arm_1k.jpg" id="2_uydcx"]
-[ext_resource type="Texture2D" uid="uid://y1xaig2bwm2i" path="res://Assets/Materials/stone_wall_04_nor_gl_1k.jpg" id="3_uhxxy"]
+[ext_resource type="Texture2D" uid="uid://ccc8pxvgfacf1" path="res://Assets/Models/Props/Rapier/textures/T_Rapier_N.png" id="2_cryas"]
 
 [resource]
 albedo_texture = ExtResource("1_tu6hs")
@@ -10,6 +9,5 @@ metallic = 0.25
 metallic_texture_channel = 2
 roughness = 0.35
 roughness_texture_channel = 1
-normal_texture = ExtResource("3_uhxxy")
-ao_enabled = true
-ao_texture = ExtResource("2_uydcx")
+normal_enabled = true
+normal_texture = ExtResource("2_cryas")

@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://bc257nwv53t10"]
+
+[ext_resource type="Texture2D" uid="uid://6acdh7kv7mdj" path="res://Assets/Models/Environment/Gate fancy/textures/gate_diffuse.jpg" id="1_o6045"]
+[ext_resource type="Texture2D" uid="uid://qgo25qcp5qbb" path="res://Assets/Models/Environment/Gate fancy/textures/gate_normal.jpg" id="2_xpjbj"]
+
+[resource]
+albedo_texture = ExtResource("1_o6045")
+normal_enabled = true
+normal_texture = ExtResource("2_xpjbj")

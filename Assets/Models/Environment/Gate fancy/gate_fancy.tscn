@@ -1,0 +1,39 @@
+[gd_scene load_steps=6 format=3 uid="uid://cl7aosfrxuevq"]
+
+[ext_resource type="PackedScene" uid="uid://870jfvrueyrc" path="res://Assets/Models/Environment/Gate fancy/gate.glb" id="1_q6j05"]
+[ext_resource type="Material" uid="uid://bc257nwv53t10" path="res://Assets/Models/Environment/Gate fancy/textures/mat_gate.tres" id="2_8raj1"]
+[ext_resource type="Material" uid="uid://2i3o7skoau22" path="res://Assets/Models/Environment/Gate fancy/textures/mat_lightlower.tres" id="3_q0rpa"]
+[ext_resource type="Material" uid="uid://moj084lyvfta" path="res://Assets/Models/Environment/Gate fancy/textures/mat_lightupper.tres" id="4_45u28"]
+[ext_resource type="Material" uid="uid://c0eoviw7um24i" path="res://Assets/Models/Environment/Gate fancy/textures/mat_pillar.tres" id="5_quw2b"]
+
+[node name="gate" instance=ExtResource("1_q6j05")]
+
+[node name="gate_left" parent="Ancient_Gate_Model/gate_main" index="0"]
+surface_material_override/0 = ExtResource("2_8raj1")
+
+[node name="gate_right" parent="Ancient_Gate_Model/gate_main" index="1"]
+surface_material_override/0 = ExtResource("2_8raj1")
+
+[node name="Gate_Light_lightlower" parent="Ancient_Gate_Model/light_left" index="0"]
+surface_material_override/0 = ExtResource("3_q0rpa")
+
+[node name="Gate_Light_lightupper" parent="Ancient_Gate_Model/light_left" index="1"]
+surface_material_override/0 = ExtResource("4_45u28")
+
+[node name="lightlower" parent="Ancient_Gate_Model/light_right" index="0"]
+surface_material_override/0 = ExtResource("3_q0rpa")
+
+[node name="lightupper" parent="Ancient_Gate_Model/light_right" index="1"]
+surface_material_override/0 = ExtResource("4_45u28")
+
+[node name="pillar_left_001" parent="Ancient_Gate_Model/pillar_left" index="0"]
+surface_material_override/0 = ExtResource("5_quw2b")
+
+[node name="support_left" parent="Ancient_Gate_Model/pillar_left" index="1"]
+surface_material_override/0 = ExtResource("5_quw2b")
+
+[node name="pillar_right_001" parent="Ancient_Gate_Model/pillar_right" index="0"]
+surface_material_override/0 = ExtResource("5_quw2b")
+
+[node name="support_right" parent="Ancient_Gate_Model/pillar_right" index="1"]
+surface_material_override/0 = ExtResource("5_quw2b")
