@@ -153,14 +153,13 @@ func grab_weapon(weapon: Node3D, distance_bonus: bool, refresh_swings: bool) -> 
 		current_speed = SPEED
 		if refresh_swings:
 			swings = 0
+			playback.travel("Flourish")
 
 		weapon.reparent($HandTemp, false)
 		weapon.position = Vector3.ZERO
 		weapon.quaternion = Quaternion.IDENTITY
 
 		damage = 2 if distance_bonus else 1
-		if distance_bonus:
-			playback.travel("Flourish")
 
 
 const game_over_transition = preload("res://System/game_over_transition.tscn")

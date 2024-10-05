@@ -32,11 +32,15 @@ var used_controller_id: int = -1
 
 const PULSE_TIME: float = 1.0
 
+func pulse_tween(object: Control) -> void:
+	prompt_tween = create_tween().set_loops().set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_IN)
+	prompt_tween.tween_property(object, "self_modulate", Color.TRANSPARENT, PULSE_TIME).from(Color.WHITE)
+	prompt_tween.tween_property(object, "self_modulate", Color.WHITE, PULSE_TIME).from(Color.TRANSPARENT)
+
+
 func _ready() -> void:
 	InputMap.load_from_project_settings()
-	prompt_tween = create_tween().set_loops().set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_IN)
-	prompt_tween.tween_property(active_label, "self_modulate", Color.TRANSPARENT, PULSE_TIME).from(Color.WHITE)
-	prompt_tween.tween_property(active_label, "self_modulate", Color.WHITE, PULSE_TIME).from(Color.TRANSPARENT)
+	pulse_tween(active_label)
 
 
 func _input(event: InputEvent) -> void:
@@ -64,7 +68,7 @@ func _input(event: InputEvent) -> void:
 				if e is InputEventKey or e is InputEventMouseButton:
 					keyboard_events.append(e)
 				elif e is InputEventJoypadButton or e is InputEventJoypadMotion:
-					e.device = event.device # remap works?
+					e.device = event.device
 			for e in keyboard_events:
 				InputMap.action_erase_event(b, e)
 
@@ -85,10 +89,7 @@ func _input(event: InputEvent) -> void:
 		ResourceLoader.load_threaded_request(main_map, "PackedScene")
 	else:
 		active_label.text = "Press a Controller Button"
-
-		prompt_tween = create_tween().set_loops().set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_IN)
-		prompt_tween.tween_property(active_label, "self_modulate", Color.TRANSPARENT, PULSE_TIME).from(Color.WHITE)
-		prompt_tween.tween_property(active_label, "self_modulate", Color.WHITE, PULSE_TIME).from(Color.TRANSPARENT)
+		pulse_tween(active_label)
 
 
 func _on_animation_finished(_anim_name: String) -> void:
