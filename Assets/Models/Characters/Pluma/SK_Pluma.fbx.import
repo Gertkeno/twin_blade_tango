@@ -39,6 +39,9 @@ _subresources={
 }
 },
 "nodes": {
+"PATH:AnimationPlayer": {
+"import/skip_import": true
+},
 "PATH:Skeleton3D": {
 "rest_pose/external_animation_library": null,
 "rest_pose/selected_animation": "Take 001",

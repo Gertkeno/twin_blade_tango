@@ -4,7 +4,6 @@ class_name Player
 const ACCELERATION = 30.0
 const SPEED: float = 5.0
 const UNARMED_SPEED: float = 6.2
-const JUMP_VELOCITY = 4.5
 
 @export var controller_id: int = 1
 @export var partner: Player
@@ -39,6 +38,7 @@ func _ready() -> void:
 	nav_map = NavigationServer3D.get_maps()[0]
 	#await get_tree().process_frame
 	$Sprite3D.texture.viewport_path = $Sprite3D/Healthbar2D.get_path()
+	current_speed = SPEED if held_weapon else UNARMED_SPEED
 
 
 func _physics_process(delta: float) -> void:
@@ -87,7 +87,7 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 
-@onready var WEAPON_GRAB_POINT := load("res://System/weapon_grab_point.tscn")
+@onready var WEAPON_GRAB_POINT := load("res://System/Player/weapon_grab_point.tscn")
 @export var held_weapon: Node3D = null
 @onready var attack_recovery: Timer = $AttackRecovery
 

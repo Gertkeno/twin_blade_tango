@@ -1,6 +1,6 @@
 [gd_scene load_steps=14 format=3 uid="uid://b88ujsclmi6i0"]
 
-[ext_resource type="Script" path="res://System/weapon_grab_point.gd" id="1_bs5q7"]
+[ext_resource type="Script" path="res://System/Player/weapon_grab_point.gd" id="1_bs5q7"]
 [ext_resource type="Gradient" uid="uid://ij8dwmvkxp80" path="res://Assets/Materials/fade_out.tres" id="1_d2lik"]
 [ext_resource type="Material" uid="uid://bl2cpnu05unk5" path="res://Assets/Materials/grab_point_bonus_particle.tres" id="3_8b2xl"]
 [ext_resource type="Material" uid="uid://brwq60m1endlr" path="res://Assets/Materials/grab_point_highlight.tres" id="3_gir3j"]
