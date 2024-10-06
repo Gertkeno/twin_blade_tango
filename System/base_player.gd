@@ -172,6 +172,7 @@ func take_damage(amount: int) -> void:
 		# Game over!
 		die_debounce = true
 		set_physics_process(false)
+		set_process_input(false)
 		animator_tree.set("parameters/conditions/died", true)
 		var clone: Control = game_over_transition.instantiate()
 		get_tree().root.add_child(clone)
