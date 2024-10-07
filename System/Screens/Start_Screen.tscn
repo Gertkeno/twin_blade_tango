@@ -149,7 +149,7 @@ grow_vertical = 2
 layout_mode = 2
 size_flags_horizontal = 4
 focus_neighbor_top = NodePath("../Exit")
-focus_neighbor_bottom = NodePath("../Credits")
+focus_neighbor_bottom = NodePath("../SinglePlayer")
 theme_override_font_sizes/font_size = 32
 text = "Start Co-op"
 flat = true
@@ -157,18 +157,16 @@ flat = true
 [node name="SinglePlayer" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
-tooltip_text = "Coming Soon!"
-focus_neighbor_top = NodePath("../Exit")
+focus_neighbor_top = NodePath("../Start")
 focus_neighbor_bottom = NodePath("../Credits")
 theme_override_font_sizes/font_size = 32
-disabled = true
 text = "Start Single Player"
 flat = true
 
 [node name="Credits" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
-focus_neighbor_top = NodePath("../Start")
+focus_neighbor_top = NodePath("../SinglePlayer")
 focus_neighbor_bottom = NodePath("../Exit")
 theme_override_font_sizes/font_size = 32
 text = "Credits"
@@ -197,5 +195,6 @@ libraries = {
 }
 
 [connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/SinglePlayer" to="." method="_on_single_player_pressed"]
 [connection signal="pressed" from="VBoxContainer/Credits" to="." method="_on_credits_pressed"]
 [connection signal="pressed" from="VBoxContainer/Exit" to="." method="_on_exit_pressed"]

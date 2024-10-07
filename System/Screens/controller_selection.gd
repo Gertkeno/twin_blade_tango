@@ -1,5 +1,7 @@
 extends Control
 
+@export_file("*.tscn") var next_scene: String
+@export var player_count: int = 2
 @onready var animator: AnimationPlayer = $AnimationPlayer
 
 @onready var lead_label: Label = %Lead/Label
@@ -11,8 +13,6 @@ extends Control
 @onready var active_portrait: TextureRect = lead_portrait
 var for_player: int = 1
 var prompt_tween: Tween
-
-const main_map = "res://System/white_box.tscn"
 
 const input_strings: PackedStringArray = [
 	"P%dLeft",
@@ -82,16 +82,16 @@ func _input(event: InputEvent) -> void:
 	active_label.self_modulate = Color.WHITE
 	active_label = follow_label
 	active_portrait = follow_portrait
-	
-	if for_player > 2:
+
+	if for_player > player_count:
 		set_process_input(false)
 		animator.play("transition")
-		ResourceLoader.load_threaded_request(main_map, "PackedScene")
+		ResourceLoader.load_threaded_request(next_scene, "PackedScene")
 	else:
 		active_label.text = "Press a Controller Button"
 		pulse_tween(active_label)
 
 
 func _on_animation_finished(_anim_name: String) -> void:
-	var scene: PackedScene = ResourceLoader.load_threaded_get(main_map)
+	var scene: PackedScene = ResourceLoader.load_threaded_get(next_scene)
 	get_tree().change_scene_to_packed(scene)

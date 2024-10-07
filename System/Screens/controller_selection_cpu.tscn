@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://cktqsvfumm1jg"]
+
+[ext_resource type="PackedScene" uid="uid://k2km5cqcs06o" path="res://System/Screens/controller_selection.tscn" id="1_e0y78"]
+
+[node name="Controller Selection CPU" instance=ExtResource("1_e0y78")]
+next_scene = "res://System/white_box_cpu.tscn"
+player_count = 1
+
+[node name="Follow" parent="." index="7"]
+visible = false
+
+[node name="FollowPortrait" parent="Version2" index="1"]
+self_modulate = Color(1, 1, 1, 1)
+
+[editable path="Version2/LeadPortrait/MaskRect/SubViewportContainer2/SubViewport/Pluma/rig/DeformationSystem"]
+[editable path="Version2/FollowPortrait/MaskRect/SubViewportContainer/SubViewport/Torro/Group/DeformationSystem"]

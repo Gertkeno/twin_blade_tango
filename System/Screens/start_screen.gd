@@ -5,19 +5,27 @@ func _ready() -> void:
 	$VBoxContainer/Exit.disabled = OS.get_name() == "Web"
 
 
-@export_file("*.tscn") var next_screen: String
 var locked: bool = false
-func _on_start_pressed() -> void:
+func load_game_scene(scene: String) -> void:
 	if locked:
 		return
 
 	locked = true
 		
-	ResourceLoader.load_threaded_request(next_screen, "PackedScene")
+	ResourceLoader.load_threaded_request(scene, "PackedScene")
 	$AnimationPlayer.play("start_select")
 	await $AnimationPlayer.animation_finished
-	var tutorial_scene: PackedScene = ResourceLoader.load_threaded_get(next_screen)
+	var tutorial_scene: PackedScene = ResourceLoader.load_threaded_get(scene)
 	get_tree().change_scene_to_packed(tutorial_scene)
+
+
+@export_file("*.tscn") var next_screen: String
+func _on_start_pressed() -> void:
+	load_game_scene(next_screen)
+
+
+func _on_single_player_pressed() -> void:
+	load_game_scene("res://System/Screens/controller_selection_cpu.tscn")
 
 
 func _on_exit_pressed() -> void:

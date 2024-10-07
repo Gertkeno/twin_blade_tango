@@ -99,6 +99,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_0uy7a")
 script = ExtResource("1_p31u7")
+next_scene = "res://System/white_box.tscn"
 
 [node name="TextureRect" type="ColorRect" parent="."]
 layout_mode = 1
