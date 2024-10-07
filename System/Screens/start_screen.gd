@@ -21,11 +21,15 @@ func load_game_scene(scene: String) -> void:
 
 @export_file("*.tscn") var next_screen: String
 func _on_start_pressed() -> void:
-	load_game_scene(next_screen)
+	if not locked:
+		GameMode.player_count = 2
+		load_game_scene(next_screen)
 
 
 func _on_single_player_pressed() -> void:
-	load_game_scene("res://System/Screens/controller_selection_cpu.tscn")
+	if not locked:
+		GameMode.player_count = 1
+		load_game_scene(next_screen)
 
 
 func _on_exit_pressed() -> void:

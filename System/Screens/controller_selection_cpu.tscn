@@ -4,7 +4,6 @@
 
 [node name="Controller Selection CPU" instance=ExtResource("1_e0y78")]
 next_scene = "res://System/white_box_cpu.tscn"
-player_count = 1
 
 [node name="Follow" parent="." index="7"]
 visible = false

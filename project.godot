@@ -19,9 +19,9 @@ config/icon="res://icon.png"
 
 [autoload]
 
-PhantomCameraManager="*res://addons/phantom_camera/scripts/managers/phantom_camera_manager.gd"
 SimpleGrass="*res://addons/simplegrasstextured/singleton.tscn"
 FullscreenToggle="*res://System/fullscreen_toggle.gd"
+GameMode="*res://System/game_mode.gd"
 
 [debug]
 

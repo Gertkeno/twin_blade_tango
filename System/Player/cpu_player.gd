@@ -2,6 +2,7 @@ extends Player
 
 @export var path: Path3D
 @onready var enemy_zone := $CPUEnemyZone as Area3D
+@onready var hold_throw := $HoldThrow as Timer
 
 @export var end_goal: Node3D
 
@@ -42,7 +43,7 @@ func _physics_process(_delta: float) -> void:
 
 				if attack_recovery.is_stopped():
 					sword_attack()
-			elif attack_recovery.is_stopped():
+			elif attack_recovery.is_stopped() and hold_throw.is_stopped():
 				throw_weapon()
 				last_thrower = true
 
@@ -63,3 +64,4 @@ func _physics_process(_delta: float) -> void:
 func grab_weapon(weapon: Node3D, distance_bonus: bool, refresh_swings: bool) -> void:
 	super.grab_weapon(weapon, distance_bonus, refresh_swings)
 	attack_recovery.start()
+	hold_throw.start()

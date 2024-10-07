@@ -13,7 +13,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("3_5trou")
 script = ExtResource("2_38bl1")
-next_scene = "res://System/Screens/controller_selection.tscn"
+next_scene = "res://System/Screens/game_mode_router.tscn"
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1

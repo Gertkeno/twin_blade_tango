@@ -1,7 +1,6 @@
 extends Control
 
 @export_file("*.tscn") var next_scene: String
-@export var player_count: int = 2
 @onready var animator: AnimationPlayer = $AnimationPlayer
 
 @onready var lead_label: Label = %Lead/Label
@@ -83,7 +82,7 @@ func _input(event: InputEvent) -> void:
 	active_label = follow_label
 	active_portrait = follow_portrait
 
-	if for_player > player_count:
+	if for_player > GameMode.player_count:
 		set_process_input(false)
 		animator.play("transition")
 		ResourceLoader.load_threaded_request(next_scene, "PackedScene")

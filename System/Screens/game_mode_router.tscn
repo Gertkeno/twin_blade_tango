@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://beebafn5bkrqw"]
+
+[sub_resource type="GDScript" id="GDScript_4e31i"]
+script/source = "extends Node
+
+func _ready() -> void:
+	await get_tree().process_frame
+	if GameMode.player_count == 2:
+		get_tree().change_scene_to_file(\"res://System/Screens/controller_selection.tscn\")
+	elif GameMode.player_count == 1:
+		get_tree().change_scene_to_file(\"res://System/Screens/controller_selection_cpu.tscn\")
+"
+
+[node name="Node" type="Node"]
+script = SubResource("GDScript_4e31i")
