@@ -1,7 +1,7 @@
 extends CharacterBody3D
 class_name Enemy
 
-const SPEED = 4.0
+const SPEED = 4.5
 
 @export var health: int = 2
 @export var animator_tree: AnimationTree
@@ -31,6 +31,7 @@ func attack() -> void:
 func _physics_process(delta: float) -> void:
 	if attack_recovery.is_stopped() and chillout.is_stopped():
 		var diff := target.global_position - self.global_position
+		diff.y = 0
 		var distance := diff.length()
 		if distance < 1.2:
 			attack()
@@ -38,9 +39,12 @@ func _physics_process(delta: float) -> void:
 			chillout.start()
 		else:
 			var direction := diff / distance
-			direction.y = -2.0
+			direction.y = -2.0 # gravity lol
+
 			look_at(target.global_position)
-			velocity = direction * SPEED
+			rotation.x = 0
+
+			velocity = velocity.move_toward(direction * SPEED, SPEED * 4 * delta)
 	else:
 		velocity = velocity.move_toward(Vector3.ZERO, SPEED * 2 * delta)
 

@@ -1,4 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://beebafn5bkrqw"]
+[gd_scene load_steps=4 format=3 uid="uid://beebafn5bkrqw"]
+
+[ext_resource type="Theme" uid="uid://jnrndgwutnjh" path="res://Assets/Interface/font_theme.tres" id="1_1mndi"]
+[ext_resource type="Texture2D" uid="uid://m74ammfxw8p8" path="res://Assets/Splashes/LOADING_bg.png" id="2_jap1e"]
 
 [sub_resource type="GDScript" id="GDScript_4e31i"]
 script/source = "extends Node
@@ -11,5 +14,26 @@ func _ready() -> void:
 		get_tree().change_scene_to_file(\"res://System/Screens/controller_selection_cpu.tscn\")
 "
 
-[node name="Node" type="Node"]
+[node name="Node" type="TextureRect"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_1mndi")
+texture = ExtResource("2_jap1e")
+expand_mode = 1
 script = SubResource("GDScript_4e31i")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 48.0
+offset_top = -173.0
+offset_right = 454.0
+offset_bottom = -42.0
+grow_vertical = 0
+theme_type_variation = &"HeaderLarge"
+text = "Loading..."

@@ -2,8 +2,8 @@ extends CharacterBody3D
 class_name Player
 
 const ACCELERATION = 30.0
-const SPEED: float = 5.0
-const UNARMED_SPEED: float = 6.2
+const SPEED: float = 3.8
+const UNARMED_SPEED: float = 4.2
 
 @export var controller_id: int = 1
 @export var partner: Player

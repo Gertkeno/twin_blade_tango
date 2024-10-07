@@ -129,7 +129,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -98.8591)
 mesh = SubResource("PlaneMesh_jb8af")
 
 [node name="LeadTorro" parent="." node_paths=PackedStringArray("partner", "held_weapon") instance=ExtResource("8_f2c5q")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.13182, 0.130615, -1.53865)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.13182, 0.178161, -1.53865)
 collision_priority = 1.0
 platform_floor_layers = 4294967295
 partner = NodePath("../FollowerPluma")
@@ -137,7 +137,7 @@ held_weapon = NodePath("HandTemp/SM_Rapier_Single")
 metadata/_edit_group_ = true
 
 [node name="HandTemp" parent="LeadTorro" index="1"]
-transform = Transform3D(0.0822462, 0.169443, 0.406066, -0.43935, 0.0540892, 0.0664174, -0.0239261, -0.410766, 0.17625, 0.522748, 0.961734, -0.058081)
+transform = Transform3D(0.0837524, 0.17733, 0.401143, -0.437968, 0.0555646, 0.0668781, -0.0233583, -0.406008, 0.184358, 0.524801, 0.970691, -0.0381083)
 
 [node name="SM_Rapier_Single" parent="LeadTorro/HandTemp" index="0" instance=ExtResource("7_o625r")]
 
@@ -145,71 +145,71 @@ transform = Transform3D(0.0822462, 0.169443, 0.406066, -0.43935, 0.0540892, 0.06
 wait_time = 1.0
 
 [node name="Skeleton3D" parent="LeadTorro/Model/Group/DeformationSystem" index="0"]
-bones/1/position = Vector3(-0.0104785, 2.37751, -0.161584)
-bones/1/rotation = Quaternion(0.537919, 0.530552, 0.441712, 0.483786)
-bones/2/position = Vector3(0.265293, -0.0313239, 0.00642031)
-bones/2/rotation = Quaternion(-0.00258603, -0.0114008, -0.0561784, 0.998352)
-bones/2/scale = Vector3(0.997473, 0.997473, 0.997473)
-bones/3/position = Vector3(0.268722, 3.51119e-07, -3.74403e-08)
-bones/3/rotation = Quaternion(0.000173356, 0.0148264, 0.0742001, 0.997133)
-bones/3/scale = Vector3(0.999762, 0.999762, 0.999762)
-bones/4/position = Vector3(0.263057, -3.33242e-05, -0.000269472)
-bones/4/rotation = Quaternion(-0.000685433, 0.0138752, 0.0398419, 0.99911)
-bones/4/scale = Vector3(1.00043, 1.00043, 1.00043)
+bones/1/position = Vector3(-0.014525, 2.37452, -0.183487)
+bones/1/rotation = Quaternion(0.538559, 0.525136, 0.445586, 0.485427)
+bones/2/position = Vector3(0.265496, -0.0319897, 0.00645548)
+bones/2/rotation = Quaternion(-0.0032213, -0.011536, -0.0568069, 0.998313)
+bones/2/scale = Vector3(0.996898, 0.996898, 0.996898)
+bones/3/position = Vector3(0.269853, 3.54546e-07, -3.52113e-08)
+bones/3/rotation = Quaternion(-0.000434816, 0.0148557, 0.0749481, 0.997077)
+bones/3/scale = Vector3(0.999493, 0.999493, 0.999493)
+bones/4/position = Vector3(0.262565, -2.18793e-05, -0.000227675)
+bones/4/rotation = Quaternion(-0.00134458, 0.0138885, 0.040596, 0.999078)
+bones/4/scale = Vector3(0.999804, 0.999804, 0.999804)
 bones/5/position = Vector3(0.125987, 6.76094e-05, 0.000257681)
-bones/5/rotation = Quaternion(-0.000850361, 0.00853838, 0.0424059, 0.999064)
-bones/5/scale = Vector3(1.00318, 1.00318, 1.00318)
+bones/5/rotation = Quaternion(-0.00143924, 0.0085471, 0.0430975, 0.999033)
+bones/5/scale = Vector3(1.00291, 1.00291, 1.00291)
 bones/6/position = Vector3(0.125492, 3.37537e-08, 1.06716e-07)
-bones/6/rotation = Quaternion(-0.000324689, 0.00540746, 0.0275134, 0.999607)
-bones/6/scale = Vector3(1.00279, 1.00279, 1.00279)
+bones/6/rotation = Quaternion(-0.00100159, 0.00525491, 0.0281132, 0.99959)
+bones/6/scale = Vector3(1.00206, 1.00206, 1.00206)
 bones/7/position = Vector3(0.126607, -3.90075e-05, 2.22016e-06)
-bones/7/rotation = Quaternion(0.000484527, 0.00153085, 0.120472, 0.992715)
+bones/7/rotation = Quaternion(0.00018382, 0.00145458, 0.12053, 0.992709)
 bones/8/position = Vector3(0.313521, 8.88178e-16, 1.20856e-15)
-bones/8/rotation = Quaternion(-0.00156148, 0.00227988, 0.00867558, 0.999959)
-bones/9/rotation = Quaternion(-0.0169828, 0.00251506, -0.0121862, 0.999778)
-bones/10/rotation = Quaternion(-0.0169828, 0.00289057, -0.0121026, 0.999778)
-bones/11/position = Vector3(0.134743, -0.070323, -0.0178635)
-bones/11/rotation = Quaternion(-0.00736541, 0.0669186, -0.113666, 0.991235)
-bones/19/rotation = Quaternion(0.0145237, 0.83413, -0.018395, 0.55107)
-bones/20/rotation = Quaternion(0.286326, 0.362858, -0.0184094, 0.886573)
+bones/8/rotation = Quaternion(-0.00143691, 0.00245448, 0.00871812, 0.999958)
+bones/9/rotation = Quaternion(-0.0138332, 0.00267824, -0.0120735, 0.999828)
+bones/10/rotation = Quaternion(-0.0138231, 0.00297839, -0.0120032, 0.999828)
+bones/11/position = Vector3(0.134788, -0.0699668, -0.0178327)
+bones/11/rotation = Quaternion(-0.00449562, 0.0709642, -0.113646, 0.990974)
+bones/19/rotation = Quaternion(0.0143716, 0.823574, -0.0131702, 0.566873)
+bones/20/rotation = Quaternion(0.280247, 0.374592, -0.030976, 0.88328)
 bones/21/position = Vector3(0.249841, 4.70747e-06, -9.32117e-07)
-bones/21/rotation = Quaternion(-0.0420989, 8.61471e-36, 0, 0.999114)
+bones/21/rotation = Quaternion(-0.0443749, 9.08043e-36, 0, 0.999015)
 bones/22/position = Vector3(0.249841, 4.77963e-06, -4.292e-07)
-bones/22/rotation = Quaternion(-0.0420989, 8.61471e-36, 0, 0.999114)
+bones/22/rotation = Quaternion(-0.0443749, 9.08043e-36, 0, 0.999015)
 bones/23/position = Vector3(0.249841, 4.79822e-06, 7.85285e-08)
-bones/23/rotation = Quaternion(-0.0445099, 0.088938, 0.218487, 0.970759)
+bones/23/rotation = Quaternion(-0.0467284, 0.0976304, 0.235874, 0.965737)
 bones/24/position = Vector3(0.26757, -3.33067e-16, 2.22045e-16)
-bones/24/rotation = Quaternion(0.155654, -1.68626e-35, 0, 0.987812)
-bones/25/rotation = Quaternion(0.155654, -1.68626e-35, 0, 0.987812)
-bones/26/rotation = Quaternion(-0.133076, -0.00947778, -0.10929, 0.985016)
+bones/24/rotation = Quaternion(0.162243, -1.75764e-35, 0, 0.986751)
+bones/25/rotation = Quaternion(0.162243, -1.75764e-35, 0, 0.986751)
+bones/26/rotation = Quaternion(-0.127263, -0.0168038, -0.104763, 0.986178)
 bones/36/rotation = Quaternion(-6.93889e-18, -2.73219e-17, 1.73472e-18, 1)
-bones/48/rotation = Quaternion(0.791398, -0.0886279, -0.601331, 0.0650825)
-bones/49/rotation = Quaternion(0.271733, 0.402566, -0.0493813, 0.872733)
+bones/48/rotation = Quaternion(0.780057, -0.0830337, -0.617002, 0.0626497)
+bones/49/rotation = Quaternion(0.265256, 0.414825, -0.0622098, 0.868153)
 bones/50/position = Vector3(-0.249841, 2.22045e-16, -6.66134e-16)
-bones/50/rotation = Quaternion(-0.0534547, -2.06795e-25, 0, 0.99857)
+bones/50/rotation = Quaternion(-0.054457, -5.16988e-26, 2.06795e-25, 0.998516)
 bones/51/position = Vector3(-0.249841, 1.11022e-16, -2.22045e-16)
-bones/51/rotation = Quaternion(-0.0534547, -2.06795e-25, 0, 0.99857)
+bones/51/rotation = Quaternion(-0.054457, -5.16988e-26, 2.06795e-25, 0.998516)
 bones/52/position = Vector3(-0.249841, 3.33067e-16, -2.22045e-16)
-bones/52/rotation = Quaternion(-0.0552868, 0.0719306, 0.178347, 0.979776)
-bones/53/rotation = Quaternion(0.156372, 2.06795e-25, 1.03398e-25, 0.987698)
-bones/54/rotation = Quaternion(0.156372, 2.06795e-25, 1.03398e-25, 0.987698)
-bones/55/rotation = Quaternion(-0.161642, -0.104378, -0.122163, 0.97368)
-bones/77/rotation = Quaternion(0.19682, 0.980262, -0.0109735, -0.0150842)
-bones/78/rotation = Quaternion(0.0387013, -9.04729e-26, 3.87741e-26, 0.999251)
-bones/79/rotation = Quaternion(0.0387013, -9.04729e-26, 3.87741e-26, 0.999251)
-bones/80/rotation = Quaternion(0.0355491, 0.0154021, -0.397242, 0.916896)
-bones/81/rotation = Quaternion(0.230912, 0.00733506, 0.200342, 0.952097)
-bones/84/rotation = Quaternion(0.959331, -0.20505, -0.193306, -0.0164626)
-bones/85/rotation = Quaternion(0.00926598, -6.01653e-36, -8.07794e-27, 0.999957)
-bones/86/rotation = Quaternion(0.00926598, -6.01653e-36, -8.07794e-27, 0.999957)
-bones/87/rotation = Quaternion(0.00878811, 0.00296451, -0.319648, 0.947491)
-bones/88/rotation = Quaternion(0.250025, 0.167603, 0.0598615, 0.951743)
+bones/52/rotation = Quaternion(-0.0567595, 0.0837694, 0.20133, 0.974283)
+bones/53/rotation = Quaternion(0.163862, 1.03398e-25, 1.03398e-25, 0.986483)
+bones/54/rotation = Quaternion(0.163862, 1.03398e-25, 1.03398e-25, 0.986483)
+bones/55/rotation = Quaternion(-0.154013, -0.110241, -0.114241, 0.975231)
+bones/77/rotation = Quaternion(0.20963, 0.977498, -0.0105192, -0.0210597)
+bones/78/rotation = Quaternion(0.0356917, 2.58494e-26, 1.80946e-25, 0.999363)
+bones/79/rotation = Quaternion(0.0356917, 2.58494e-26, 1.80946e-25, 0.999363)
+bones/80/rotation = Quaternion(0.0327055, 0.0142917, -0.400163, 0.915749)
+bones/81/rotation = Quaternion(0.236855, 0.00515739, 0.195564, 0.951645)
+bones/84/rotation = Quaternion(0.955914, -0.213906, -0.200504, -0.0164496)
+bones/85/rotation = Quaternion(0.013749, -6.46235e-27, -8.44145e-26, 0.999906)
+bones/86/rotation = Quaternion(0.013749, -6.46235e-27, -8.44145e-26, 0.999906)
+bones/87/rotation = Quaternion(0.0130867, 0.00446338, -0.322776, 0.946375)
+bones/88/rotation = Quaternion(0.242104, 0.164401, 0.0553542, 0.954617)
 
 [node name="Sprite3D" parent="LeadTorro" index="6"]
 texture = SubResource("ViewportTexture_3anly")
 
 [node name="FollowerPluma" parent="." node_paths=PackedStringArray("partner") instance=ExtResource("8_xa135")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.1621, 0.113098, -2.87394)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.1621, 0.160705, -2.87394)
 collision_priority = 1.0
 platform_floor_layers = 4294967295
 controller_id = 2
@@ -217,72 +217,72 @@ partner = NodePath("../LeadTorro")
 metadata/_edit_group_ = true
 
 [node name="HandTemp" parent="FollowerPluma" index="1"]
-transform = Transform3D(0.205694, 0.00440881, 0.239815, -0.207914, 0.160799, 0.175375, -0.119594, -0.271965, 0.107578, 0.224718, 1.11049, -0.0716364)
+transform = Transform3D(0.209231, 0.0106445, 0.236336, -0.207105, 0.16074, 0.176112, -0.114348, -0.271652, 0.113469, 0.225403, 1.11388, -0.0559692)
 
 [node name="AttackRecovery" parent="FollowerPluma" index="3"]
 wait_time = 1.0
 
 [node name="Skeleton3D" parent="FollowerPluma/Model/rig/DeformationSystem" index="0"]
-bones/1/position = Vector3(-0.00915134, 3.4215, 0.136621)
-bones/1/rotation = Quaternion(0.612932, 0.439484, 0.513034, 0.409835)
-bones/2/position = Vector3(0.176557, -0.0226719, 0.00445431)
-bones/2/rotation = Quaternion(-0.00137282, -0.0148112, -0.0748198, 0.997086)
-bones/2/scale = Vector3(1.00096, 1.00096, 1.00096)
-bones/3/position = Vector3(0.177806, -5.7727e-08, -4.03891e-07)
-bones/3/rotation = Quaternion(0.00153797, 0.0124884, 0.0645286, 0.997837)
-bones/3/scale = Vector3(1.00198, 1.00198, 1.00198)
-bones/4/position = Vector3(0.175462, -9.49469e-06, -0.00147586)
-bones/4/rotation = Quaternion(0.000713472, 0.0143722, -0.107618, 0.994088)
-bones/4/scale = Vector3(1.00076, 1.00076, 1.00076)
-bones/5/position = Vector3(0.164099, 0.000221454, 0.00150005)
-bones/5/rotation = Quaternion(-0.00235461, 0.010433, 0.0521164, 0.998584)
-bones/5/scale = Vector3(1.00023, 1.00023, 1.00023)
+bones/1/position = Vector3(-0.01839, 3.41847, 0.10572)
+bones/1/rotation = Quaternion(0.612784, 0.434317, 0.517026, 0.410547)
+bones/2/position = Vector3(0.176644, -0.0234767, 0.00456697)
+bones/2/rotation = Quaternion(-0.00215505, -0.0151907, -0.0755903, 0.997021)
+bones/2/scale = Vector3(1.00121, 1.00121, 1.00121)
+bones/3/position = Vector3(0.177786, -5.22695e-08, -3.74639e-07)
+bones/3/rotation = Quaternion(0.000841101, 0.0129736, 0.0652444, 0.997785)
+bones/3/scale = Vector3(1.0015, 1.0015, 1.0015)
+bones/4/position = Vector3(0.1751, 2.91167e-05, -0.00127838)
+bones/4/rotation = Quaternion(-2.00488e-05, 0.0146504, -0.106841, 0.994168)
+bones/4/scale = Vector3(1.00077, 1.00077, 1.00077)
+bones/5/position = Vector3(0.164506, 0.000138635, 0.00127031)
+bones/5/rotation = Quaternion(-0.00310172, 0.0104934, 0.0528034, 0.998545)
+bones/5/scale = Vector3(0.999741, 0.999741, 0.999741)
 bones/6/position = Vector3(0.16387, 6.89321e-08, 2.11686e-07)
-bones/6/rotation = Quaternion(-0.00101132, 0.00777269, 0.0397384, 0.999179)
-bones/6/scale = Vector3(0.999639, 0.999639, 0.999639)
+bones/6/rotation = Quaternion(-0.00167986, 0.0077232, 0.0403638, 0.999154)
+bones/6/scale = Vector3(0.999882, 0.999882, 0.999882)
 bones/7/position = Vector3(0.16481, -0.00140202, 6.70748e-05)
-bones/7/rotation = Quaternion(0.0010449, 0.00234459, -0.146025, 0.989278)
+bones/7/rotation = Quaternion(0.000913305, 0.00247546, -0.144992, 0.989429)
 bones/8/position = Vector3(0.640938, -1.45696e-07, 5.59204e-08)
-bones/8/rotation = Quaternion(-0.00209942, 0.00174758, 0.258506, 0.966006)
-bones/9/rotation = Quaternion(0.00584762, 0.00225883, -0.0120787, 0.999907)
-bones/10/rotation = Quaternion(0.00584761, 0.00207806, -0.0121111, 0.999907)
-bones/11/position = Vector3(0.1087, -0.0571069, -0.00891475)
-bones/11/rotation = Quaternion(-0.0211231, 0.0779867, 0.336778, 0.938111)
-bones/19/rotation = Quaternion(-0.173395, 0.74776, 0.155696, 0.62173)
-bones/20/rotation = Quaternion(0.292719, 0.458411, -0.0895902, 0.834355)
+bones/8/rotation = Quaternion(-0.00197086, 0.0019426, 0.258609, 0.965978)
+bones/9/rotation = Quaternion(0.00923371, 0.0023411, -0.0120301, 0.999882)
+bones/10/rotation = Quaternion(0.0092337, 0.00208425, -0.0120774, 0.999882)
+bones/11/position = Vector3(0.108716, -0.0569976, -0.00874328)
+bones/11/rotation = Quaternion(-0.0172293, 0.0802719, 0.336495, 0.9381)
+bones/19/rotation = Quaternion(-0.170047, 0.736232, 0.164446, 0.634039)
+bones/20/rotation = Quaternion(0.28943, 0.468447, -0.105297, 0.82807)
 bones/21/position = Vector3(0.198762, 8.60085e-06, -1.84542e-07)
-bones/21/rotation = Quaternion(-0.0300594, -2.9703e-23, 1.81933e-21, 0.999548)
+bones/21/rotation = Quaternion(-0.0342452, -2.1216e-23, 1.28117e-21, 0.999414)
 bones/22/position = Vector3(0.198762, 8.60005e-06, 1.96492e-07)
-bones/22/rotation = Quaternion(-0.0300594, -2.9703e-23, 1.81933e-21, 0.999548)
+bones/22/rotation = Quaternion(-0.0342452, -2.1216e-23, 1.28117e-21, 0.999414)
 bones/23/position = Vector3(0.198762, 8.58217e-06, 5.77118e-07)
-bones/23/rotation = Quaternion(-0.0378238, 0.103525, 0.254473, 0.960779)
-bones/24/rotation = Quaternion(0.120106, 2.46848e-21, -2.06479e-22, 0.992761)
-bones/25/rotation = Quaternion(0.120106, 2.46848e-21, -2.06479e-22, 0.992761)
-bones/26/rotation = Quaternion(-0.182853, -0.182671, 0.115754, 0.959061)
-bones/48/rotation = Quaternion(0.721898, 0.082643, -0.644405, 0.238275)
+bones/23/rotation = Quaternion(-0.0421175, 0.113779, 0.270163, 0.95514)
+bones/24/rotation = Quaternion(0.125201, 1.67252e-21, -1.23356e-22, 0.992131)
+bones/25/rotation = Quaternion(0.125201, 1.67252e-21, -1.23356e-22, 0.992131)
+bones/26/rotation = Quaternion(-0.17412, -0.193365, 0.118818, 0.958214)
+bones/48/rotation = Quaternion(0.708079, 0.0848102, -0.658385, 0.24075)
 bones/49/position = Vector3(-0.226693, -7.35523e-16, 3.55271e-15)
-bones/49/rotation = Quaternion(0.283256, 0.494212, -0.127949, 0.81188)
+bones/49/rotation = Quaternion(0.2792, 0.504194, -0.141566, 0.804857)
 bones/50/position = Vector3(-0.198763, -5.68434e-08, -4.30354e-09)
-bones/50/rotation = Quaternion(-0.0461164, -5.93112e-24, -2.52569e-21, 0.998936)
+bones/50/rotation = Quaternion(-0.0479928, 6.51069e-24, -4.48099e-22, 0.998848)
 bones/51/position = Vector3(-0.198763, -5.61516e-08, -1.17111e-08)
-bones/51/rotation = Quaternion(-0.0461164, -5.93112e-24, -2.52569e-21, 0.998936)
+bones/51/rotation = Quaternion(-0.0479928, 6.51069e-24, -4.48099e-22, 0.998848)
 bones/52/position = Vector3(-0.198763, -5.44883e-08, -1.90057e-08)
-bones/52/rotation = Quaternion(-0.0515656, 0.0851664, 0.214729, 0.971586)
-bones/53/rotation = Quaternion(0.0984314, -1.31929e-21, -1.91383e-20, 0.995144)
-bones/54/rotation = Quaternion(0.0984314, -1.31929e-21, -1.91383e-20, 0.995144)
-bones/55/rotation = Quaternion(-0.188851, -0.24952, 0.0891637, 0.945582)
-bones/77/rotation = Quaternion(0.207905, 0.975731, -0.0412585, -0.0549784)
-bones/78/rotation = Quaternion(0.0250292, 1.42689e-22, 8.45921e-23, 0.999687)
-bones/79/rotation = Quaternion(0.0250292, 1.42689e-22, 8.45921e-23, 0.999687)
-bones/80/rotation = Quaternion(0.0245209, 0.00481529, -0.195861, 0.980313)
-bones/81/rotation = Quaternion(0.0199827, -0.033279, 0.129167, 0.990863)
-bones/82/rotation = Quaternion(-0.00788331, 0.00955316, 0.639687, 0.768535)
-bones/84/rotation = Quaternion(0.969442, -0.16363, -0.167089, -0.0740901)
-bones/85/rotation = Quaternion(-0.00388155, 2.84183e-24, 1.23718e-22, 0.999993)
-bones/86/rotation = Quaternion(-0.00388155, 2.84183e-24, 1.23718e-22, 0.999993)
-bones/87/rotation = Quaternion(-0.00385398, -0.000243154, -0.00374455, 0.999986)
-bones/88/rotation = Quaternion(0.108857, 0.138444, -0.0318225, 0.983855)
-bones/89/rotation = Quaternion(-0.00351312, 0.0190144, 0.623464, 0.781613)
+bones/52/rotation = Quaternion(-0.055036, 0.0991972, 0.23668, 0.964942)
+bones/53/rotation = Quaternion(0.105172, -1.01622e-21, -1.54579e-20, 0.994454)
+bones/54/rotation = Quaternion(0.105172, -1.01622e-21, -1.54579e-20, 0.994454)
+bones/55/rotation = Quaternion(-0.179303, -0.257816, 0.0947753, 0.944669)
+bones/77/rotation = Quaternion(0.222633, 0.972125, -0.0404698, -0.0614036)
+bones/78/rotation = Quaternion(0.0170215, 9.26622e-23, 5.45939e-23, 0.999855)
+bones/79/rotation = Quaternion(0.0170215, 9.26622e-23, 5.45939e-23, 0.999855)
+bones/80/rotation = Quaternion(0.0171687, 0.00345551, -0.201386, 0.979355)
+bones/81/rotation = Quaternion(0.0382446, -0.0348896, 0.126153, 0.990659)
+bones/82/rotation = Quaternion(-0.00788269, 0.00955422, 0.639674, 0.768546)
+bones/84/rotation = Quaternion(0.967961, -0.169322, -0.169881, -0.0743117)
+bones/85/rotation = Quaternion(0.00878557, 2.33608e-24, 9.09862e-23, 0.999961)
+bones/86/rotation = Quaternion(0.00878557, 2.33608e-24, 9.09862e-23, 0.999961)
+bones/87/rotation = Quaternion(0.00880443, -0.000193253, -0.00455872, 0.999951)
+bones/88/rotation = Quaternion(0.0785378, 0.139351, -0.0395509, 0.986331)
+bones/89/rotation = Quaternion(-0.00411063, 0.0178102, 0.625408, 0.780084)
 
 [node name="Sprite3D" parent="FollowerPluma" index="6"]
 texture = SubResource("ViewportTexture_6xbnb")
@@ -1050,811 +1050,811 @@ affect_navigation_mesh = true
 [node name="Floor" type="Node3D" parent="NavigationRegion3D"]
 
 [node name="FloorMarble" parent="NavigationRegion3D/Floor" instance=ExtResource("16_tl5t8")]
-transform = Transform3D(1, 0, 0, 0, 2.96764, 0, 0, 0, 1, 1.12826, 0.28988, -190.391)
+transform = Transform3D(1, 0, 0, 0, 2.96764, 0, 0, 0, 1, 1.12826, 0.210407, -190.391)
 
 [node name="FloorMarble2" parent="NavigationRegion3D/Floor" instance=ExtResource("16_tl5t8")]
-transform = Transform3D(1, 0, 0, 0, 2.96764, 0, 0, 0, 1, 1.12826, 0.28988, -194.329)
+transform = Transform3D(1, 0, 0, 0, 2.96764, 0, 0, 0, 1, 1.12826, 0.210407, -194.329)
 
 [node name="FloorMarble6" parent="NavigationRegion3D/Floor" instance=ExtResource("16_tl5t8")]
-transform = Transform3D(1, 0, 0, 0, 2.96764, 0, 0, 0, 1, -14.8282, 0.28988, -190.391)
+transform = Transform3D(1, 0, 0, 0, 2.96764, 0, 0, 0, 1, -14.8282, 0.210407, -190.391)
 
 [node name="FloorMarble7" parent="NavigationRegion3D/Floor" instance=ExtResource("16_tl5t8")]
-transform = Transform3D(1, 0, 0, 0, 2.96764, 0, 0, 0, 1, -14.8282, 0.28988, -194.329)
+transform = Transform3D(1, 0, 0, 0, 2.96764, 0, 0, 0, 1, -14.8282, 0.210407, -194.329)
 
 [node name="FloorMarble3" parent="NavigationRegion3D/Floor" instance=ExtResource("16_tl5t8")]
-transform = Transform3D(1, 0, 0, 0, 2.96764, 0, 0, 0, 1, -2.86913, 0.28988, -194.329)
+transform = Transform3D(1, 0, 0, 0, 2.96764, 0, 0, 0, 1, -2.86913, 0.210407, -194.329)
 
 [node name="FloorMarble8" parent="NavigationRegion3D/Floor" instance=ExtResource("16_tl5t8")]
-transform = Transform3D(1, 0, 0, 0, 2.96764, 0, 0, 0, 1, -10.8227, 0.28988, -194.329)
+transform = Transform3D(1, 0, 0, 0, 2.96764, 0, 0, 0, 1, -10.8227, 0.210407, -194.329)
 
 [node name="FloorMarble4" parent="NavigationRegion3D/Floor" instance=ExtResource("16_tl5t8")]
-transform = Transform3D(1, 0, 0, 0, 2.96764, 0, 0, 0, 1, -2.86913, 0.28988, -198.3)
+transform = Transform3D(1, 0, 0, 0, 2.96764, 0, 0, 0, 1, -2.86913, 0.210407, -198.3)
 
 [node name="FloorMarble9" parent="NavigationRegion3D/Floor" instance=ExtResource("16_tl5t8")]
-transform = Transform3D(1, 0, 0, 0, 2.96764, 0, 0, 0, 1, -10.8284, 0.28988, -198.3)
+transform = Transform3D(1, 0, 0, 0, 2.96764, 0, 0, 0, 1, -10.8284, 0.210407, -198.3)
 
 [node name="FloorMarble5" parent="NavigationRegion3D/Floor" instance=ExtResource("16_tl5t8")]
-transform = Transform3D(1, 0, 0, 0, 2.96764, 0, 0, 0, 1, -6.83627, 0.346999, -198.325)
+transform = Transform3D(1, 0, 0, 0, 2.96764, 0, 0, 0, 1, -6.83627, 0.210407, -198.325)
 
 [node name="Floor Pink" parent="NavigationRegion3D/Floor" instance=ExtResource("21_jsf0d")]
-transform = Transform3D(2.22589, 0, 0, 0, 2.82181, 0, 0, 0, 3.14417, -6.79968, 0.20413, -206.68)
+transform = Transform3D(2.22589, 0, 0, 0, 2.82181, 0, 0, 0, 3.14417, -6.79968, 0.205432, -206.68)
 
 [node name="FloorSandstone" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(1, 0, 0, 0, 2.95444, 0, 0, 0, 1, -1.9981, 0.133688, -3.03185)
+transform = Transform3D(1, 0, 0, 0, 2.95444, 0, 0, 0, 1, -1.9981, 0.209957, -3.03185)
 
 [node name="FloorSandstone2" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(1, 0, 0, 0, 2.95444, 0, 0, 0, 1, 8.30365, 0.160814, -3.03519)
+transform = Transform3D(1, 0, 0, 0, 2.95444, 0, 0, 0, 1, 8.30365, 0.209957, -3.03519)
 
 [node name="FloorSandstone3" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(1, 0, 0, 0, 2.95444, 0, 0, 0, 1, -1.9981, 0.133688, -7.04365)
+transform = Transform3D(1, 0, 0, 0, 2.95444, 0, 0, 0, 1, -1.9981, 0.209957, -7.04365)
 
 [node name="FloorSandstone4" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(1, 0, 0, 0, 2.95444, 0, 0, 0, 1, 8.30365, 0.160814, -7.04699)
+transform = Transform3D(1, 0, 0, 0, 2.95444, 0, 0, 0, 1, 8.30365, 0.209957, -7.04699)
 
 [node name="FloorSandstone5" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(1, 0, 0, 0, 2.95444, 0, 0, 0, 1, -1.9981, 0.133688, -11.0628)
+transform = Transform3D(1, 0, 0, 0, 2.95444, 0, 0, 0, 1, -1.9981, 0.209957, -11.0628)
 
 [node name="FloorSandstone6" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(1, 0, 0, 0, 2.95444, 0, 0, 0, 1, 8.30365, 0.160814, -11.0661)
+transform = Transform3D(1, 0, 0, 0, 2.95444, 0, 0, 0, 1, 8.30365, 0.209957, -11.0661)
 
 [node name="FloorSandstone7" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(1, 0, 0, 0, 2.95444, 0, 0, 0, 1, -1.9981, 0.133688, -15.0746)
+transform = Transform3D(1, 0, 0, 0, 2.95444, 0, 0, 0, 1, -1.9981, 0.209957, -15.0746)
 
 [node name="FloorSandstone15" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(1, 0, 0, 0, 2.95444, 0, 0, 0, 1, -1.9981, 0.133688, -19.087)
+transform = Transform3D(1, 0, 0, 0, 2.95444, 0, 0, 0, 1, -1.9981, 0.209957, -19.087)
 
 [node name="FloorSandstone27" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(1, 0, 0, 0, 2.95444, 0, 0, 0, 1, -5.92424, 0.133688, -3.03185)
+transform = Transform3D(1, 0, 0, 0, 2.95444, 0, 0, 0, 1, -5.92424, 0.209957, -3.03185)
 
 [node name="FloorSandstone28" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(1, 0, 0, 0, 2.95444, 0, 0, 0, 1, -5.92424, 0.133688, -7.04365)
+transform = Transform3D(1, 0, 0, 0, 2.95444, 0, 0, 0, 1, -5.92424, 0.209957, -7.04365)
 
 [node name="FloorSandstone29" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(1, 0, 0, 0, 2.95444, 0, 0, 0, 1, -5.92424, 0.133688, -11.0628)
+transform = Transform3D(1, 0, 0, 0, 2.95444, 0, 0, 0, 1, -5.92424, 0.209957, -11.0628)
 
 [node name="FloorSandstone30" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(1, 0, 0, 0, 2.95444, 0, 0, 0, 1, -5.92424, 0.133688, -15.0746)
+transform = Transform3D(1, 0, 0, 0, 2.95444, 0, 0, 0, 1, -5.92424, 0.209957, -15.0746)
 
 [node name="FloorSandstone31" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(1, 0, 0, 0, 2.95444, 0, 0, 0, 1, -5.92424, 0.133688, -19.087)
+transform = Transform3D(1, 0, 0, 0, 2.95444, 0, 0, 0, 1, -5.92424, 0.209957, -19.087)
 
 [node name="FloorSandstone16" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(0.817235, 0, 0.576304, 0, 2.95444, 0, -0.576304, 0, 0.817235, -2.76141, 0.253841, -21.4006)
+transform = Transform3D(0.817235, 0, 0.576304, 0, 2.95444, 0, -0.576304, 0, 0.817235, -2.76141, 0.209957, -21.4006)
 
 [node name="FloorSandstone17" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(0.817235, 0, 0.576304, 0, 2.95444, 0, -0.576304, 0, 0.817235, -5.00581, 0.253841, -24.5571)
+transform = Transform3D(0.817235, 0, 0.576304, 0, 2.95444, 0, -0.576304, 0, 0.817235, -5.00581, 0.209957, -24.5571)
 
 [node name="FloorSandstone18" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(0.817235, 0, 0.576304, 0, 2.95444, 0, -0.576304, 0, 0.817235, -7.2269, 0.253841, -27.7265)
+transform = Transform3D(0.817235, 0, 0.576304, 0, 2.95444, 0, -0.576304, 0, 0.817235, -7.2269, 0.209957, -27.7265)
 
 [node name="FloorSandstone19" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(0.817235, 0, 0.576304, 0, 2.95444, 0, -0.576304, 0, 0.817235, -9.53926, 0.253841, -31.0056)
+transform = Transform3D(0.817235, 0, 0.576304, 0, 2.95444, 0, -0.576304, 0, 0.817235, -9.53926, 0.209957, -31.0056)
 
 [node name="FloorSandstone20" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(0.817235, 0, 0.576304, 0, 2.95444, 0, -0.576304, 0, 0.817235, -11.8275, 0.253841, -34.2171)
+transform = Transform3D(0.817235, 0, 0.576304, 0, 2.95444, 0, -0.576304, 0, 0.817235, -11.8275, 0.209957, -34.2171)
 
 [node name="FloorSandstone32" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(0.817235, 0, 0.576304, 0, 2.95444, 0, -0.576304, 0, 0.817235, -6.04638, 0.253841, -19.1748)
+transform = Transform3D(0.817235, 0, 0.576304, 0, 2.95444, 0, -0.576304, 0, 0.817235, -6.04638, 0.209957, -19.1748)
 
 [node name="FloorSandstone33" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(0.817235, 0, 0.576304, 0, 2.95444, 0, -0.576304, 0, 0.817235, -8.35874, 0.253841, -22.4539)
+transform = Transform3D(0.817235, 0, 0.576304, 0, 2.95444, 0, -0.576304, 0, 0.817235, -8.35874, 0.209957, -22.4539)
 
 [node name="FloorSandstone34" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(0.817235, 0, 0.576304, 0, 2.95444, 0, -0.576304, 0, 0.817235, -10.5798, 0.253841, -25.6232)
+transform = Transform3D(0.817235, 0, 0.576304, 0, 2.95444, 0, -0.576304, 0, 0.817235, -10.5798, 0.209957, -25.6232)
 
 [node name="FloorSandstone35" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(0.817235, 0, 0.576304, 0, 2.95444, 0, -0.576304, 0, 0.817235, -12.8922, 0.253841, -28.9023)
+transform = Transform3D(0.817235, 0, 0.576304, 0, 2.95444, 0, -0.576304, 0, 0.817235, -12.8922, 0.209957, -28.9023)
 
 [node name="FloorSandstone36" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(0.817235, 0, 0.576304, 0, 2.95444, 0, -0.576304, 0, 0.817235, -15.1804, 0.253841, -32.1138)
+transform = Transform3D(0.817235, 0, 0.576304, 0, 2.95444, 0, -0.576304, 0, 0.817235, -15.1804, 0.209957, -32.1138)
 
 [node name="FloorSandstone37" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(0.817235, 0, 0.576304, 0, 2.95444, 0, -0.576304, 0, 0.817235, -9.21486, 0.253841, -16.9215)
+transform = Transform3D(0.817235, 0, 0.576304, 0, 2.95444, 0, -0.576304, 0, 0.817235, -9.21486, 0.209957, -16.9215)
 
 [node name="FloorSandstone38" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(0.817235, 0, 0.576304, 0, 2.95444, 0, -0.576304, 0, 0.817235, -11.5272, 0.253841, -20.2006)
+transform = Transform3D(0.817235, 0, 0.576304, 0, 2.95444, 0, -0.576304, 0, 0.817235, -11.5272, 0.209957, -20.2006)
 
 [node name="FloorSandstone39" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(0.817235, 0, 0.576304, 0, 2.95444, 0, -0.576304, 0, 0.817235, -13.7483, 0.253841, -23.3699)
+transform = Transform3D(0.817235, 0, 0.576304, 0, 2.95444, 0, -0.576304, 0, 0.817235, -13.7483, 0.209957, -23.3699)
 
 [node name="FloorSandstone40" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(0.817235, 0, 0.576304, 0, 2.95444, 0, -0.576304, 0, 0.817235, -16.0607, 0.253841, -26.649)
+transform = Transform3D(0.817235, 0, 0.576304, 0, 2.95444, 0, -0.576304, 0, 0.817235, -16.0607, 0.209957, -26.649)
 
 [node name="FloorSandstone41" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(0.817235, 0, 0.576304, 0, 2.95444, 0, -0.576304, 0, 0.817235, -18.3489, 0.253841, -29.8605)
+transform = Transform3D(0.817235, 0, 0.576304, 0, 2.95444, 0, -0.576304, 0, 0.817235, -18.3489, 0.209957, -29.8605)
 
 [node name="FloorSandstone21" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(0.999786, 0, 0.0206982, 0, 2.95444, 0, -0.0206982, 0, 0.999786, -13.3934, 0.253837, -36.8046)
+transform = Transform3D(0.999786, 0, 0.0206982, 0, 2.95444, 0, -0.0206982, 0, 0.999786, -13.3934, 0.209957, -36.8046)
 
 [node name="FloorSandstone22" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(0.999786, 0, 0.0206982, 0, 2.95444, 0, -0.0206982, 0, 0.999786, -13.4942, 0.253837, -40.7466)
+transform = Transform3D(0.999786, 0, 0.0206982, 0, 2.95444, 0, -0.0206982, 0, 0.999786, -13.4942, 0.209957, -40.7466)
 
 [node name="FloorSandstone42" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(0.999786, 0, 0.0206982, 0, 2.95444, 0, -0.0206982, 0, 0.999786, -17.3559, 0.253837, -36.8046)
+transform = Transform3D(0.999786, 0, 0.0206982, 0, 2.95444, 0, -0.0206982, 0, 0.999786, -17.3559, 0.209957, -36.8046)
 
 [node name="FloorSandstone43" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(0.999786, 0, 0.0206982, 0, 2.95444, 0, -0.0206982, 0, 0.999786, -17.4567, 0.253837, -40.7466)
+transform = Transform3D(0.999786, 0, 0.0206982, 0, 2.95444, 0, -0.0206982, 0, 0.999786, -17.4567, 0.209957, -40.7466)
 
 [node name="FloorSandstone44" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(0.999786, 0, 0.0206982, 0, 2.95444, 0, -0.0206982, 0, 0.999786, -21.3637, 0.253837, -36.8046)
+transform = Transform3D(0.999786, 0, 0.0206982, 0, 2.95444, 0, -0.0206982, 0, 0.999786, -21.3637, 0.209957, -36.8046)
 
 [node name="FloorSandstone46" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(0.999786, 0, 0.0206982, 0, 2.95444, 0, -0.0206982, 0, 0.999786, -17.3559, 0.253837, -33.9277)
+transform = Transform3D(0.999786, 0, 0.0206982, 0, 2.95444, 0, -0.0206982, 0, 0.999786, -17.3559, 0.209957, -33.9277)
 
 [node name="FloorSandstone47" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(0.856306, 0, 0.79324, 0, 2.96644, 0, -0.485877, 0, 1.398, -20.394, 0.253837, -32.9361)
+transform = Transform3D(0.856306, 0, 0.79324, 0, 2.96644, 0, -0.485877, 0, 1.398, -20.394, 0.210366, -32.9361)
 
 [node name="FloorSandstone45" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(0.999786, 0, 0.0206982, 0, 2.95444, 0, -0.0206982, 0, 0.999786, -21.4645, 0.253837, -40.7466)
+transform = Transform3D(0.999786, 0, 0.0206982, 0, 2.95444, 0, -0.0206982, 0, 0.999786, -21.4645, 0.209957, -40.7466)
 
 [node name="FloorSandstone68" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(0.999786, 0, 0.0206982, 0, 2.95444, 0, -0.0206982, 0, 0.999786, -21.3637, 0.253837, -47.5997)
+transform = Transform3D(0.999786, 0, 0.0206982, 0, 2.95444, 0, -0.0206982, 0, 0.999786, -21.3637, 0.209957, -47.5997)
 
 [node name="FloorSandstone69" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(0.999786, 0, 0.0206982, 0, 2.95444, 0, -0.0206982, 0, 0.999786, -21.3637, 0.253837, -44.7229)
+transform = Transform3D(0.999786, 0, 0.0206982, 0, 2.95444, 0, -0.0206982, 0, 0.999786, -21.3637, 0.209957, -44.7229)
 
 [node name="FloorSandstone70" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(0.999786, 0, 0.0206982, 0, 2.95444, 0, -0.0206982, 0, 0.999786, -21.4645, 0.253837, -51.5417)
+transform = Transform3D(0.999786, 0, 0.0206982, 0, 2.95444, 0, -0.0206982, 0, 0.999786, -21.4645, 0.209957, -51.5417)
 
 [node name="FloorSandstone74" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(0.999786, 0, 0.0206982, 0, 2.95444, 0, -0.0206982, 0, 0.999786, -21.3637, 0.253837, -55.5442)
+transform = Transform3D(0.999786, 0, 0.0206982, 0, 2.95444, 0, -0.0206982, 0, 0.999786, -21.3637, 0.209957, -55.5442)
 
 [node name="FloorSandstone75" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(0.999786, 0, 0.0206982, 0, 2.95444, 0, -0.0206982, 0, 0.999786, -21.4645, 0.253837, -59.4862)
+transform = Transform3D(0.999786, 0, 0.0206982, 0, 2.95444, 0, -0.0206982, 0, 0.999786, -21.4645, 0.209957, -59.4862)
 
 [node name="FloorSandstone71" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(0.999786, 0, 0.0206982, 0, 2.95444, 0, -0.0206982, 0, 0.999786, -17.3375, 0.253837, -47.5997)
+transform = Transform3D(0.999786, 0, 0.0206982, 0, 2.95444, 0, -0.0206982, 0, 0.999786, -17.3375, 0.209957, -47.5997)
 
 [node name="FloorSandstone72" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(0.999786, 0, 0.0206982, 0, 2.95444, 0, -0.0206982, 0, 0.999786, -17.3375, 0.253837, -44.7229)
+transform = Transform3D(0.999786, 0, 0.0206982, 0, 2.95444, 0, -0.0206982, 0, 0.999786, -17.3375, 0.209957, -44.7229)
 
 [node name="FloorSandstone73" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(0.999786, 0, 0.0206982, 0, 2.95444, 0, -0.0206982, 0, 0.999786, -17.4383, 0.253837, -51.5417)
+transform = Transform3D(0.999786, 0, 0.0206982, 0, 2.95444, 0, -0.0206982, 0, 0.999786, -17.4383, 0.209957, -51.5417)
 
 [node name="FloorSandstone76" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(0.999786, 0, 0.0206982, 0, 2.95444, 0, -0.0206982, 0, 0.999786, -21.4645, 0.253837, -63.4917)
+transform = Transform3D(0.999786, 0, 0.0206982, 0, 2.95444, 0, -0.0206982, 0, 0.999786, -21.4645, 0.209957, -63.4917)
 
 [node name="FloorSandstone77" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(0.999786, 0, 0.0206982, 0, 2.95444, 0, -0.0206982, 0, 0.999786, -17.4383, 0.253837, -63.4917)
+transform = Transform3D(0.999786, 0, 0.0206982, 0, 2.95444, 0, -0.0206982, 0, 0.999786, -17.4383, 0.209957, -63.4917)
 
 [node name="FloorSandstone78" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(0.999786, 0, 0.0206982, 0, 2.95444, 0, -0.0206982, 0, 0.999786, -21.4645, 0.253837, -67.3331)
+transform = Transform3D(0.999786, 0, 0.0206982, 0, 2.95444, 0, -0.0206982, 0, 0.999786, -21.4645, 0.209957, -67.3331)
 
 [node name="FloorSandstone79" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(0.999786, 0, 0.0206982, 0, 2.95444, 0, -0.0206982, 0, 0.999786, -17.4383, 0.253837, -67.3331)
+transform = Transform3D(0.999786, 0, 0.0206982, 0, 2.95444, 0, -0.0206982, 0, 0.999786, -17.4383, 0.209957, -67.3331)
 
 [node name="FloorSandstone80" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(0.999786, 0, 0.0206982, 0, 2.95444, 0, -0.0206982, 0, 0.999786, -13.6317, 0.253837, -67.3331)
+transform = Transform3D(0.999786, 0, 0.0206982, 0, 2.95444, 0, -0.0206982, 0, 0.999786, -13.6317, 0.209957, -67.3331)
 
 [node name="FloorSandstone81" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(0.999786, 0, 0.0206982, 0, 2.95444, 0, -0.0206982, 0, 0.999786, -21.4645, 0.253837, -71.2486)
+transform = Transform3D(0.999786, 0, 0.0206982, 0, 2.95444, 0, -0.0206982, 0, 0.999786, -21.4645, 0.209957, -71.2486)
 
 [node name="FloorSandstone82" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(0.999786, 0, 0.0206982, 0, 2.95444, 0, -0.0206982, 0, 0.999786, -17.4383, 0.253837, -71.2486)
+transform = Transform3D(0.999786, 0, 0.0206982, 0, 2.95444, 0, -0.0206982, 0, 0.999786, -17.4383, 0.209957, -71.2486)
 
 [node name="FloorSandstone83" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(0.999786, 0, 0.0206982, 0, 2.95444, 0, -0.0206982, 0, 0.999786, -13.6317, 0.253837, -71.2486)
+transform = Transform3D(0.999786, 0, 0.0206982, 0, 2.95444, 0, -0.0206982, 0, 0.999786, -13.6317, 0.209957, -71.2486)
 
 [node name="FloorSandstone84" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(0.999786, 0, 0.0206982, 0, 2.95444, 0, -0.0206982, 0, 0.999786, -9.6834, 0.253837, -71.2486)
+transform = Transform3D(0.999786, 0, 0.0206982, 0, 2.95444, 0, -0.0206982, 0, 0.999786, -9.6834, 0.209957, -71.2486)
 
 [node name="FloorSandstone85" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(0.999786, 0, 0.0206982, 0, 2.95444, 0, -0.0206982, 0, 0.999786, -21.4645, 0.253837, -75.176)
+transform = Transform3D(0.999786, 0, 0.0206982, 0, 2.95444, 0, -0.0206982, 0, 0.999786, -21.4645, 0.209957, -75.176)
 
 [node name="FloorSandstone86" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(0.999786, 0, 0.0206982, 0, 2.95444, 0, -0.0206982, 0, 0.999786, -17.4383, 0.253837, -75.176)
+transform = Transform3D(0.999786, 0, 0.0206982, 0, 2.95444, 0, -0.0206982, 0, 0.999786, -17.4383, 0.209957, -75.176)
 
 [node name="FloorSandstone87" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(0.999786, 0, 0.0206982, 0, 2.95444, 0, -0.0206982, 0, 0.999786, -13.6317, 0.253837, -75.176)
+transform = Transform3D(0.999786, 0, 0.0206982, 0, 2.95444, 0, -0.0206982, 0, 0.999786, -13.6317, 0.209957, -75.176)
 
 [node name="FloorSandstone88" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(0.999786, 0, 0.0206982, 0, 2.95444, 0, -0.0206982, 0, 0.999786, -9.6834, 0.253837, -75.176)
+transform = Transform3D(0.999786, 0, 0.0206982, 0, 2.95444, 0, -0.0206982, 0, 0.999786, -9.6834, 0.209957, -75.176)
 
 [node name="FloorSandstone113" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(0.999786, 0, 0.0206982, 0, 2.95444, 0, -0.0206982, 0, 0.999786, -1.70173, 0.253837, -74.5911)
+transform = Transform3D(0.999786, 0, 0.0206982, 0, 2.95444, 0, -0.0206982, 0, 0.999786, -1.70173, 0.209957, -74.5911)
 
 [node name="FloorSandstone117" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(0.999786, 0, 0.0206982, 0, 2.95444, 0, -0.0206982, 0, 0.999786, -5.70628, 0.253837, -74.523)
+transform = Transform3D(0.999786, 0, 0.0206982, 0, 2.95444, 0, -0.0206982, 0, 0.999786, -5.70628, 0.209957, -74.523)
 
 [node name="FloorSandstone114" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(0.999786, 0, 0.0206982, 0, 2.95444, 0, -0.0206982, 0, 0.999786, 2.32441, 0.253837, -74.6571)
+transform = Transform3D(0.999786, 0, 0.0206982, 0, 2.95444, 0, -0.0206982, 0, 0.999786, 2.32441, 0.209957, -74.6571)
 
 [node name="FloorSandstone115" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(0.999786, 0, 0.0206982, 0, 2.95444, 0, -0.0206982, 0, 0.999786, 6.13106, 0.253837, -74.7168)
+transform = Transform3D(0.999786, 0, 0.0206982, 0, 2.95444, 0, -0.0206982, 0, 0.999786, 6.13106, 0.209957, -74.7168)
 
 [node name="FloorSandstone116" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(0.999786, 0, 0.0206982, 0, 2.95444, 0, -0.0206982, 0, 0.999786, 10.0793, 0.253837, -74.7563)
+transform = Transform3D(0.999786, 0, 0.0206982, 0, 2.95444, 0, -0.0206982, 0, 0.999786, 10.0793, 0.209957, -74.7563)
 
 [node name="FloorSandstone120" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(0.999786, 0, 0.0206982, 0, 2.95444, 0, -0.0206982, 0, 0.999786, 2.32441, 0.253837, -78.6218)
+transform = Transform3D(0.999786, 0, 0.0206982, 0, 2.95444, 0, -0.0206982, 0, 0.999786, 2.32441, 0.209957, -78.6218)
 
 [node name="FloorSandstone121" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(0.999786, 0, 0.0206982, 0, 2.95444, 0, -0.0206982, 0, 0.999786, 6.13106, 0.253837, -78.6814)
+transform = Transform3D(0.999786, 0, 0.0206982, 0, 2.95444, 0, -0.0206982, 0, 0.999786, 6.13106, 0.209957, -78.6814)
 
 [node name="FloorSandstone122" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(0.999786, 0, 0.0206982, 0, 2.95444, 0, -0.0206982, 0, 0.999786, 10.0793, 0.253837, -78.721)
+transform = Transform3D(0.999786, 0, 0.0206982, 0, 2.95444, 0, -0.0206982, 0, 0.999786, 10.0793, 0.209957, -78.721)
 
 [node name="FloorSandstone119" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(0.999786, 0, 0.0206982, 0, 2.95444, 0, -0.0206982, 0, 0.999786, 6.13106, 0.253837, -82.6821)
+transform = Transform3D(0.999786, 0, 0.0206982, 0, 2.95444, 0, -0.0206982, 0, 0.999786, 6.13106, 0.209957, -82.6821)
 
 [node name="FloorSandstone123" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(0.999786, 0, 0.0206982, 0, 2.95444, 0, -0.0206982, 0, 0.999786, 10.0793, 0.253837, -82.7217)
+transform = Transform3D(0.999786, 0, 0.0206982, 0, 2.95444, 0, -0.0206982, 0, 0.999786, 10.0793, 0.209957, -82.7217)
 
 [node name="FloorSandstone124" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(0.999786, 0, 0.0206982, 0, 2.95444, 0, -0.0206982, 0, 0.999786, 10.0793, 0.253837, -86.6863)
+transform = Transform3D(0.999786, 0, 0.0206982, 0, 2.95444, 0, -0.0206982, 0, 0.999786, 10.0793, 0.209957, -86.6863)
 
 [node name="FloorSandstone125" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(0.999786, 0, 0.0206982, 0, 2.95444, 0, -0.0206982, 0, 0.999786, 14.0984, 0.253837, -86.6863)
+transform = Transform3D(0.999786, 0, 0.0206982, 0, 2.95444, 0, -0.0206982, 0, 0.999786, 14.0984, 0.209957, -86.6863)
 
 [node name="FloorSandstone126" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(0.999786, 0, 0.0206982, 0, 2.95444, 0, -0.0206982, 0, 0.999786, 14.0984, 0.253837, -90.6301)
+transform = Transform3D(0.999786, 0, 0.0206982, 0, 2.95444, 0, -0.0206982, 0, 0.999786, 14.0984, 0.209957, -90.6301)
 
 [node name="FloorSandstone127" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(0.999786, 0, 0.0206982, 0, 2.95444, 0, -0.0206982, 0, 0.999786, 14.0984, 0.253837, -94.6307)
+transform = Transform3D(0.999786, 0, 0.0206982, 0, 2.95444, 0, -0.0206982, 0, 0.999786, 14.0984, 0.209957, -94.6307)
 
 [node name="FloorSandstone128" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(0.999786, 0, 0.0206982, 0, 2.95444, 0, -0.0206982, 0, 0.999786, 14.0984, 0.253837, -98.5745)
+transform = Transform3D(0.999786, 0, 0.0206982, 0, 2.95444, 0, -0.0206982, 0, 0.999786, 14.0984, 0.209957, -98.5745)
 
 [node name="FloorSandstone129" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(0.999786, 0, 0.0206982, 0, 2.95444, 0, -0.0206982, 0, 0.999786, 14.0984, 0.253837, -102.616)
+transform = Transform3D(0.999786, 0, 0.0206982, 0, 2.95444, 0, -0.0206982, 0, 0.999786, 14.0984, 0.209957, -102.616)
 
 [node name="FloorSandstone130" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(0.999786, 0, 0.0206982, 0, 2.95444, 0, -0.0206982, 0, 0.999786, 14.0984, 0.253837, -106.56)
+transform = Transform3D(0.999786, 0, 0.0206982, 0, 2.95444, 0, -0.0206982, 0, 0.999786, 14.0984, 0.209957, -106.56)
 
 [node name="FloorSandstone185" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(0.999786, 0, 0.0206982, 0, 2.95444, 0, -0.0206982, 0, 0.999786, 14.0984, 0.253837, -110.573)
+transform = Transform3D(0.999786, 0, 0.0206982, 0, 2.95444, 0, -0.0206982, 0, 0.999786, 14.0984, 0.209957, -110.573)
 
 [node name="FloorSandstone186" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(0.999786, 0, 0.0206982, 0, 2.95444, 0, -0.0206982, 0, 0.999786, 14.0984, 0.253837, -114.517)
+transform = Transform3D(0.999786, 0, 0.0206982, 0, 2.95444, 0, -0.0206982, 0, 0.999786, 14.0984, 0.209957, -114.517)
 
 [node name="FloorSandstone91" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(0.999786, 0, 0.0206982, 0, 2.95444, 0, -0.0206982, 0, 0.999786, -13.6317, 0.253837, -78.9881)
+transform = Transform3D(0.999786, 0, 0.0206982, 0, 2.95444, 0, -0.0206982, 0, 0.999786, -13.6317, 0.209957, -78.9881)
 
 [node name="FloorSandstone92" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(0.999786, 0, 0.0206982, 0, 2.95444, 0, -0.0206982, 0, 0.999786, -9.6834, 0.253837, -78.9881)
+transform = Transform3D(0.999786, 0, 0.0206982, 0, 2.95444, 0, -0.0206982, 0, 0.999786, -9.6834, 0.209957, -78.9881)
 
 [node name="FloorSandstone94" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(0.999786, 0, 0.0206982, 0, 2.95444, 0, -0.0206982, 0, 0.999786, -17.6642, 0.253837, -82.7835)
+transform = Transform3D(0.999786, 0, 0.0206982, 0, 2.95444, 0, -0.0206982, 0, 0.999786, -17.6642, 0.209957, -82.7835)
 
 [node name="FloorSandstone95" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(0.999786, 0, 0.0206982, 0, 2.95444, 0, -0.0206982, 0, 0.999786, -13.7275, 0.253837, -82.8544)
+transform = Transform3D(0.999786, 0, 0.0206982, 0, 2.95444, 0, -0.0206982, 0, 0.999786, -13.7275, 0.209957, -82.8544)
 
 [node name="FloorSandstone96" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(0.999786, 0, 0.0206982, 0, 2.95444, 0, -0.0206982, 0, 0.999786, -9.77923, 0.253837, -82.9155)
+transform = Transform3D(0.999786, 0, 0.0206982, 0, 2.95444, 0, -0.0206982, 0, 0.999786, -9.77923, 0.209957, -82.9155)
 
 [node name="FloorSandstone93" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(0.999786, 0, 0.0206982, 0, 2.95444, 0, -0.0206982, 0, 0.999786, -5.67966, 0.253837, -78.5118)
+transform = Transform3D(0.999786, 0, 0.0206982, 0, 2.95444, 0, -0.0206982, 0, 0.999786, -5.67966, 0.209957, -78.5118)
 
 [node name="FloorSandstone188" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(0.999786, 0, 0.0206982, 0, 2.95444, 0, -0.0206982, 0, 0.999786, -5.77548, 0.253837, -82.4391)
+transform = Transform3D(0.999786, 0, 0.0206982, 0, 2.95444, 0, -0.0206982, 0, 0.999786, -5.77548, 0.209957, -82.4391)
 
 [node name="FloorSandstone189" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(0.999786, 0, 0.0206982, 0, 2.95444, 0, -0.0206982, 0, 0.999786, -5.83074, 0.253837, -86.3921)
+transform = Transform3D(0.999786, 0, 0.0206982, 0, 2.95444, 0, -0.0206982, 0, 0.999786, -5.83074, 0.209957, -86.3921)
 
 [node name="FloorSandstone131" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -9.78286, 0.253837, -86.8488)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -9.78286, 0.209957, -86.8488)
 
 [node name="FloorSandstone132" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -13.7198, 0.253837, -86.7926)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -13.7198, 0.209957, -86.7926)
 
 [node name="FloorSandstone133" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -17.6683, 0.253837, -86.7463)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -17.6683, 0.209957, -86.7463)
 
 [node name="FloorSandstone134" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -21.6549, 0.253837, -86.7463)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -21.6549, 0.209957, -86.7463)
 
 [node name="FloorSandstone135" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -9.78286, 0.253837, -90.8536)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -9.78286, 0.209957, -90.8536)
 
 [node name="FloorSandstone136" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -13.7198, 0.253837, -90.7974)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -13.7198, 0.209957, -90.7974)
 
 [node name="FloorSandstone137" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -17.6683, 0.253837, -90.751)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -17.6683, 0.209957, -90.751)
 
 [node name="FloorSandstone138" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -21.6549, 0.253837, -90.751)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -21.6549, 0.209957, -90.751)
 
 [node name="FloorSandstone139" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -25.6504, 0.253837, -90.751)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -25.6504, 0.209957, -90.751)
 
 [node name="FloorSandstone140" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -9.78286, 0.253837, -94.8312)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -9.78286, 0.209957, -94.8312)
 
 [node name="FloorSandstone141" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -13.7198, 0.253837, -94.775)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -13.7198, 0.209957, -94.775)
 
 [node name="FloorSandstone142" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -17.6683, 0.253837, -94.7286)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -17.6683, 0.209957, -94.7286)
 
 [node name="FloorSandstone143" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -21.6549, 0.253837, -94.7286)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -21.6549, 0.209957, -94.7286)
 
 [node name="FloorSandstone144" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -25.6504, 0.253837, -94.7286)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -25.6504, 0.209957, -94.7286)
 
 [node name="FloorSandstone145" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -29.6198, 0.253837, -94.7286)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -29.6198, 0.209957, -94.7286)
 
 [node name="FloorSandstone167" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -9.78286, 0.253837, -110.901)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -9.78286, 0.209957, -110.901)
 
 [node name="FloorSandstone168" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -13.7198, 0.253837, -110.845)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -13.7198, 0.209957, -110.845)
 
 [node name="FloorSandstone169" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -17.6683, 0.253837, -110.799)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -17.6683, 0.209957, -110.799)
 
 [node name="FloorSandstone170" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -21.6549, 0.253837, -110.799)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -21.6549, 0.209957, -110.799)
 
 [node name="FloorSandstone171" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -25.6504, 0.253837, -110.799)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -25.6504, 0.209957, -110.799)
 
 [node name="FloorSandstone173" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -9.78286, 0.253837, -114.91)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -9.78286, 0.209957, -114.91)
 
 [node name="FloorSandstone174" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -13.7198, 0.253837, -114.853)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -13.7198, 0.209957, -114.853)
 
 [node name="FloorSandstone175" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -17.6683, 0.253837, -114.807)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -17.6683, 0.209957, -114.807)
 
 [node name="FloorSandstone176" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -21.6549, 0.253837, -114.807)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -21.6549, 0.209957, -114.807)
 
 [node name="FloorSandstone178" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -9.78286, 0.253837, -118.914)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -9.78286, 0.209957, -118.914)
 
 [node name="FloorSandstone179" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -13.7198, 0.253837, -118.858)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -13.7198, 0.209957, -118.858)
 
 [node name="FloorSandstone180" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -17.6683, 0.253837, -118.811)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -17.6683, 0.209957, -118.811)
 
 [node name="FloorSandstone182" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -9.78286, 0.253837, -122.467)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -9.78286, 0.209957, -122.467)
 
 [node name="FloorSandstone183" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -13.7198, 0.253837, -122.411)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -13.7198, 0.209957, -122.411)
 
 [node name="FloorSandstone184" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -17.6683, 0.253837, -122.364)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -17.6683, 0.209957, -122.364)
 
 [node name="FloorSandstone181" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -21.6549, 0.253837, -118.811)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -21.6549, 0.209957, -118.811)
 
 [node name="FloorSandstone177" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -25.6504, 0.253837, -114.807)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -25.6504, 0.209957, -114.807)
 
 [node name="FloorSandstone172" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -29.6198, 0.253837, -110.799)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -29.6198, 0.209957, -110.799)
 
 [node name="FloorSandstone146" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -9.78286, 0.253837, -98.7967)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -9.78286, 0.209957, -98.7967)
 
 [node name="FloorSandstone147" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -13.7198, 0.253837, -98.7405)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -13.7198, 0.209957, -98.7405)
 
 [node name="FloorSandstone148" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -17.6683, 0.253837, -98.6942)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -17.6683, 0.209957, -98.6942)
 
 [node name="FloorSandstone149" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -21.6549, 0.253837, -98.6942)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -21.6549, 0.209957, -98.6942)
 
 [node name="FloorSandstone150" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -25.6504, 0.253837, -98.6942)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -25.6504, 0.209957, -98.6942)
 
 [node name="FloorSandstone151" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -29.6198, 0.253837, -98.6942)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -29.6198, 0.209957, -98.6942)
 
 [node name="FloorSandstone152" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -33.636, 0.253837, -98.6942)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -33.636, 0.209957, -98.6942)
 
 [node name="FloorSandstone153" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -9.78286, 0.253837, -102.823)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -9.78286, 0.209957, -102.823)
 
 [node name="FloorSandstone154" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -13.7198, 0.253837, -102.767)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -13.7198, 0.209957, -102.767)
 
 [node name="FloorSandstone155" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -17.6683, 0.253837, -102.721)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -17.6683, 0.209957, -102.721)
 
 [node name="FloorSandstone156" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -21.6549, 0.253837, -102.721)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -21.6549, 0.209957, -102.721)
 
 [node name="FloorSandstone157" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -25.6504, 0.253837, -102.721)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -25.6504, 0.209957, -102.721)
 
 [node name="FloorSandstone158" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -29.6198, 0.253837, -102.721)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -29.6198, 0.209957, -102.721)
 
 [node name="FloorSandstone159" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -33.636, 0.253837, -102.721)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -33.636, 0.209957, -102.721)
 
 [node name="FloorSandstone160" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -9.78286, 0.253837, -106.876)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -9.78286, 0.209957, -106.876)
 
 [node name="FloorSandstone190" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -5.76138, 0.253837, -90.3659)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -5.76138, 0.209957, -90.3659)
 
 [node name="FloorSandstone191" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -5.76138, 0.253837, -94.4036)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -5.76138, 0.209957, -94.4036)
 
 [node name="FloorSandstone192" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -5.76138, 0.253837, -110.473)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -5.76138, 0.209957, -110.473)
 
 [node name="FloorSandstone193" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -5.76138, 0.253837, -114.482)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -5.76138, 0.209957, -114.482)
 
 [node name="FloorSandstone194" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -5.76138, 0.253837, -118.486)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -5.76138, 0.209957, -118.486)
 
 [node name="FloorSandstone195" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -5.76138, 0.253837, -122.521)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -5.76138, 0.209957, -122.521)
 
 [node name="FloorSandstone196" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -5.76138, 0.253837, -98.3691)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -5.76138, 0.209957, -98.3691)
 
 [node name="FloorSandstone197" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -5.76138, 0.253837, -102.395)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -5.76138, 0.209957, -102.395)
 
 [node name="FloorSandstone198" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -5.76138, 0.253837, -106.448)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -5.76138, 0.209957, -106.448)
 
 [node name="FloorSandstone199" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -1.7923, 0.253837, -90.3659)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -1.7923, 0.209957, -90.3659)
 
 [node name="FloorSandstone200" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -1.7923, 0.253837, -94.4036)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -1.7923, 0.209957, -94.4036)
 
 [node name="FloorSandstone201" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -3.04496, 0.253837, -110.473)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -3.04496, 0.209957, -110.473)
 
 [node name="FloorSandstone202" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -1.7923, 0.253837, -114.482)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -1.7923, 0.209957, -114.482)
 
 [node name="FloorSandstone203" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -1.7923, 0.253837, -118.486)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -1.7923, 0.209957, -118.486)
 
 [node name="FloorSandstone204" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -1.7923, 0.253837, -122.521)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -1.7923, 0.209957, -122.521)
 
 [node name="FloorSandstone187" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -10.6304, 0.253837, -126.448)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -10.6304, 0.209957, -126.448)
 
 [node name="FloorSandstone208" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -6.60888, 0.253837, -126.502)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -6.60888, 0.209957, -126.502)
 
 [node name="FloorSandstone217" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -2.63981, 0.253837, -126.502)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -2.63981, 0.209957, -126.502)
 
 [node name="FloorSandstone226" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -10.6304, 0.253837, -130.416)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -10.6304, 0.209957, -130.416)
 
 [node name="FloorSandstone227" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -6.60888, 0.253837, -130.47)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -6.60888, 0.209957, -130.47)
 
 [node name="FloorSandstone228" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -2.63981, 0.253837, -130.47)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -2.63981, 0.209957, -130.47)
 
 [node name="FloorSandstone229" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -10.6304, 0.253837, -134.397)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -10.6304, 0.209957, -134.397)
 
 [node name="FloorSandstone230" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -6.60888, 0.253837, -134.451)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -6.60888, 0.209957, -134.451)
 
 [node name="FloorSandstone231" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -2.63981, 0.253837, -134.451)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -2.63981, 0.209957, -134.451)
 
 [node name="FloorSandstone232" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -10.6304, 0.253837, -138.393)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -10.6304, 0.209957, -138.393)
 
 [node name="FloorSandstone233" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -6.60888, 0.253837, -138.447)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -6.60888, 0.209957, -138.447)
 
 [node name="FloorSandstone234" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -2.63981, 0.253837, -138.447)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -2.63981, 0.209957, -138.447)
 
 [node name="FloorSandstone235" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -10.6304, 0.253837, -142.374)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -10.6304, 0.209957, -142.374)
 
 [node name="FloorSandstone236" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -6.60888, 0.253837, -142.428)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -6.60888, 0.209957, -142.428)
 
 [node name="FloorSandstone237" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -2.63981, 0.253837, -142.428)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -2.63981, 0.209957, -142.428)
 
 [node name="FloorSandstone238" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -10.6304, 0.253837, -146.381)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -10.6304, 0.209957, -146.381)
 
 [node name="FloorSandstone239" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -6.60888, 0.253837, -146.435)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -6.60888, 0.209957, -146.435)
 
 [node name="FloorSandstone240" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -2.63981, 0.253837, -146.435)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -2.63981, 0.209957, -146.435)
 
 [node name="FloorSandstone241" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -10.6304, 0.253837, -150.362)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -10.6304, 0.209957, -150.362)
 
 [node name="FloorSandstone242" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -6.60888, 0.253837, -150.416)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -6.60888, 0.209957, -150.416)
 
 [node name="FloorSandstone243" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -2.63981, 0.253837, -150.416)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -2.63981, 0.209957, -150.416)
 
 [node name="FloorSandstone244" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -10.6304, 0.253837, -154.369)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -10.6304, 0.209957, -154.369)
 
 [node name="FloorSandstone246" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -2.63981, 0.253837, -154.423)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -2.63981, 0.209957, -154.423)
 
 [node name="FloorSandstone245" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -10.6304, 0.253837, -158.363)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -10.6304, 0.209957, -158.363)
 
 [node name="FloorSandstone262" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -14.6472, 0.253837, -158.363)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -14.6472, 0.209957, -158.363)
 
 [node name="FloorSandstone247" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -2.63981, 0.253837, -158.418)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -2.63981, 0.209957, -158.418)
 
 [node name="FloorSandstone248" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -10.6304, 0.253837, -162.319)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -10.6304, 0.209957, -162.319)
 
 [node name="FloorSandstone263" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -14.6704, 0.253837, -162.319)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -14.6704, 0.209957, -162.319)
 
 [node name="FloorSandstone264" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -18.6392, 0.253837, -162.319)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -18.6392, 0.209957, -162.319)
 
 [node name="FloorSandstone265" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -14.6653, 0.253837, -166.267)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -14.6653, 0.209957, -166.267)
 
 [node name="FloorSandstone266" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -18.69, 0.253837, -166.267)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -18.69, 0.209957, -166.267)
 
 [node name="FloorSandstone267" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -22.6741, 0.253837, -166.267)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -22.6741, 0.209957, -166.267)
 
 [node name="FloorSandstone268" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -18.6797, 0.253837, -170.288)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -18.6797, 0.209957, -170.288)
 
 [node name="FloorSandstone269" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -22.7197, 0.253837, -170.288)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -22.7197, 0.209957, -170.288)
 
 [node name="FloorSandstone270" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -26.6885, 0.253837, -170.288)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -26.6885, 0.209957, -170.288)
 
 [node name="FloorSandstone271" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -14.7129, 0.253837, -170.317)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -14.7129, 0.209957, -170.317)
 
 [node name="FloorSandstone272" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -18.6797, 0.253837, -174.278)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -18.6797, 0.209957, -174.278)
 
 [node name="FloorSandstone273" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -22.7197, 0.253837, -174.278)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -22.7197, 0.209957, -174.278)
 
 [node name="FloorSandstone274" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -26.6885, 0.253837, -174.278)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -26.6885, 0.209957, -174.278)
 
 [node name="FloorSandstone275" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -14.7129, 0.253837, -174.308)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -14.7129, 0.209957, -174.308)
 
 [node name="FloorSandstone276" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -18.6797, 0.253837, -178.321)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -18.6797, 0.209957, -178.321)
 
 [node name="FloorSandstone277" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -22.7197, 0.253837, -178.321)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -22.7197, 0.209957, -178.321)
 
 [node name="FloorSandstone278" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -26.6885, 0.253837, -178.321)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -26.6885, 0.209957, -178.321)
 
 [node name="FloorSandstone279" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -14.7129, 0.253837, -178.35)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -14.7129, 0.209957, -178.35)
 
 [node name="FloorSandstone280" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -18.6797, 0.253837, -182.351)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -18.6797, 0.209957, -182.351)
 
 [node name="FloorSandstone281" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -22.7197, 0.253837, -182.351)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -22.7197, 0.209957, -182.351)
 
 [node name="FloorSandstone283" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -14.7129, 0.253837, -182.38)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -14.7129, 0.209957, -182.38)
 
 [node name="FloorSandstone282" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -18.6797, 0.253837, -186.315)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -18.6797, 0.209957, -186.315)
 
 [node name="FloorSandstone284" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -14.7129, 0.253837, -186.345)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -14.7129, 0.209957, -186.345)
 
 [node name="FloorSandstone285" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, 1.30733, 0.253837, -158.363)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, 1.30733, 0.209957, -158.363)
 
 [node name="FloorSandstone286" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, 1.28415, 0.253837, -162.319)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, 1.28415, 0.209957, -162.319)
 
 [node name="FloorSandstone287" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, 1.28929, 0.253837, -166.267)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, 1.28929, 0.209957, -166.267)
 
 [node name="FloorSandstone288" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, 1.24164, 0.253837, -170.317)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, 1.24164, 0.209957, -170.317)
 
 [node name="FloorSandstone289" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, 1.24164, 0.253837, -174.308)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, 1.24164, 0.209957, -174.308)
 
 [node name="FloorSandstone290" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, 1.24164, 0.253837, -178.35)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, 1.24164, 0.209957, -178.35)
 
 [node name="FloorSandstone291" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, 1.24164, 0.253837, -182.38)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, 1.24164, 0.209957, -182.38)
 
 [node name="FloorSandstone292" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, 1.24164, 0.253837, -186.345)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, 1.24164, 0.209957, -186.345)
 
 [node name="FloorSandstone294" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, 5.3193, 0.253837, -162.319)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, 5.3193, 0.209957, -162.319)
 
 [node name="FloorSandstone295" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, 5.32444, 0.253837, -166.267)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, 5.32444, 0.209957, -166.267)
 
 [node name="FloorSandstone296" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, 5.27678, 0.253837, -170.317)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, 5.27678, 0.209957, -170.317)
 
 [node name="FloorSandstone297" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, 5.27678, 0.253837, -174.308)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, 5.27678, 0.209957, -174.308)
 
 [node name="FloorSandstone298" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, 5.27678, 0.253837, -178.35)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, 5.27678, 0.209957, -178.35)
 
 [node name="FloorSandstone299" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, 5.27678, 0.253837, -182.38)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, 5.27678, 0.209957, -182.38)
 
 [node name="FloorSandstone302" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, 9.23199, 0.253837, -166.267)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, 9.23199, 0.209957, -166.267)
 
 [node name="FloorSandstone303" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, 9.18434, 0.253837, -170.317)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, 9.18434, 0.209957, -170.317)
 
 [node name="FloorSandstone304" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, 9.18434, 0.253837, -174.308)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, 9.18434, 0.209957, -174.308)
 
 [node name="FloorSandstone305" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, 9.18434, 0.253837, -178.35)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, 9.18434, 0.209957, -178.35)
 
 [node name="FloorSandstone307" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, 13.1469, 0.253837, -170.317)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, 13.1469, 0.209957, -170.317)
 
 [node name="FloorSandstone308" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, 13.1469, 0.253837, -174.308)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, 13.1469, 0.209957, -174.308)
 
 [node name="FloorSandstone309" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, 13.1469, 0.253837, -178.35)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, 13.1469, 0.209957, -178.35)
 
 [node name="FloorSandstone306" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, 9.18434, 0.253837, -182.38)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, 9.18434, 0.209957, -182.38)
 
 [node name="FloorSandstone300" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, 5.27678, 0.253837, -186.345)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, 5.27678, 0.209957, -186.345)
 
 [node name="FloorSandstone251" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -2.70798, 0.253837, -166.351)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -2.70798, 0.209957, -166.351)
 
 [node name="FloorSandstone252" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -10.6985, 0.253837, -170.263)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -10.6985, 0.209957, -170.263)
 
 [node name="FloorSandstone254" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -10.6985, 0.253837, -174.25)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -10.6985, 0.209957, -174.25)
 
 [node name="FloorSandstone255" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -2.70798, 0.253837, -174.304)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -2.70798, 0.209957, -174.304)
 
 [node name="FloorSandstone257" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -2.70798, 0.253837, -178.267)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -2.70798, 0.209957, -178.267)
 
 [node name="FloorSandstone258" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -10.7813, 0.253837, -182.183)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -10.7813, 0.209957, -182.183)
 
 [node name="FloorSandstone259" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -2.7907, 0.253837, -182.237)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -2.7907, 0.209957, -182.237)
 
 [node name="FloorSandstone205" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -1.7923, 0.253837, -98.3691)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -1.7923, 0.209957, -98.3691)
 
 [node name="FloorSandstone206" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -1.7923, 0.253837, -102.395)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -1.7923, 0.209957, -102.395)
 
 [node name="FloorSandstone207" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -2.93627, 0.253837, -106.448)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -2.93627, 0.209957, -106.448)
 
 [node name="FloorSandstone209" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, 2.19693, 0.253837, -94.4036)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, 2.19693, 0.209957, -94.4036)
 
 [node name="FloorSandstone211" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, 2.19693, 0.253837, -114.482)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, 2.19693, 0.209957, -114.482)
 
 [node name="FloorSandstone212" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, 2.19693, 0.253837, -118.486)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, 2.19693, 0.209957, -118.486)
 
 [node name="FloorSandstone213" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, 2.19693, 0.253837, -122.521)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, 2.19693, 0.209957, -122.521)
 
 [node name="FloorSandstone214" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, 2.19693, 0.253837, -98.3691)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, 2.19693, 0.209957, -98.3691)
 
 [node name="FloorSandstone215" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, 2.19693, 0.253837, -102.395)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, 2.19693, 0.209957, -102.395)
 
 [node name="FloorSandstone218" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, 6.20214, 0.253837, -110.473)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, 6.20214, 0.209957, -110.473)
 
 [node name="FloorSandstone219" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, 6.20214, 0.253837, -114.482)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, 6.20214, 0.209957, -114.482)
 
 [node name="FloorSandstone220" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, 6.20699, 0.253837, -118.486)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, 6.20699, 0.209957, -118.486)
 
 [node name="FloorSandstone224" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, 10.2083, 0.253837, -118.328)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, 10.2083, 0.209957, -118.328)
 
 [node name="FloorSandstone225" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, 10.2083, 0.253837, -114.323)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, 10.2083, 0.209957, -114.323)
 
 [node name="FloorSandstone221" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, 6.1661, 0.253837, -122.521)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, 6.1661, 0.209957, -122.521)
 
 [node name="FloorSandstone222" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, 6.22565, 0.253837, -98.3691)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, 6.22565, 0.209957, -98.3691)
 
 [node name="FloorSandstone223" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, 6.22565, 0.253837, -102.395)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, 6.22565, 0.209957, -102.395)
 
 [node name="FloorSandstone161" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -13.7198, 0.253837, -106.82)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -13.7198, 0.209957, -106.82)
 
 [node name="FloorSandstone162" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -17.6683, 0.253837, -106.773)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -17.6683, 0.209957, -106.773)
 
 [node name="FloorSandstone163" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -21.6549, 0.253837, -106.773)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -21.6549, 0.209957, -106.773)
 
 [node name="FloorSandstone164" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -25.6504, 0.253837, -106.773)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -25.6504, 0.209957, -106.773)
 
 [node name="FloorSandstone165" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -29.6198, 0.253837, -106.773)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -29.6198, 0.209957, -106.773)
 
 [node name="FloorSandstone166" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -33.636, 0.253837, -106.773)
+transform = Transform3D(-0.999856, 0, -0.0169638, 0, 2.95444, 0, 0.0169638, 0, -0.999856, -33.636, 0.209957, -106.773)
 
 [node name="FloorSandstone8" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(1, 0, 0, 0, 2.95444, 0, 0, 0, 1, 8.30365, 0.160814, -15.0779)
+transform = Transform3D(1, 0, 0, 0, 2.95444, 0, 0, 0, 1, 8.30365, 0.209957, -15.0779)
 
 [node name="FloorSandstone9" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(1, 0, 0, 0, 2.95444, 0, 0, 0, 1, 12.3008, 0.160814, -11.0661)
+transform = Transform3D(1, 0, 0, 0, 2.95444, 0, 0, 0, 1, 12.3008, 0.209957, -11.0661)
 
 [node name="FloorSandstone10" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(1, 0, 0, 0, 2.95444, 0, 0, 0, 1, 12.3008, 0.160814, -15.0779)
+transform = Transform3D(1, 0, 0, 0, 2.95444, 0, 0, 0, 1, 12.3008, 0.209957, -15.0779)
 
 [node name="FloorSandstone11" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(1, 0, 0, 0, 2.95444, 0, 0, 0, 1, 12.3008, 0.160814, -19.048)
+transform = Transform3D(1, 0, 0, 0, 2.95444, 0, 0, 0, 1, 12.3008, 0.209957, -19.048)
 
 [node name="FloorSandstone12" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(1, 0, 0, 0, 2.95444, 0, 0, 0, 1, 12.3008, 0.160814, -23.0598)
+transform = Transform3D(1, 0, 0, 0, 2.95444, 0, 0, 0, 1, 12.3008, 0.209957, -23.0598)
 
 [node name="FloorSandstone13" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(1, 0, 0, 0, 2.95444, 0, 0, 0, 1, 12.3008, 0.160814, -27.0684)
+transform = Transform3D(1, 0, 0, 0, 2.95444, 0, 0, 0, 1, 12.3008, 0.209957, -27.0684)
 
 [node name="FloorSandstone14" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(1, 0, 0, 0, 2.95444, 0, 0, 0, 1, 12.3008, 0.160814, -31.0802)
+transform = Transform3D(1, 0, 0, 0, 2.95444, 0, 0, 0, 1, 12.3008, 0.209957, -31.0802)
 
 [node name="FloorSandstone97" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(1, 0, 0, 0, 2.95444, 0, 0, 0, 1, 8.31466, 0.160814, -31.0802)
+transform = Transform3D(1, 0, 0, 0, 2.95444, 0, 0, 0, 1, 8.31466, 0.209957, -31.0802)
 
 [node name="FloorSandstone23" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.0161785, 0, 0.999869, 0, 2.95444, 0, -0.999869, 0, -0.0161785, 12.2299, 0.160814, -35.0091)
+transform = Transform3D(-0.0161785, 0, 0.999869, 0, 2.95444, 0, -0.999869, 0, -0.0161785, 12.2299, 0.209957, -35.0091)
 
 [node name="FloorSandstone24" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
-transform = Transform3D(-0.0161785, 0, 0.999869, 0, 2.95444, 0, -0.999869, 0, -0.0161785, 8.21859, 0.160814, -34.9442)
+transform = Transform3D(-0.0161785, 0, 0.999869, 0, 2.95444, 0, -0.999869, 0, -0.0161785, 8.21859, 0.209957, -34.9442)
 
 [node name="FloorSandstone25" parent="NavigationRegion3D/Floor" instance=ExtResource("6_6xj25")]
 transform = Transform3D(-0.0161785, 0, 0.999869, 0, 2.95444, 0, -0.999869, 0, -0.0161785, 4.30496, 0.160814, -34.9017)
